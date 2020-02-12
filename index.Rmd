@@ -1,0 +1,13 @@
+---
+title: "Jamovi Stats"
+author: "Hokusei Gakuen Statistics Education Renovation Team"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook: default
+---
+
+# jamovi Manual
+
+jamovi (https://www.jamovi.org/) の利用マニュアルというか，教材のベータ版です。
+まだまだ，修正中。

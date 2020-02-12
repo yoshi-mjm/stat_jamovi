@@ -1,0 +1,6 @@
+name: "Jamovi_stats"
+navbar:
+  title: "Jamovi Stats"
+  left:
+    - text: "Top"
+      href: index.html

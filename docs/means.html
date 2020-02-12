@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 平均値の検定 | Jamovi Stats</title>
+  <meta name="description" content="4 平均値の検定 | Jamovi Stats" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 平均値の検定 | Jamovi Stats" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 平均値の検定 | Jamovi Stats" />
+  
+  
+  
+
+<meta name="author" content="Hokusei Gakuen Statistics Education Renovation Team" />
+
+
+<meta name="date" content="2020-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="descriptives.html"/>
+<link rel="next" href="correlation.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> jamovi Manual</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install.html"><a href="install.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install.html"><a href="install.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install.html"><a href="install.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
+<li class="chapter" data-level="2.2.4" data-path="install.html"><a href="install.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
+<li class="chapter" data-level="2.2.5" data-path="install.html"><a href="install.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
+<li class="chapter" data-level="2.2.6" data-path="install.html"><a href="install.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptives.html"><a href="descriptives.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptives.html"><a href="descriptives.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptives.html"><a href="descriptives.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="means.html"><a href="means.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="means.html"><a href="means.html#節-t検定"><i class="fa fa-check"></i><b>4.1</b> ○節　t検定</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="means.html"><a href="means.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.1.2" data-path="means.html"><a href="means.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
+<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>6</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>6.1</b> １要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="anova.html"><a href="anova.html#変数の指定"><i class="fa fa-check"></i><b>6.1.1</b> 変数の指定</a></li>
+<li class="chapter" data-level="6.1.2" data-path="anova.html"><a href="anova.html#主効果の検定"><i class="fa fa-check"></i><b>6.1.2</b> 主効果の検定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="anova.html"><a href="anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>6.1.3</b> 分散の等質性の検定</a></li>
+<li class="chapter" data-level="6.1.4" data-path="anova.html"><a href="anova.html#正規性の検定"><i class="fa fa-check"></i><b>6.1.4</b> 正規性の検定</a></li>
+<li class="chapter" data-level="6.1.5" data-path="anova.html"><a href="anova.html#多重比較"><i class="fa fa-check"></i><b>6.1.5</b> 多重比較</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>6.2</b> ２要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="anova.html"><a href="anova.html#事後検定"><i class="fa fa-check"></i><b>6.2.1</b> 事後検定</a></li>
+<li class="chapter" data-level="6.2.2" data-path="anova.html"><a href="anova.html#推定周辺平均"><i class="fa fa-check"></i><b>6.2.2</b> 推定周辺平均</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="anova.html"><a href="anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>6.3</b> クラスカル・ウォリスの検定</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Jamovi Stats</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="means" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> 平均値の検定</h1>
+<div id="節-t検定" class="section level2" number="4.1">
+<h2><span class="header-section-number">4.1</span> ○節　t検定</h2>
+<p>本項ではt検定の分析方法を解説します。ここでは永井(2018)によるデータを使い，居場所尺度の下位尺度である「社会的居場所」の平均得点が男性と女性で異なるのかどうかを分析していきます。t検定は，データの正規性や仮説の立て方によって適切な分析方法を選択していく必要があります。ここでは，男性と女性という異なる２つの標本を用い，Jamoviniを使った独立した標本を調べるｔ検定のやり方を解説します。また，t検定の場合，等分散性が仮定されているかどうかによってt値の計算方法が変わるため，等分散であるか否かを判定する検定も行う必要があります。Jamoviの場合，t検定を分析する際のオプションに等分散性の検定があります。そこで，本稿ではスチューデントのt検定と等分散性の検定を同時に実施し，等分散が確認できればそのままt検定の結果を採用し，等分散性が確認できなければウィルチのt検定に切り替えて分析する方法を紹介します。また，t検定の場合，仮説の立て方によって棄却域が変わります。仮説は，１）男性の方が「社会的居場所」得点が高い可能性，２）逆に女性の方が高い可能性，３）男女間で何らかの相違がある可能性の３つです。前者の１）と２）とでは，理論的にまったく異なる結果であることが分かります。どの仮説を採用するかは，先行知見と照らし合わせながら適切な根拠を示すことができる仮説を採用していきます。今回は，研究内容には踏み込まずに，操作方法を重点的に説明するため，３）の男女間で相違があるか否かを調べる両側検定を行っていきます。では，この概要を踏まえて，基本統計量の算出とt検定の実施を行っていきましょう。</p>
+<div id="基本統計量の算出" class="section level3" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> 基本統計量の算出</h3>
+<p>まず，適切な分析方法を選ぶための準備として，男女のサンプル数，平均値，標準偏差，ヒストグラム，密度曲線を見ていきます。t検定の理解を深めるために必要な手順ですが，手早く分析したい場合にはこの基本統計量の算出は飛ばすこともできます。その場合には，後述するt検定の分析の際にオプション（Additional Statisticsカテゴリー内にあるDescriptives）を追加します。</p>
+<p>Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。</p>
+<div class="figure">
+<img src="img/03mean/exploration_01.png" alt="" />
+<p class="caption">exploration_01</p>
+</div>
+<p>次に［Statistics］より，オプション設定を１つ行います。Dispersion（ばらつき）カテゴリーにあるStd. deviation（標準偏差）にチェックを追加します。</p>
+<div class="figure">
+<img src="img/03mean/exploration_02.png" alt="" />
+<p class="caption">exploration_02</p>
+</div>
+<p>次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の種類を決める際に必要となります。次の等分散性の検定でさらに判断していきましょう。また，ばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも試してみましょう。</p>
+<div class="figure">
+<img src="img/03mean/exploration_03.png" alt="" />
+<p class="caption">exploration_03</p>
+</div>
+<p>Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（ヒストグラム）カテゴリーにあるHistogram（ヒストグラム）と（密度曲線）にチェックするだけで作図が行われます。</p>
+<div class="figure">
+<img src="img/03mean/exploration_04.png" alt="" />
+<p class="caption">exploration_04</p>
+</div>
+<div class="figure">
+<img src="img/03mean/exploration_05.png" alt="" />
+<p class="caption">exploration_05</p>
+</div>
+<p>　凸凹しているのがヒストグラム，曲線がヒストグラムをカーネル平滑化した密度曲線になります。Jamoviでは，ヒストグラムに密度曲線を重ねて作図することができます。その他に，Box Plot（ボックスプロット）では，データの中央値・四分位範囲・範囲をシンプルな形で視覚化する箱ひげ図が，Q-Q（Q-Qプロット）では，標本が正規性の仮定を満たしているかどうかを視覚的に確認することができます。</p>
+</div>
+<div id="t検定の実施" class="section level3" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> t検定の実施</h3>
+<p>では，上記の基本統計量の結果を理解した上で，t検定を実施していきます。まず「Analyses」タブより「T-Tests」を選択すると３つの分析タイプが出てきます。各分析タイプの概略を以下に記します。</p>
+<div id="independent-samples-t-test独立標本ｔ検定" class="section level5" number="4.1.2.0.1">
+<h5><span class="header-section-number">4.1.2.0.1</span> Independent Samples T-Test（独立標本ｔ検定）</h5>
+<p>男性のデータと女性のデータのように，対応のない２つの標本の平均値の差を求めたいときに用います。Jamoviでは，スチューデントの対応なしｔ検定，ウェルチ検定，マン・ホイットニーのＵ検定の３つを行うことができます。</p>
+</div>
+<div id="pared-sample-t-test対応のある標本ｔ検定" class="section level5" number="4.1.2.0.2">
+<h5><span class="header-section-number">4.1.2.0.2</span> Pared Sample T-Test（対応のある標本ｔ検定）</h5>
+<p>同じ人で走る前のデータと後のデータように，対応のある２つの標本の平均値の差を求めたいときに用います。Jamoviでは，スチューデントの対応ありｔ検定，ウィルコクソンの符号順位検定の２つを行うことができます。</p>
+</div>
+<div id="one-sample-t-test１標本ｔ検定" class="section level5" number="4.1.2.0.3">
+<h5><span class="header-section-number">4.1.2.0.3</span> One Sample T-Test（１標本ｔ検定）</h5>
+<p>10人の身長の平均と日本人の平均身長のように，１組のデータとある固定値を比較したいときに用います。Jamoviでは，スチューデントの対応ありｔ検定，ウィルコクソンの符号順位検定の２つを行うことができます。</p>
+<div class="figure">
+<img src="img/03mean/t-test_00.png" alt="" />
+<p class="caption">t-test_a_01</p>
+</div>
+<p>ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。</p>
+<div class="figure">
+<img src="img/03mean/t-test_01.png" alt="" />
+<p class="caption">t-test_a_01</p>
+</div>
+<p>次に，以下の分析方法を確認もしくは追加していきます。</p>
+</div>
+<div id="tests検定" class="section level5" number="4.1.2.0.4">
+<h5><span class="header-section-number">4.1.2.0.4</span> Tests（検定）</h5>
+<p>・Student’s（スチューデント検定）：分散の等質性を仮定したスチューデントのｔによる検定を行います。Bayes factor（ベイズ因子）では，平均値の差についてベイズ因子を算出します。
+・Welch’s（ウェルチ検定）：分散が等質であるという仮定を設けないウェルチ法によるｔ検定を行います。
+・Mann-Whitney U（マン・ホイットニーのＵ）：分布の正規性が確認できない場合に行います（ノンパラメトリック検定）。</p>
+<p>ここでは，スチューデントのt検定が選択されているのを確認しましょう。</p>
+</div>
+<div id="hypothesis仮説" class="section level5" number="4.1.2.0.5">
+<h5><span class="header-section-number">4.1.2.0.5</span> Hypothesis（仮説）</h5>
+<p>・Group 1 ≠ Group 2：『グループ１と２の平均値に差があるかどうか』を調べる両側検定を行います。ここでは，男性と女性の得点に違いがあるかどうかを調べることになります。
+・Group 1 &gt; Group 2：『グループ１の平均値がグループ２の平均値より有意に高いかどうか』を調べる片側検定を行います。ここでは，男性（＝１）の方が女性（＝２）より平均値が高いかどうかを調べることになります。
+・Group 1 &lt; Group 2：『グループ２の平均値がグループ１の平均値より有意に高いかどうか』を調べる片側検定を行います。ここでは，女性（＝２）の方が男性（＝１）よりも平均値が高いかどうかを調べることになります。</p>
+<p>ここでは，Group 1 ≠ Group 2が選択されているのを確認しましょう。</p>
+</div>
+<div id="missing-values欠損値" class="section level5" number="4.1.2.0.6">
+<h5><span class="header-section-number">4.1.2.0.6</span> Missing values（欠損値）　</h5>
+<p>・Exclude cases analysis by analysis：欠損値がある場合，各分析ごとに該当する行を除外します（ペアワイズ除去）。
+・Exclude cases listwise：欠損値が含まれている行全体を分析から除外します（リストワイズ除去）。</p>
+<p>ここでは，Exclude cases analysis by analysisが選択されていることを確認しましょう。</p>
+</div>
+<div id="additional-statisticsその他の統計量" class="section level5" number="4.1.2.0.7">
+<h5><span class="header-section-number">4.1.2.0.7</span> Additional Statistics（その他の統計量）</h5>
+<p>・Mean difference（平均値の差）　平均値の差と差の標準誤差を算出します。
+・Effect size（効果量）　コーエンのｄ統計量を算出します。
+・Confidence intervals（信頼区間）　指定した幅の信頼区間を算出します。初期値は「95%」です。
+・Descriptives（記述統計量）　標本サイズ，平均値，中央値，標準偏差，標準誤差を算出します。
+・Descriptives plots（記述統計量プロット）　平均値（および95%信頼区間），中央値のグラフを作成します。</p>
+<p>ここでは，Descriptivesにチェックを入れましょう。すでに基本統計量の算出のところで確認した数値ですので，出力結果についての解説は省きますが，基本統計量の算出をなるべく簡素化したい場合にはこのDescriptivesで確認すると良いです。</p>
+</div>
+<div id="assumption-checks分析に関わる前提条件の確認" class="section level5" number="4.1.2.0.8">
+<h5><span class="header-section-number">4.1.2.0.8</span> Assumption Checks（分析に関わる前提条件の確認）</h5>
+<p>・Normality (Shapiro-Wilk)（シャピロ・ウィルク検定）：データが正規分布から乖離していないかどうかを確認します。
+・Normality (Q-Q plot)：データが正規分布しているかどうかを視覚的に確かめるためのＱ‐Ｑプロットを作図します。
+・Equality of variances（分散の等質性）：分散が等質であるかどうかを調べるために，Levene（ルビーン）の等分散性検定を実施します。</p>
+<p>ここでは，Equality of variances（分散の等質性）にチェックを入れます。はじめに述べたように，Jamoviではここで等分散性の検定を行うことができます。そのため，t検定と等分散性の検定結果は同時に出力されます。この等分散性の検定結果によって，等分散性が仮定されない場合にはウェルチのt検定に変更する必要があります。</p>
+<div class="figure">
+<img src="img/03mean/t-test_02.png" alt="" />
+<p class="caption">t-test_02</p>
+</div>
+<p>結果は，t検定の結果ではなく，検定の前提条件となるAssumptionsにあるTest of Equality of Variances(Levene’s)の結果から見ていきます。</p>
+<div class="figure">
+<img src="img/03mean/t-test_03.png" alt="" />
+<p class="caption">t-test_03</p>
+</div>
+<p>等分散性の検定の場合，p &lt; 0.05 であった場合は『分散に差がある』，p ≧ 0.05 であった場合は『分散に差がない』となります。今回のp値は0.182なので『分散に差がない』つまり等分散性を仮定したスチューデントのt検定が適合します。今回はスチューデントのt検定を選択していたので，そのままt検定の結果を見ていきます。『分散に差がある』場合には，TestsカテゴリーにあるWelch’s（ウェルチのt検定）にチェックを入れます。</p>
+<p>では，スチューデントのt検定の結果を見てみましょう。</p>
+<div class="figure">
+<img src="img/03mean/t-test_04.png" alt="" />
+<p class="caption">t-test_04</p>
+</div>
+<p>ｔ値は2.24，ｐ値は0.026と有意な差が見られています。したがって，男性と女性は「社会的居場所」において異なる（t(355)=2.24, p &lt; .05)ことが分かりました。</p>
+<p>では，さいごにもう一つt検定を行ってみましょう。基本統計量のところで確認したように「社会的居場所」の平均値は，女性の方が男性よりもが高い結果が得られていました。もし理論的に女性の方が「社会的居場所」得点が高くなる可能性を説明できるのであれば，女性の方が得点が高いことを統計的に示すことができます。では，理論的根拠を説明できたと想定して，女性の方が「社会的居場所」得点が高くなるのかどうかを調べる片側t検定を実施して見ましょう。</p>
+<p>分析は先ほどとすべて同じですが，次の１カ所のみ変更します。Hypothesis（仮説）をGroup 1 &lt; Group 2に変更します。</p>
+<div class="figure">
+<img src="img/03mean/t-test_05.png" alt="" />
+<p class="caption">t-test_05</p>
+</div>
+<div class="figure">
+<img src="img/03mean/t-test_06.png" alt="" />
+<p class="caption">t-test_06</p>
+</div>
+<p>両側検定と同じく有意になりました。この場合，変更されたのはp値の0.013のみで，t値，自由度はそのままの値です。分布の両側を棄却域にするよりも，片側を棄却域にする方が若干検出力が高くなります。この結果からは，女性の方が男性よりも「社会的居場所」得点が高い（t(355)=2.24, p &lt; .05)ことを示すことができます。このように両側と片側検定は仮説に応じて使い分けていきます。</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="descriptives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="correlation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

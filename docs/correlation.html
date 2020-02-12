@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 相関と連関 | Jamovi Stats</title>
+  <meta name="description" content="5 相関と連関 | Jamovi Stats" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 相関と連関 | Jamovi Stats" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 相関と連関 | Jamovi Stats" />
+  
+  
+  
+
+<meta name="author" content="Hokusei Gakuen Statistics Education Renovation Team" />
+
+
+<meta name="date" content="2020-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="means.html"/>
+<link rel="next" href="anova.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> jamovi Manual</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install.html"><a href="install.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install.html"><a href="install.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install.html"><a href="install.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
+<li class="chapter" data-level="2.2.4" data-path="install.html"><a href="install.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
+<li class="chapter" data-level="2.2.5" data-path="install.html"><a href="install.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
+<li class="chapter" data-level="2.2.6" data-path="install.html"><a href="install.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptives.html"><a href="descriptives.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptives.html"><a href="descriptives.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptives.html"><a href="descriptives.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="means.html"><a href="means.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="means.html"><a href="means.html#節-t検定"><i class="fa fa-check"></i><b>4.1</b> ○節　t検定</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="means.html"><a href="means.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.1.2" data-path="means.html"><a href="means.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
+<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>6</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>6.1</b> １要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="anova.html"><a href="anova.html#変数の指定"><i class="fa fa-check"></i><b>6.1.1</b> 変数の指定</a></li>
+<li class="chapter" data-level="6.1.2" data-path="anova.html"><a href="anova.html#主効果の検定"><i class="fa fa-check"></i><b>6.1.2</b> 主効果の検定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="anova.html"><a href="anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>6.1.3</b> 分散の等質性の検定</a></li>
+<li class="chapter" data-level="6.1.4" data-path="anova.html"><a href="anova.html#正規性の検定"><i class="fa fa-check"></i><b>6.1.4</b> 正規性の検定</a></li>
+<li class="chapter" data-level="6.1.5" data-path="anova.html"><a href="anova.html#多重比較"><i class="fa fa-check"></i><b>6.1.5</b> 多重比較</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>6.2</b> ２要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="anova.html"><a href="anova.html#事後検定"><i class="fa fa-check"></i><b>6.2.1</b> 事後検定</a></li>
+<li class="chapter" data-level="6.2.2" data-path="anova.html"><a href="anova.html#推定周辺平均"><i class="fa fa-check"></i><b>6.2.2</b> 推定周辺平均</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="anova.html"><a href="anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>6.3</b> クラスカル・ウォリスの検定</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Jamovi Stats</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="correlation" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> 相関と連関</h1>
+<div id="節-相関-連関" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> ◯節　相関 ・連関</h2>
+<p>　本節では回帰分析および重回帰分析の操作方法を解説します。ここでは永井(2018)が扱ったデータを使って分析していきます。永井(2018)では，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度を用い，友人との付き合い方を分類しています。ここで用いられている「傷つけ合い回避」尺度は「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」の４つの下位尺度から構成されています。それでは，この４つの下位尺度間にはどの程度関連性があるのか確かめます。この時，それぞれの調査協力者が示す各下位尺度の得点は，各下位尺度に含まれる複数の質問項目に対して５件法で回答した結果の平均値として求められています。このような情報は間隔尺度として扱えるため，４つの下位尺度間の関連性は相関係数を求めることによって確かることができます。
+　調査に協力した357名の学生の「友人との付き合い方」は，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度への回答結果に基づいて5つのグループ（クラスタ）に分けられ，永井(2018)ではそれぞれのグループが示した特徴が述べられます。本節では，5つに分けられたそれぞれの「友人との付き合い方」のグループと，調査協力者の性別との関わりについて検討した結果（Table 2）を確かめます。
+　</p>
+<div id="相関係数を求める相関分析をおこなう" class="section level3" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> 相関係数を求める／相関分析をおこなう</h3>
+<p>　それでは，「傷つけ合い回避」尺度の下位尺度である「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」のそれぞれの尺度得点間の関連性を確かめてみましょう。まず，AnalysesタブのRegressionを選択します。プルダウンメニューから「Correlation Matrix」を選択してください (Figure ％1)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここでは「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」のそれぞれの尺度得点間の関連性を確かめるため，「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」の４つを選びます。すると右側の出力結果部分に，それぞれの尺度得点間のピアソンの積率相関係数 (Pearson’s r) を示した相関行列が示されます。</p>
+<p><img src="img/04correl/Figure1.png" alt="Figure ％1" />
+Figure ％1 相関行列の表示</p>
+<p>　ピアソンの積率相関係数 (Pearson’s r) の下の行に示されている数値は，その相関係数が生じ得る確率 (p-value)です。「その相関係数が生じ得る確率 (p-value)」とは，関連性を確認した２つの変数から得られた相関係数について，仮説検定（無相関検定）を行った結果を示しています。無相関検定の帰無仮説は「相関がない／相関係数≒０」となります。相関係数は自由度がn-2のt分布に従うことが知られているので， <span class="math display">\[ t = r\sqrt{n-2}/\sqrt{1-r^2} \]</span> の式に，相関係数 (<em>r</em>) およびデータ数 (<em>n</em>) を代入してt値を求めると，そのt値が取る累積確率（外側）を用いて仮説検定を行えます。</p>
+<div id="信頼区間を表示する" class="section level4" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> 信頼区間を表示する</h4>
+<p>　左側のボックスの下部には「Correlation Coefficients」，「Additional Options」，「Hypothesis」，「Plot」の４つのメニューがあります。このうち「Additional Options」の「Confidence intervals」を選択すると，得られたピアソンの積率相関係数 (Pearson’s r) が取り得る信頼区間が示されます(Figure ％2)。このとき，信頼区間の水準を指定することができます（初期値の信頼区間の水準は95%）。示された数値は，母集団の相関係数が95％の確率で含まれる相関係数の範囲 (95% CI Lower ~ 95% CI Upper) を示しています。
+　
+<img src="img/04correl/Figure2.png" alt="Figure ％2" />
+Figure ％2 相関行列の表示（信頼区間を示したもの）</p>
+</div>
+<div id="相関係数の結果を確かめる" class="section level4" number="5.1.1.2">
+<h4><span class="header-section-number">5.1.1.2</span> 相関係数の結果を確かめる</h4>
+<p>　Figure ％2で示された相関行列から，「傷つけられ回避」と「距離確保」との間には有意な正の相関が認められ (<em>r</em> = .57, <em>p</em> &lt; .001, 95% <em>CI</em> [.49 .63])，「傷つけられ回避」と「礼儀」，そして「傷つけ回避」との間にもそれぞれ有意な正の相関が認められています (<em>r</em> = .46, <em>p</em> &lt; .001, 95% <em>CI</em> [.37 .53], <em>r</em> = .67, <em>p</em> &lt; .001, 95% <em>CI</em> [.37 .53], ) 。したがって，「傷つけられ回避」と「距離確保」，「礼儀」，「傷つけ回避」との間には中程度の関連性があることが分かります。同様に，「距離確保」と「礼儀」そして「傷つけ回避」との間にはそれぞれ有意な正の相関が認められています (<em>r</em> = .27, <em>p</em> &lt; .001, 95% <em>CI</em> [.17 .37], <em>r</em> = .54, <em>p</em> &lt; .001, 95% <em>CI</em> [.46 .61]) 。したがって「距離確保」と「礼儀」との間には弱い関連性が，「距離確保」と「傷つけ回避」との間には中程度の関連性があることが分かります。 最後に「礼儀」と「傷つけ回避」との間にも有意な正の相関が認められ (<em>r</em> = .63, <em>p</em> &lt; .001, 95% <em>CI</em> [.56 .68]) ，この両者にも中程度の関連性があることが分かります。</p>
+<p>　以上の結果から，「傷つけ合い回避」尺度の下位尺度である「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」のそれぞれ４つの尺度は，互いに強く関連していることが明らかになりました。</p>
+</div>
+</div>
+<div id="クロス集計カイ二乗検定をおこなう" class="section level3" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> クロス集計／カイ二乗検定をおこなう</h3>
+<p>　永井(2018)では，調査に協力した357名の学生の「友人との付き合い方」を，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度への回答結果に基づいて５つのグループ（クラスタ）に分け，調査協力者の性別との関わりについて検討しています（Table 2）。この分析をどのようにおこなうのか，実際に確かめてみましょう。まず，AnalysesタブのFrequenciesを選択します。プルダウンメニューから「Contingency Tables」の下にある「Independent Samples <em>χ</em><sup>2</sup> test of associationを選択してください (Figure ％3)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここではRows（行）に「性別」，Columns（列）に「友人との付き合い方」を選択します。すると右側の出力結果部分に，連関表（クロス集計表）が示されます。同時にカイ二乗検定をおこなった結果も示されています。
+　
+<img src="img/04correl/Figure3.png" alt="Figure ％3" />
+Figure ％3 性別と友人との付き合い方とのクロス集計表</p>
+<p>　それぞれのグループでの男女比を示したい場合には，左側のボックスの下部の「Cells」をクリックして開き，「Percentages」で Row と Column を選択すると，各性別での各グループの構成比および各グループでの男女比がクロス集計表に追加されて示されます (Figure ％4)。これらの情報を見ると，男性でも女性でも各グループの構成比は変わらないこと，そしてどのグループでも男女比が３:７～４：６の間に収まっていることが分かります。
+　
+<img src="img/04correl/Figure4.png" alt="Figure ％4" />
+Figure ％4 性別と友人との付き合い方とのクロス集計表（男女比を示したもの）</p>
+<div id="カイ二乗検定の結果を確かめる" class="section level4" number="5.1.2.1">
+<h4><span class="header-section-number">5.1.2.1</span> カイ二乗検定の結果を確かめる</h4>
+<p>　Figure ％4 で見たように，どちらの性別でも「友人との付き合い方」で分けた５つのグループの構成比に違いはありませんでした。またどのグループでも男女比は３:７～４：６の間に収まりました。このことは，５つの「友人との付き合い方」と調査協力者の性別との間に関わりはなく，「友人との付き合い方」は性別によって決まるものではない，と考えられます。この傾向はカイ二乗検定の結果 (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71) からも確かめられます。この結果に加えて，このカイ二乗値にどれだけ効果が認められるか確かめておきましょう。左側のボックスの下部の「Nominal」欄の Phi and Cramer’s V を選択すると効果量が求められます (Figure %5)。今回の分析で用いた２行×５列のような多くのカテゴリーから構成される情報を分析する場合は，Cramer’s V を用います。それぞれの２つずつのカテゴリーから構成される２行×２列のクロス集計の場合には，Phi-coefficient (<em>φ</em>) を用います。それぞれの降下量の目安は，小：.10，中：.30，大：.50です。今回の場合 <em>V</em> = .08ですので，「友人との付き合い方」と調査協力者の性別との間に連関がないこと（独立であること）が確かめられます。
+　
+<img src="img/04correl/Figure5.png" alt="Figure ％5" />
+Figure ％5 性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）
+　
+　カイ二乗検定に用いられるカイ二乗値には，複数の求め方があります。一般的な求め方の他に尤度比と呼ばれるものを用いてカイ二乗値を求めたい場合には，左側のボックスの下部の「Tests」欄のLikelihood ratioを選択すると尤度比検定を行った結果が示されます (Figure ％6)。また，今回の分析で用いた２行×５列のような，多くのカテゴリーからなる情報を分析する場合には問題になりませんが，それぞれの２つずつのカテゴリーからなる２行×２列になる情報をクロス集計する場合には注意が必要です。この場合は「Tests」欄の<em>χ</em><sup>2</sup> continuity correction（連続修正／イエーツの修正），そしてFisher’s exact test（フィッシャーの正確確率検定）を選択します。もし１つのセルの期待度数が５未満となる場合にはFisher’s exact test の結果を用います。そうでない場合は，<em>χ</em><sup>2</sup> continuity correction の結果を用います (Figure ％6)。</p>
+<p><img src="img/04correl/Figure6.png" alt="Figure ％6" />
+Figure ％6 性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）
+　　
+　以上の結果をまとめると，「友人との付き合い方」によって分けた５つのグループと調査協力者の性別との間には関わり（連関）はなく独立の関係であること (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71, <em>V</em> = .08) が確かめられました。</p>
+
+</div>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="means.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

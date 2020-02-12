@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 記述統計 | Jamovi Stats</title>
+  <meta name="description" content="3 記述統計 | Jamovi Stats" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 記述統計 | Jamovi Stats" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 記述統計 | Jamovi Stats" />
+  
+  
+  
+
+<meta name="author" content="Hokusei Gakuen Statistics Education Renovation Team" />
+
+
+<meta name="date" content="2020-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="install.html"/>
+<link rel="next" href="means.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> jamovi Manual</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install.html"><a href="install.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install.html"><a href="install.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install.html"><a href="install.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
+<li class="chapter" data-level="2.2.4" data-path="install.html"><a href="install.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
+<li class="chapter" data-level="2.2.5" data-path="install.html"><a href="install.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
+<li class="chapter" data-level="2.2.6" data-path="install.html"><a href="install.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptives.html"><a href="descriptives.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptives.html"><a href="descriptives.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptives.html"><a href="descriptives.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="means.html"><a href="means.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="means.html"><a href="means.html#節-t検定"><i class="fa fa-check"></i><b>4.1</b> ○節　t検定</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="means.html"><a href="means.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.1.2" data-path="means.html"><a href="means.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
+<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>6</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>6.1</b> １要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="anova.html"><a href="anova.html#変数の指定"><i class="fa fa-check"></i><b>6.1.1</b> 変数の指定</a></li>
+<li class="chapter" data-level="6.1.2" data-path="anova.html"><a href="anova.html#主効果の検定"><i class="fa fa-check"></i><b>6.1.2</b> 主効果の検定</a></li>
+<li class="chapter" data-level="6.1.3" data-path="anova.html"><a href="anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>6.1.3</b> 分散の等質性の検定</a></li>
+<li class="chapter" data-level="6.1.4" data-path="anova.html"><a href="anova.html#正規性の検定"><i class="fa fa-check"></i><b>6.1.4</b> 正規性の検定</a></li>
+<li class="chapter" data-level="6.1.5" data-path="anova.html"><a href="anova.html#多重比較"><i class="fa fa-check"></i><b>6.1.5</b> 多重比較</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>6.2</b> ２要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="anova.html"><a href="anova.html#事後検定"><i class="fa fa-check"></i><b>6.2.1</b> 事後検定</a></li>
+<li class="chapter" data-level="6.2.2" data-path="anova.html"><a href="anova.html#推定周辺平均"><i class="fa fa-check"></i><b>6.2.2</b> 推定周辺平均</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="anova.html"><a href="anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>6.3</b> クラスカル・ウォリスの検定</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Jamovi Stats</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="descriptives" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> 記述統計</h1>
+<p>本節では記述統計量の操作方法を解説します。計量データを分析するときにはいきなり統計を始めず，まずはそのデータの大まかな傾向を掴む必要があります。そのために見るのが記述統計量と呼ばれるものです（要約統計量，基本統計量，代表値などとも）。記述統計量の代表的なものとしては平均値と分散があるので，ここではjamoviを使ってその計算方法を説明します。</p>
+<div id="平均化する" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 平均化する</h2>
+<p>ここではMajima &amp; Nakamura (2019)のStudy 1のデータを使います。Majima &amp; Nakamura (2019)ではGCBS(一般陰謀論者信念尺度, Generic Conspiracist Beliefs Scale)，BCTI(陰謀理論目録の信念, Belief in Conspiracy Theories Inventory)，OICM(【日本語】,One-Item Conspiracy Measure)の記述統計量を出していますが，ここではGCBSのうち，EFA (exploratory factor analysis) subsampleのみ扱います。GCB-Jは一般陰謀論者信念尺度と呼ばれ，GCは一般陰謀者信念とETC(地球外陰謀論者信念)という2つの下位尺度からなります。この2つの下位尺度の記述統計量を出すためにはそれぞれの尺度の平均値を出す必要があります。</p>
+<p>CSVファイル(Survey1_EFA.csv)を読み込みます。</p>
+<div class="figure">
+<img src="img/02desc/dscr01.png" title="データ読み込み" alt="" />
+<p class="caption">データ読み込み</p>
+</div>
+<p>列を見るとGCB_1からGCB_15まであることが分かります。GCとETCを出すのに必要な変数は次のように分かれています。</p>
+<ul>
+<li>GC (12項目)
+<ul>
+<li>GCB_1, GCB_2, GCB_4, GCB_5, GCB_6, GCB_7, GCB_9, GCB_10, GCB_11, GCB_12, GCB_14, GCB_15</li>
+</ul></li>
+<li>ETC (3項目)
+<ul>
+<li>GCB_3, GCB_8, GCB_13</li>
+</ul></li>
+</ul>
+<p>それぞれの下位尺度の記述統計量を出すにあたり，このデータをそれぞれ平均化する必要があります。平均化は次の手順で行います。まずDataタブを選択します。</p>
+<div class="figure">
+<img src="img/02desc/dscr02.png" title="Dataタブ" alt="" />
+<p class="caption">Dataタブ</p>
+</div>
+<p>この状態で[Compute]を押します。この状態で新しい変数が追加されていますので，COMPUTED VARIABLE（おそらく「B」と書かれている）に新たな変数の名前を付けます（ここではGCにします）。</p>
+<div class="figure">
+<img src="img/02desc/dscr03.png" title="Computeで平均を出す" alt="" />
+<p class="caption">Compute</p>
+</div>
+<p>そして，2行下の=の後ろに計算式を入れます。ここでは必要な変数を全て足し，項目数の12で割ります。そうすると平均した結果が出てきます（1行目の2.583など）。</p>
+<div class="figure">
+<img src="img/02desc/dscr04.png" title="平均を計算" alt="" />
+<p class="caption">平均を計算した状態</p>
+</div>
+<p>ETCについても出す必要があるので，再び[Compute]を押して，変数の名前(ETC)を入れ3つの変数を足し，3で割ります。</p>
+<div class="figure">
+<img src="img/02desc/dscr05.png" title="Descriptviesを選択" alt="" />
+<p class="caption">Descriptivesを選択した状態</p>
+</div>
+</div>
+<div id="記述統計量の計算" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 記述統計量の計算</h2>
+<p>記述統計量を出すためにAnalysisタブを押し，[Exploration]から[Descriptives]を選択します。</p>
+<div class="figure">
+<img src="img/02desc/dscr06.png" title="変数を選択" alt="" />
+<p class="caption">変数を選択</p>
+</div>
+<p>そうすると記述統計量のための画面になります。</p>
+<div class="figure">
+<img src="img/02desc/dscr07.png" title="デフォルトの結果" alt="" />
+<p class="caption">デフォルトの結果</p>
+</div>
+<p>ここでここで先ほど計算したGCとETCを選択し「→」を押すと，右の画面にデフォルトの記述統計量が出てきます。</p>
+<div class="figure">
+<img src="img/02desc/dscr10.png" alt="" />
+<p class="caption">dscr10</p>
+</div>
+<p>Statisticsを押すと様々な項目があるので，必要な記述統計量の項目を選びます。ここではMajima &amp; Nakamura (2019)に従い「平均 (Mean)」と「標準偏差 (Std. deviation)」を選択してみましょう。</p>
+<div class="figure">
+<img src="img/02desc/dscr09.png" title="Statisticsの画面" alt="" />
+<p class="caption">Statisticsの画面</p>
+</div>
+<p>このようにして記述統計量として平均と標準偏差を出すことができました。</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="install.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="means.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
