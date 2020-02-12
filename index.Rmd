@@ -10,8 +10,9 @@ output:
     toc: true
     toc_float: true
     number_sections: true
-    theme: paper
+    theme: readable
 ---
+
 
 # jamovi Manual
 
