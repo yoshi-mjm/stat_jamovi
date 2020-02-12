@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 回帰分析・重回帰分析 | Jamovi Stats</title>
+  <meta name="description" content="6 回帰分析・重回帰分析 | Jamovi Stats" />
+  <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 回帰分析・重回帰分析 | Jamovi Stats" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 回帰分析・重回帰分析 | Jamovi Stats" />
+  
+  
+  
+
+<meta name="author" content="Hokusei Gakuen Statistics Education Renovation Team" />
+
+
+<meta name="date" content="2020-02-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="correlation.html"/>
+<link rel="next" href="anova.html"/>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> jamovi Manual</a></li>
+<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
+<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="install.html"><a href="install.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
+<li class="chapter" data-level="2.2.2" data-path="install.html"><a href="install.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
+<li class="chapter" data-level="2.2.3" data-path="install.html"><a href="install.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
+<li class="chapter" data-level="2.2.4" data-path="install.html"><a href="install.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
+<li class="chapter" data-level="2.2.5" data-path="install.html"><a href="install.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
+<li class="chapter" data-level="2.2.6" data-path="install.html"><a href="install.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="descriptives.html"><a href="descriptives.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="descriptives.html"><a href="descriptives.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
+<li class="chapter" data-level="3.2" data-path="descriptives.html"><a href="descriptives.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="means.html"><a href="means.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="means.html"><a href="means.html#節-t検定"><i class="fa fa-check"></i><b>4.1</b> ○節　t検定</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="means.html"><a href="means.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.1.2" data-path="means.html"><a href="means.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
+<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>6</b> 回帰分析・重回帰分析</a></li>
+<li class="chapter" data-level="7" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>7</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>7.1</b> １要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="anova.html"><a href="anova.html#変数の指定"><i class="fa fa-check"></i><b>7.1.1</b> 変数の指定</a></li>
+<li class="chapter" data-level="7.1.2" data-path="anova.html"><a href="anova.html#主効果の検定"><i class="fa fa-check"></i><b>7.1.2</b> 主効果の検定</a></li>
+<li class="chapter" data-level="7.1.3" data-path="anova.html"><a href="anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>7.1.3</b> 分散の等質性の検定</a></li>
+<li class="chapter" data-level="7.1.4" data-path="anova.html"><a href="anova.html#正規性の検定"><i class="fa fa-check"></i><b>7.1.4</b> 正規性の検定</a></li>
+<li class="chapter" data-level="7.1.5" data-path="anova.html"><a href="anova.html#多重比較"><i class="fa fa-check"></i><b>7.1.5</b> 多重比較</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>7.2</b> ２要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="anova.html"><a href="anova.html#事後検定"><i class="fa fa-check"></i><b>7.2.1</b> 事後検定</a></li>
+<li class="chapter" data-level="7.2.2" data-path="anova.html"><a href="anova.html#推定周辺平均"><i class="fa fa-check"></i><b>7.2.2</b> 推定周辺平均</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="anova.html"><a href="anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>7.3</b> クラスカル・ウォリスの検定</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Jamovi Stats</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="regression" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> 回帰分析・重回帰分析</h1>
+<p>##○節　回帰分析・重回帰分析<br />
+　本項では回帰分析および重回帰分析の操作方法を解説します。ここではMajima &amp; Nakamura(2019)のデータを使って分析していきます。</p>
+<p>###回帰分析を行う
+　まず，AnalysesタブのRegressionを選択します。プルダウンメニューから「Liner Regression」を選択してください(Figure x-1)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び，右側のボックスに移します。Dependent Variableに分析の従属変数(目的変数)を指定します。Covariatesに独立変数(説明変数)を指定します。重回帰分析を行う際にはCovariatesに複数の独立変数を指定してください。たとえば，○節で記述統計量を算出したMajima &amp; Nakamura(2019)の，GCBS-J-GCをDependent Variableに，edu_lvをCovariatesに指定することで単回帰分析ができます(Figure x-2)。</p>
+<p><img src="img/05reg/Figure_x-1_select_regression_analysis.png" alt="Figure x-1_select regression analysis" /><br />
+Figure x-1 回帰分析の選択</p>
+<p><img src="img/05reg/Figure_x-2_sra_for_GCBS-J-GC_and_edu_lv.png" alt="Figure x-2_sra for GCBS-J-GC and edu_lv" /><br />
+Figure x-2 GCBS-J-GCとedu_lvの単回帰分析</p>
+<p>###分析結果の表示を選ぶ
+　回帰分析のオプションメニューの内，「Model Fit」を開くと，結果に表示する適合度指標を選ぶことができます。初期値はFit MeasuresのRとR<sup>2</sup>が選択されています。調整済み決定係数を表示する際にはAdjust R<sup>2</sup>を選択します。その他，赤池情報量基準 (AIC)，ベイズ情報量規準 (BIC)，RMSEA (Root Mean Square Error of Approximation)を選択できます。また，Overall Model TestからF Testを選択することで，回帰モデルの F 検定の結果を示すことができます。以上，主に分析モデル全体の評価に関する指標は「Model Fit」から指定できます。<br />
+　次に，表示する係数を指定します。初期値は非標準化係数の点推定値のみが表示されています。標準化係数 (Standardized Estimate) や各推定値の95%信頼区間を表示するためにはオプションメニューの「Model Coefficients」にあるStandardized Estimateを選択します。信頼区間を表示するためには，Confidence Intervalを選択し，信頼区間の数値を指定してください(初期値は95%信頼区間)。例として，Figure x-1で表示した回帰分析に，調整済み決定係数，F 検定の結果，標準化係数，非標準化係数の95%信頼区間を加えて表示してみました(Figure x-3)。Figure x-2からFigure x-3にかけて表示されている結果が増えています。</p>
+<p><img src="img/05reg/Figure_x-3_select_the_type_of_value_to_display.png" alt="Figure x-3_select the type of value to display" /><br />
+Figure x-3 様々な指標の表示</p>
+<p>###重回帰分析を行う
+　最後に，改めてMajima &amp; Nakamura(2019)のデータを使って分析していきます。ここでは，Majima &amp; Nakamura(2019)によって邦訳された日本語版一般陰謀論者信念尺度の一般陰謀者信念(GCBS-J-GC)，地球外陰謀論者信念(GCBS-J-ETC)の各下位尺度を性別(gender)，年齢(age)，教育水準(edu_lv)によって予測することを試みます。この分析はMajima &amp; Nakamura(2019)には記載されていませんが，この論文のstudy 2で用いられたデータを使っています。関心のある方はMajima &amp; Nakamura(2019)を読んでみてください。<br />
+　今回の目的変数となる日本語版一般陰謀論者信念尺度の一般陰謀者信念(GCBS-J-GC)，地球外陰謀論者信念(GCBS-J-ETC)の各下位尺度は前節○ページにて変数の作成を行いました。本項ではこの変数を用いることにします。説明変数の性別(gender)は男性が1，女性が2の数値を割り当てられている名義尺度です。回帰分析における説明変数は間隔尺度以上の尺度水準であることが求められますので，このままでは分析に用いることができません。そこで，性別(gender)を0，1のダミー変数に変換します。ダミー変数は0から1までの間隔尺度として見なされます。ここでは男性を0，女性を1としたgender dummyを作ります。
+　ダミー変数の作り方を以下に示します。この方法では，元となる変数を指定し，その変数の値によって新たな変数の値を指定します。まずDataタブのTransformを選択します。すると，画面上部にTRANSFORMED VARIABLEと表示されます。上部の空欄に新しく作成する変数名を入力します。今回はgender dummyとします(Figure x-4)。</p>
+<p><img src="img/05reg/Figure_x-4_prepare_dummy.png" alt="Figure x-4_prepare dummy" /><br />
+Figure x-4 ダミー変数の作成</p>
+<p>次に，「Source variable」欄に元になる変数を指定します。gender dummyの作成にあたっては，gender変数の値(1=男性，2=女性)を用いますので，genderを指定します。次に「using transform」欄に変数を変換する条件を指定します。初期値はNoneになっていますので，プルダウンメニューを開き「Create New Transform…」を選択してください(Figure x-5)。なお，一度変数の変換をすれば，変換の条件がJamoviに記憶され，次回からは「using transform」欄に任意の変換条件を指定することで簡便に変数の変換を行えます。</p>
+<p><img src="img/05reg/Figure_x-5_select_using_trasform.png" alt="Figure x-5_select using trasform" /><br />
+Figure x-5 変換条件の指定</p>
+<p>「Create New Transform…」を選択すると，TRANSFORMと表示される画面が重なります。上部の空欄には新しく作る変換条件の名前をつけることができます。ここではcreate gender dummyとしました。f<sub>x</sub>=<span class="math inline">\(sourceと書いてある欄の右辺(\)</span>sourceと記入されている部分)を編集します。用いることのできる関数の一覧はf<sub>x</sub>をクリックすることで開くことができます。今回はIF関数を使います。性別(gender)の値が1(男性)であれば，性別ダミー(gender dummy)の値は0となり，性別の値が1(男性)ではなければ性別ダミーの値を1となるように指定します。以上からIF(gender==1,0,1)という条件を記入します(Figure x-6)。条件の記入が終わったら，↓をクリックします。条件に従い新たな変数である性別ダミー(gender dummy)が作られました(Figure x-7)。今回は等価である演算子「==」を用いましたが，その他にも様々な演算子があります。演算子の一例をTable x-1に示します。</p>
+<p><img src="img/05reg/Figure_x-6_feed_condition_transform.png" alt="Figure x-6_feed condition transform" /><br />
+Figure x-6 変換条件の入力</p>
+<p><img src="img/05reg/Figure_x-7_complete_dummy.png" alt="Figure x-7_complete dummy" /><br />
+Figure x-7 ダミー変数の完成</p>
+<p>Table x-1 演算子の一例</p>
+<table>
+<thead>
+<tr class="header">
+<th>演算内容</th>
+<th align="center">演算子</th>
+<th align="center">入力例</th>
+<th align="center">意味</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>未満</td>
+<td align="center">&lt;</td>
+<td align="center">a&lt;1</td>
+<td align="center">aが1よりも小さい</td>
+</tr>
+<tr class="even">
+<td>以下</td>
+<td align="center">&lt;=</td>
+<td align="center">a&lt;=1</td>
+<td align="center">aが1以下である</td>
+</tr>
+<tr class="odd">
+<td>超過</td>
+<td align="center">&gt;</td>
+<td align="center">a&gt;1</td>
+<td align="center">aが1よりも大きい</td>
+</tr>
+<tr class="even">
+<td>以上</td>
+<td align="center">&gt;=</td>
+<td align="center">a&gt;=1</td>
+<td align="center">aが1以上である</td>
+</tr>
+<tr class="odd">
+<td>等価</td>
+<td align="center">==</td>
+<td align="center">a==1</td>
+<td align="center">aが1と等しい</td>
+</tr>
+<tr class="even">
+<td>不等価</td>
+<td align="center">!=</td>
+<td align="center">a!=1</td>
+<td align="center">aが1と等しくない</td>
+</tr>
+</tbody>
+</table>
+<p>　目的変数となる一般陰謀者信念(GCBS-J-GC)と地球外陰謀論者信念(GCBS-J-ETC)，説明変数となる性別(gender dummy)，年齢(age)，教育水準(edu_lv)が用意できましたので，重回帰分析を試みます。もう一度Analysesタブを開き，Regressionを選択します。プルダウンメニューから「Liner Regression」を選択します。まずDependent VariableにGCBS-J-GCを指定します。次にCovariatesにgender dummy，age，edu_lvの3変数を指定します(Figure x-8)。前述の例と同様に重相関係数，決定係数，調整済み決定係数，F 検定の結果，標準化係数，非標準化係数の95%信頼区間を表示しました(Figure x-9)。次にGCBS-J-ETCをDependent Variableに指定して同様の分析を行います(Figure x-10)。</p>
+<p><img src="img/05reg/Figure_x-8_select_using_variable.png" alt="Figure x-8_select using variable" /><br />
+Figure x-8 分析する変数の投入</p>
+<p><img src="img/05reg/Figure_x-9_mra_for_GCBS-J-GC.png" alt="Figure x-9_mra for GCBS-J-GC" /><br />
+Figure x-9 重回帰分析結果の表示(GCBS-J-GC)</p>
+<p><img src="img/05reg/Figure_x-10_mra_for_GCBS-J-ETC.png" alt="Figure x-10_mra for GCBS-J-ETC" /><br />
+Figure x-10 重回帰分析結果の表示(GCBS-J-ETC)</p>
+<p>　分析の結果をまとめると，以下のようになります。一般陰謀者信念(GCBS-J-GC)への性別(gender dummy)，年齢(age)，教育水準(edu_lv)の効果は有意です(adjR<sup>2</sup>=.01, <em>p</em>&lt;.05)が，その効果は大きくありません。偏回帰係数を確認すると，年齢のみ有意な負の効果が見られており，非標準化推定値が約-0.01であることから，年齢が1上昇すると一般陰謀者信念は0.01減少することが分かります(β=-.12, <em>p</em>&lt;.01)。一方で，地球外陰謀論者信念(GCBS-J-ETC)に対しては有意な効果は見られませんでした(adjR<sup>2</sup>=.00, <em>n.s.</em>)。</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="correlation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="anova.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
