@@ -20,7 +20,7 @@ jamovi は，プロジェクトの Web サイト (https://www.jamovi.org/) か�
 
 jamovi は Excel や SPSS と良く似たスプレッドシート形式の外観をもっています。また，トップレベルのメニューは，データの各種操作を行う Data と，分析を行う Analysis の2つであり，とてもシンプルです。ファイルの操作は，Data の左にある Ξ のような形をしたメニューをクリックして行います。また，設定は，画面右上にある三つの点が縦に並んだボタンをクリックして行います。
 
-![Figure 2](./img/01install/Install04.PNG)
+!["Interface of jamovi"](./img/01install/Install04.PNG "Interface of jamovi")
 
 ### データの入力
 
@@ -39,7 +39,7 @@ jamovi は Excel や SPSS と良く似たスプレッドシート形式の外観
 
 データを入力し終えると 下図のようになっているはずです。
 
-![](./img/01install/Install05.PNG "Data Entry")
+!["Data Entry"](./img/01install/Install05.PNG "Data Entry")
 
 次に，列（変数）の設定を行います。Data タブをクリックし，1列目 (A) のいずこかのセルが選択されている状態で Setup ボタンをクリックしましょう。すると，下図のような設定画面となるので，変数名 (Data variable) に PID を入力します。変数（データ）の種類としては，連続量 (Continuous)，順序尺度 (Ordinal)，名義尺度 (Nominal) の他に，jamovi に特有の変数種類として ID の4種類があります。なお，ID はデータの型としては名義尺度なのですが，変数の値をメモリ上に貯蔵しないので，メモリの消費を抑えることができます。
 
