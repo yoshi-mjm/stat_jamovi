@@ -12,7 +12,8 @@ pre {
 pre code {
   white-space: inherit;
 }
-div.figure {
+.figure {
     max-width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
