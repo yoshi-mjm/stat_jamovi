@@ -4,10 +4,4 @@ bookdown::gitbook:
   pandoc_args: [
         "--from", "markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures"
         ]
-html_document:
-  self_contained: false
-  toc: true
-  toc_float: true
-  number_sections: true
-  theme: default
   
