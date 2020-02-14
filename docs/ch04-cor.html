@@ -24,15 +24,15 @@
 <meta name="author" content="Hokusei Gakuen Statistics Education Renovation Team" />
 
 
-<meta name="date" content="2020-02-13" />
+<meta name="date" content="2020-02-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="means.html"/>
-<link rel="next" href="regression.html"/>
+<link rel="prev" href="ch03-ttest.html"/>
+<link rel="next" href="ch05-regression.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -54,6 +54,7 @@
 
 
 
+<link rel="stylesheet" href="style_customized.css" type="text/css" />
 </head>
 
 <body>
@@ -67,57 +68,63 @@
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> jamovi Manual</a></li>
-<li class="chapter" data-level="2" data-path="install.html"><a href="install.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
+<li class="chapter" data-level="2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="install.html"><a href="install.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
-<li class="chapter" data-level="2.2" data-path="install.html"><a href="install.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
+<li class="chapter" data-level="2.1" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
+<li class="chapter" data-level="2.2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#jamovi-の基本操作"><i class="fa fa-check"></i><b>2.2</b> jamovi の基本操作</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="install.html"><a href="install.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
-<li class="chapter" data-level="2.2.2" data-path="install.html"><a href="install.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
-<li class="chapter" data-level="2.2.3" data-path="install.html"><a href="install.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
-<li class="chapter" data-level="2.2.4" data-path="install.html"><a href="install.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
-<li class="chapter" data-level="2.2.5" data-path="install.html"><a href="install.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
-<li class="chapter" data-level="2.2.6" data-path="install.html"><a href="install.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
+<li class="chapter" data-level="2.2.1" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#データの入力"><i class="fa fa-check"></i><b>2.2.1</b> データの入力</a></li>
+<li class="chapter" data-level="2.2.2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#変数の計算"><i class="fa fa-check"></i><b>2.2.2</b> 変数の計算</a></li>
+<li class="chapter" data-level="2.2.3" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#ファイルの保存"><i class="fa fa-check"></i><b>2.2.3</b> ファイルの保存</a></li>
+<li class="chapter" data-level="2.2.4" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#ファイルを開く"><i class="fa fa-check"></i><b>2.2.4</b> ファイルを開く</a></li>
+<li class="chapter" data-level="2.2.5" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#インポートとエクスポート"><i class="fa fa-check"></i><b>2.2.5</b> インポートとエクスポート</a></li>
+<li class="chapter" data-level="2.2.6" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#その他データの操作"><i class="fa fa-check"></i><b>2.2.6</b> その他データの操作</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="descriptives.html"><a href="descriptives.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
+<li class="chapter" data-level="3" data-path="ch02-Dscr_stat.html"><a href="ch02-Dscr_stat.html"><i class="fa fa-check"></i><b>3</b> 記述統計</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="descriptives.html"><a href="descriptives.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
-<li class="chapter" data-level="3.2" data-path="descriptives.html"><a href="descriptives.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
+<li class="chapter" data-level="3.1" data-path="ch02-Dscr_stat.html"><a href="ch02-Dscr_stat.html#平均化する"><i class="fa fa-check"></i><b>3.1</b> 平均化する</a></li>
+<li class="chapter" data-level="3.2" data-path="ch02-Dscr_stat.html"><a href="ch02-Dscr_stat.html#記述統計量の計算"><i class="fa fa-check"></i><b>3.2</b> 記述統計量の計算</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="means.html"><a href="means.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
+<li class="chapter" data-level="4" data-path="ch03-ttest.html"><a href="ch03-ttest.html"><i class="fa fa-check"></i><b>4</b> 平均値の検定</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="means.html"><a href="means.html#節-t検定"><i class="fa fa-check"></i><b>4.1</b> ○節　t検定</a>
+<li class="chapter" data-level="4.1" data-path="ch03-ttest.html"><a href="ch03-ttest.html#対応のないt検定"><i class="fa fa-check"></i><b>4.1</b> 対応のないt検定</a>
 <ul>
-<li class="chapter" data-level="4.1.1" data-path="means.html"><a href="means.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
-<li class="chapter" data-level="4.1.2" data-path="means.html"><a href="means.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="correlation.html"><a href="correlation.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="correlation.html"><a href="correlation.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
-<ul>
-<li class="chapter" data-level="5.1.1" data-path="correlation.html"><a href="correlation.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
-<li class="chapter" data-level="5.1.2" data-path="correlation.html"><a href="correlation.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
+<li class="chapter" data-level="4.1.1" data-path="ch03-ttest.html"><a href="ch03-ttest.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.1.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
+<li class="chapter" data-level="4.1.3" data-path="ch03-ttest.html"><a href="ch03-ttest.html#結果の見方"><i class="fa fa-check"></i><b>4.1.3</b> 結果の見方</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="regression.html"><a href="regression.html"><i class="fa fa-check"></i><b>6</b> 回帰分析・重回帰分析</a></li>
-<li class="chapter" data-level="7" data-path="anova.html"><a href="anova.html"><i class="fa fa-check"></i><b>7</b> 分散分析</a>
+<li class="chapter" data-level="5" data-path="ch04-cor.html"><a href="ch04-cor.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>7.1</b> １要因完全無作為計画の分散分析</a>
+<li class="chapter" data-level="5.1" data-path="ch04-cor.html"><a href="ch04-cor.html#節-相関-連関"><i class="fa fa-check"></i><b>5.1</b> ◯節　相関 ・連関</a>
 <ul>
-<li class="chapter" data-level="7.1.1" data-path="anova.html"><a href="anova.html#変数の指定"><i class="fa fa-check"></i><b>7.1.1</b> 変数の指定</a></li>
-<li class="chapter" data-level="7.1.2" data-path="anova.html"><a href="anova.html#主効果の検定"><i class="fa fa-check"></i><b>7.1.2</b> 主効果の検定</a></li>
-<li class="chapter" data-level="7.1.3" data-path="anova.html"><a href="anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>7.1.3</b> 分散の等質性の検定</a></li>
-<li class="chapter" data-level="7.1.4" data-path="anova.html"><a href="anova.html#正規性の検定"><i class="fa fa-check"></i><b>7.1.4</b> 正規性の検定</a></li>
-<li class="chapter" data-level="7.1.5" data-path="anova.html"><a href="anova.html#多重比較"><i class="fa fa-check"></i><b>7.1.5</b> 多重比較</a></li>
+<li class="chapter" data-level="5.1.1" data-path="ch04-cor.html"><a href="ch04-cor.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1.1</b> 相関係数を求める／相関分析をおこなう</a></li>
+<li class="chapter" data-level="5.1.2" data-path="ch04-cor.html"><a href="ch04-cor.html#クロス集計カイ二乗検定をおこなう"><i class="fa fa-check"></i><b>5.1.2</b> クロス集計／カイ二乗検定をおこなう</a></li>
 </ul></li>
-<li class="chapter" data-level="7.2" data-path="anova.html"><a href="anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>7.2</b> ２要因完全無作為計画の分散分析</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="anova.html"><a href="anova.html#事後検定"><i class="fa fa-check"></i><b>7.2.1</b> 事後検定</a></li>
-<li class="chapter" data-level="7.2.2" data-path="anova.html"><a href="anova.html#推定周辺平均"><i class="fa fa-check"></i><b>7.2.2</b> 推定周辺平均</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="anova.html"><a href="anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>7.3</b> クラスカル・ウォリスの検定</a></li>
+<li class="chapter" data-level="6" data-path="ch05-regression.html"><a href="ch05-regression.html"><i class="fa fa-check"></i><b>6</b> 回帰分析・重回帰分析</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="ch05-regression.html"><a href="ch05-regression.html#回帰分析を行う"><i class="fa fa-check"></i><b>6.1</b> 回帰分析を行う</a></li>
+<li class="chapter" data-level="6.2" data-path="ch05-regression.html"><a href="ch05-regression.html#分析結果の表示を選ぶ"><i class="fa fa-check"></i><b>6.2</b> 分析結果の表示を選ぶ</a></li>
+<li class="chapter" data-level="6.3" data-path="ch05-regression.html"><a href="ch05-regression.html#重回帰分析を行う"><i class="fa fa-check"></i><b>6.3</b> 重回帰分析を行う</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="ch06-anova.html"><a href="ch06-anova.html"><i class="fa fa-check"></i><b>7</b> 分散分析</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="ch06-anova.html"><a href="ch06-anova.html#要因完全無作為計画の分散分析"><i class="fa fa-check"></i><b>7.1</b> １要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="ch06-anova.html"><a href="ch06-anova.html#変数の指定"><i class="fa fa-check"></i><b>7.1.1</b> 変数の指定</a></li>
+<li class="chapter" data-level="7.1.2" data-path="ch06-anova.html"><a href="ch06-anova.html#主効果の検定"><i class="fa fa-check"></i><b>7.1.2</b> 主効果の検定</a></li>
+<li class="chapter" data-level="7.1.3" data-path="ch06-anova.html"><a href="ch06-anova.html#分散の等質性の検定"><i class="fa fa-check"></i><b>7.1.3</b> 分散の等質性の検定</a></li>
+<li class="chapter" data-level="7.1.4" data-path="ch06-anova.html"><a href="ch06-anova.html#正規性の検定"><i class="fa fa-check"></i><b>7.1.4</b> 正規性の検定</a></li>
+<li class="chapter" data-level="7.1.5" data-path="ch06-anova.html"><a href="ch06-anova.html#多重比較"><i class="fa fa-check"></i><b>7.1.5</b> 多重比較</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="ch06-anova.html"><a href="ch06-anova.html#要因完全無作為計画の分散分析-1"><i class="fa fa-check"></i><b>7.2</b> ２要因完全無作為計画の分散分析</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="ch06-anova.html"><a href="ch06-anova.html#事後検定"><i class="fa fa-check"></i><b>7.2.1</b> 事後検定</a></li>
+<li class="chapter" data-level="7.2.2" data-path="ch06-anova.html"><a href="ch06-anova.html#推定周辺平均"><i class="fa fa-check"></i><b>7.2.2</b> 推定周辺平均</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="ch06-anova.html"><a href="ch06-anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>7.3</b> クラスカル・ウォリスの検定</a></li>
 </ul></li>
 </ul>
 
@@ -166,7 +173,7 @@ Figure ％2 相関行列の表示（信頼区間を示したもの）</p>
 <h3><span class="header-section-number">5.1.2</span> クロス集計／カイ二乗検定をおこなう</h3>
 <p>　永井(2018)では，調査に協力した357名の学生の「友人との付き合い方」を，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度への回答結果に基づいて５つのグループ（クラスタ）に分け，調査協力者の性別との関わりについて検討しています（Table 2）。この分析をどのようにおこなうのか，実際に確かめてみましょう。まず，AnalysesタブのFrequenciesを選択します。プルダウンメニューから「Contingency Tables」の下にある「Independent Samples <em>χ</em><sup>2</sup> test of associationを選択してください (Figure ％3)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここではRows（行）に「性別」，Columns（列）に「友人との付き合い方」を選択します。すると右側の出力結果部分に，連関表（クロス集計表）が示されます。同時にカイ二乗検定をおこなった結果も示されています。
 　
-<img src="./img/04correl/Figure3.png" alt="Figure ％3" />
+<img src="img/04correl/Figure3.png" alt="Figure ％3" />
 Figure ％3 性別と友人との付き合い方とのクロス集計表</p>
 <p>　それぞれのグループでの男女比を示したい場合には，左側のボックスの下部の「Cells」をクリックして開き，「Percentages」で Row と Column を選択すると，各性別での各グループの構成比および各グループでの男女比がクロス集計表に追加されて示されます (Figure ％4)。これらの情報を見ると，男性でも女性でも各グループの構成比は変わらないこと，そしてどのグループでも男女比が３:７～４：６の間に収まっていることが分かります。
 　
@@ -194,8 +201,8 @@ Figure ％6 性別と友人との付き合い方とのクロス集計表（全�
           </div>
         </div>
       </div>
-<a href="means.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ch03-ttest.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ch05-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -3,14 +3,6 @@ title: "Jamovi Stats"
 author: "Hokusei Gakuen Statistics Education Renovation Team"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output:
-  bookdown::gitbook: default
-  html_document:
-    self_contained: false
-    toc: true
-    toc_float: true
-    number_sections: true
-    theme: readable
 ---
 
 

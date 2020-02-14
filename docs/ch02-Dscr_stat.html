@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Jamovi Stats</title>
-  <meta name="description" content="Jamovi Stats" />
+  <title>3 記述統計 | Jamovi Stats</title>
+  <meta name="description" content="3 記述統計 | Jamovi Stats" />
   <meta name="generator" content="bookdown 0.17 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Jamovi Stats" />
+  <meta property="og:title" content="3 記述統計 | Jamovi Stats" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Jamovi Stats" />
+  <meta name="twitter:title" content="3 記述統計 | Jamovi Stats" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="ch01-install-jamovi.html"/>
+<link rel="prev" href="ch01-install-jamovi.html"/>
+<link rel="next" href="ch03-ttest.html"/>
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -143,24 +143,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Jamovi Stats</h1>
-<p class="author"><em>Hokusei Gakuen Statistics Education Renovation Team</em></p>
-<p class="date"><em>2020-02-14</em></p>
+<div id="descriptives" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> 記述統計</h1>
+<p>本節では記述統計量の操作方法を解説します。計量データを分析するときにはいきなり統計を始めず，まずはそのデータの大まかな傾向を掴む必要があります。そのために見るのが記述統計量と呼ばれるものです（要約統計量，基本統計量，代表値などとも）。記述統計量の代表的なものとしては平均値と分散があるので，ここではjamoviを使ってその計算方法を説明します。</p>
+<div id="平均化する" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 平均化する</h2>
+<p>ここではMajima &amp; Nakamura (2019)のStudy 1のデータを使います。Majima &amp; Nakamura (2019)ではGCBS(一般陰謀論者信念尺度, Generic Conspiracist Beliefs Scale)，BCTI(陰謀理論目録の信念, Belief in Conspiracy Theories Inventory)，OICM(【日本語】,One-Item Conspiracy Measure)の記述統計量を出していますが，ここではGCBSのうち，EFA (exploratory factor analysis) subsampleのみ扱います。GCB-Jは一般陰謀論者信念尺度と呼ばれ，GCは一般陰謀者信念とETC(地球外陰謀論者信念)という2つの下位尺度からなります。この2つの下位尺度の記述統計量を出すためにはそれぞれの尺度の平均値を出す必要があります。</p>
+<p>CSVファイル(Survey1_EFA.csv)を読み込みます。</p>
+<p><img src="img/02desc/dscr01.png" title="データ読み込み" alt="データ読み込み" /></p>
+<p>列を見るとGCB_1からGCB_15まであることが分かります。GCとETCを出すのに必要な変数は次のように分かれています。</p>
+<ul>
+<li>GC (12項目)
+<ul>
+<li>GCB_1, GCB_2, GCB_4, GCB_5, GCB_6, GCB_7, GCB_9, GCB_10, GCB_11, GCB_12, GCB_14, GCB_15</li>
+</ul></li>
+<li>ETC (3項目)
+<ul>
+<li>GCB_3, GCB_8, GCB_13</li>
+</ul></li>
+</ul>
+<p>それぞれの下位尺度の記述統計量を出すにあたり，このデータをそれぞれ平均化する必要があります。平均化は次の手順で行います。まずDataタブを選択します。</p>
+<p><img src="img/02desc/dscr02.png" title="Dataタブ" alt="Dataタブ" /></p>
+<p>この状態で[Compute]を押します。この状態で新しい変数が追加されていますので，COMPUTED VARIABLE（おそらく「B」と書かれている）に新たな変数の名前を付けます（ここではGCにします）。</p>
+<p><img src="img/02desc/dscr03.png" title="Computeで平均を出す" alt="Compute" /></p>
+<p>そして，2行下の=の後ろに計算式を入れます。ここでは必要な変数を全て足し，項目数の12で割ります。そうすると平均した結果が出てきます（1行目の2.583など）。</p>
+<p><img src="img/02desc/dscr04.png" title="平均を計算" alt="平均を計算した状態" /></p>
+<p>ETCについても出す必要があるので，再び[Compute]を押して，変数の名前(ETC)を入れ3つの変数を足し，3で割ります。</p>
+<p><img src="img/02desc/dscr05.png" title="Descriptviesを選択" alt="Descriptivesを選択した状態" /></p>
 </div>
-<div id="jamovi-manual" class="section level1" number="1">
-<h1><span class="header-section-number">1</span> jamovi Manual</h1>
-<p>jamovi (<a href="https://www.jamovi.org/" class="uri">https://www.jamovi.org/</a>) の利用マニュアルというか，教材のベータ版です。
-まだまだ，修正中。</p>
+<div id="記述統計量の計算" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 記述統計量の計算</h2>
+<p>記述統計量を出すためにAnalysisタブを押し，[Exploration]から[Descriptives]を選択します。</p>
+<p><img src="img/02desc/dscr06.png" title="変数を選択" alt="変数を選択" /></p>
+<p>そうすると記述統計量のための画面になります。</p>
+<p><img src="img/02desc/dscr07.png" title="デフォルトの結果" alt="デフォルトの結果" /></p>
+<p>ここでここで先ほど計算したGCとETCを選択し「→」を押すと，右の画面にデフォルトの記述統計量が出てきます。</p>
+<p><img src="img/02desc/dscr10.png" alt="dscr10" /></p>
+<p>Statisticsを押すと様々な項目があるので，必要な記述統計量の項目を選びます。ここではMajima &amp; Nakamura (2019)に従い「平均 (Mean)」と「標準偏差 (Std. deviation)」を選択してみましょう。</p>
+<p><img src="img/02desc/dscr09.png" title="Statisticsの画面" alt="Statisticsの画面" /></p>
+<p>このようにして記述統計量として平均と標準偏差を出すことができました。</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="ch01-install-jamovi.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ch01-install-jamovi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="ch03-ttest.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
