@@ -7,7 +7,7 @@
 
 CSVファイル(Survey1_EFA.csv)を読み込みます。
 
-![データ読み込み]( ./img/02desc/dscr01.png "データ読み込み")
+![データ読み込み](./img/02desc/dscr01.png "データ読み込み")
 
 列を見るとGCB_1からGCB_15まであることが分かります。GCとETCを出すのに必要な変数は次のように分かれています。
 
@@ -18,29 +18,29 @@ CSVファイル(Survey1_EFA.csv)を読み込みます。
 
 それぞれの下位尺度の記述統計量を出すにあたり，このデータをそれぞれ平均化する必要があります。平均化は次の手順で行います。まずDataタブを選択します。
 
-![Dataタブ]( ./img/02desc/dscr02.png "Dataタブ")
+![Dataタブ](./img/02desc/dscr02.png "Dataタブ")
 
 この状態で[Compute]を押します。この状態で新しい変数が追加されていますので，COMPUTED VARIABLE（おそらく「B」と書かれている）に新たな変数の名前を付けます（ここではGCにします）。
 
-![Compute]( ./img/02desc/dscr03.png "Computeで平均を出す")
+![Compute](./img/02desc/dscr03.png "Computeで平均を出す")
 
 そして，2行下の=の後ろに計算式を入れます。ここでは必要な変数を全て足し，項目数の12で割ります。そうすると平均した結果が出てきます（1行目の2.583など）。
 
-![平均を計算した状態]( ./img/02desc/dscr04.png "平均を計算")
+![平均を計算した状態](./img/02desc/dscr04.png "平均を計算")
 
 ETCについても出す必要があるので，再び[Compute]を押して，変数の名前(ETC)を入れ3つの変数を足し，3で割ります。
 
-![Descriptivesを選択した状態]( ./img/02desc/dscr05.png "Descriptviesを選択")
+![Descriptivesを選択した状態](./img/02desc/dscr05.png "Descriptviesを選択")
 
 ## 記述統計量の計算
 
 記述統計量を出すためにAnalysisタブを押し，[Exploration]から[Descriptives]を選択します。
 
-![変数を選択]( ./img/02desc/dscr06.png "変数を選択")
+![変数を選択](./img/02desc/dscr06.png "変数を選択")
 
 そうすると記述統計量のための画面になります。
 
-![デフォルトの結果]( ./img/02desc/dscr07.png "デフォルトの結果")
+![デフォルトの結果](./img/02desc/dscr07.png "デフォルトの結果")
 
 ここでここで先ほど計算したGCとETCを選択し「→」を押すと，右の画面にデフォルトの記述統計量が出てきます。
 
@@ -48,6 +48,6 @@ ETCについても出す必要があるので，再び[Compute]を押して，�
 
 Statisticsを押すと様々な項目があるので，必要な記述統計量の項目を選びます。ここではMajima & Nakamura (2019)に従い「平均 (Mean)」と「標準偏差 (Std. deviation)」を選択してみましょう。
 
-![Statisticsの画面]( ./img/02desc/dscr09.png "Statisticsの画面")
+![Statisticsの画面](./img/02desc/dscr09.png "Statisticsの画面")
 
 このようにして記述統計量として平均と標準偏差を出すことができました。
