@@ -5,6 +5,8 @@ bookdown::gitbook:
         "--from", "markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures"
         ]
 html_document:
+  fig_caption: true
+  keep_md: yes
   css: style_customized.css
   self_contained: false
   toc: true
