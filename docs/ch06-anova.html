@@ -153,11 +153,11 @@
             <section class="normal" id="section-">
 <div id="anova" class="section level1" number="7">
 <h1><span class="header-section-number">7</span> 分散分析</h1>
-<p>ここでは，分散分析の方法について学びます。データは，永井 (2018) のものを用います（URL）。</p>
+<p>ここでは，分散分析の方法について学びます。データは，永井 (2018) のものを用います。</p>
 <div id="要因完全無作為計画の分散分析" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> １要因完全無作為計画の分散分析</h2>
-<p>1要因完全無作為計画の分散分析では，対応のない1つの質的な独立変数（要因）の水準によって，従属変数の平均に差があるかどうかを検定します。。ここでは，永井 (2018) の中から，友人との付き合い方 (friendship; 5水準) という要因によって，傷つけられやすさ回避 ，距離確保，礼儀，傷つけ回避に差があるかどうかを検定してみましょう。</p>
-<p>データファイル (Nagai_2018.csv) を読み込み，変数の諸設定を行います。ここで扱う分散分析は，いずれも Analysis タブの ANOVA の中にあります。ANOVA のメニューの中には，1要因の分散分析 (One-Way ANOVA)，分散分析 (ANOVA)，反復測定デザインの分散分析 (Repeated Measures ANOVA)，共分散分析 (ANCOVA)，多変量共分散分析 (MANCOVA) や，ノンパラメトリック検定として，対応のない1要因のクラスカル・ウォリスの検定 (Kruskal-Wallis)，対応のある要因のフリードマン検定 (Friedman) が用意されています。</p>
+<p>1要因完全無作為計画の分散分析では，対応のない1つの質的な独立変数（要因）の水準によって，従属変数の平均に差があるかどうかを検定します。。ここでは，永井 (2018) の中から，友人との付き合い方 (5水準) という要因によって，傷つけられやすさ回避 ，距離確保，礼儀，傷つけ回避に差があるかどうかを検定してみましょう。</p>
+<p>データファイルを読み込み，変数の諸設定を行います。ここで扱う分散分析は，いずれも Analysis タブの ANOVA の中にあります。ANOVA のメニューの中には，1要因の分散分析 (One-Way ANOVA)，分散分析 (ANOVA)，反復測定デザインの分散分析 (Repeated Measures ANOVA)，共分散分析 (ANCOVA)，多変量共分散分析 (MANCOVA) や，ノンパラメトリック検定として，対応のない1要因のクラスカル・ウォリスの検定 (Kruskal-Wallis)，対応のある要因のフリードマン検定 (Friedman) が用意されています。</p>
 <p>1要因の分散分析 (One-Way ANOVA) は，独立変数・要因は1つのみ，従属変数は複数指定可能ですが，分散分析は (ANOVA) では独立変数・要因は複数指定可能であるものの，従属変数は1つしか指定できません。しかしながら，使い方や出力の仕方は多少異なっていますが，One-Way ANOVA で行った分析を ANOVA を使って行っても，当然ですが検定結果は変わりません。つまり，ここで行う1要因完全無作為計画の分散分析については，One-way ANOVA または，ANOVA のいずれを選択しても問題ありません。ここでは，One-way ANOVA で分散分析を行ってみましょう。</p>
 <p><img src="img/06anova/Anova02_oneway_menu.png" title="Menu - Oneway ANOVA" alt="“Menu - Oneway ANOVA”" /></p>
 <div id="変数の指定" class="section level3" number="7.1.1">
