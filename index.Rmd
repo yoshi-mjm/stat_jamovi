@@ -1,5 +1,5 @@
 ---
-title: "Jamovi Stats"
+title: "Jamovi ガイドブック（北星学園大学版）"
 author: "Hokusei Gakuen Statistics Education Renovation Team"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
