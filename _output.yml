@@ -1,5 +1,9 @@
 bookdown::gitbook: 
+  fig_caption: yes
+  keep_md: yes
   css: style_customized.css
+  self_contained: false
+  number_sections: true
   split_by: "rmd"
   pandoc_args: [
         "--from", "markdown+autolink_bare_uris+tex_math_single_backslash-implicit_figures"
