@@ -22,3 +22,9 @@ jamovi (https://www.jamovi.org/) の利用マニュアルというか，教材�
 
 を使用しています。
 なお，Majima & Nakamura (2020) については，全てのデータが https://osf.io/24w8u/ からダウンロードすることが可能です。
+
+## その他の参考文献
+
+jamovi の使い方については，下のサイトも参考になります。あわせてご覧ください。
+
+- jamovi で学ぶ心理統計 [https://bookdown.org/sbtseiji/lswjamoviJ/]
