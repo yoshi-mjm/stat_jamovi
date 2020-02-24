@@ -15,10 +15,10 @@ jamovi (https://www.jamovi.org/) の利用マニュアルというか，教材�
 
 ## データについて
 
-この教材で使用するデータは，https://github.com/yoshi-mjm/stat_jamovi の data というフォルダの中にあります。また，これらのデータは，それぞれ，
+この教材で使用するデータは，[https://github.com/yoshi-mjm/stat_jamovi](https://github.com/yoshi-mjm/stat_jamovi){target="_blank} の data というフォルダの中にあります。また，これらのデータは，それぞれ，
 
-- Majima, Y. & Nakamura, H. (2020). Development of the Japanese Version of the Generic Conspiracist Beliefs Scale (GCBS‐J). Japanese Psychological Research. [Advance Online Publication] https://doi.org/10.1111/jpr.12267
-- 永井暁行 (2018). ソーシャルスキルと態度による大学生の友人との付き合い方の分類―友人関係による居場所感の違い―. 教育心理学研究, 66, 54-66. https://doi.org/10.5926/jjep.66.54
+- Majima, Y. & Nakamura, H. (2020). Development of the Japanese Version of the Generic Conspiracist Beliefs Scale (GCBS‐J). Japanese Psychological Research. (Advance Online Publication)  [https://doi.org/10.1111/jpr.12267](https://doi.org/10.1111/jpr.12267){target="_blank"}
+- 永井暁行 (2018). ソーシャルスキルと態度による大学生の友人との付き合い方の分類―友人関係による居場所感の違い―. 教育心理学研究, 66, 54-66. [https://doi.org/10.5926/jjep.66.54](https://doi.org/10.5926/jjep.66.54){target="_blank"}
 
 を使用しています。
 なお，Majima & Nakamura (2020) については，全てのデータが https://osf.io/24w8u/ からダウンロードすることが可能です。
@@ -27,4 +27,4 @@ jamovi (https://www.jamovi.org/) の利用マニュアルというか，教材�
 
 jamovi の使い方については，下のサイトも参考になります。あわせてご覧ください。
 
-- jamovi で学ぶ心理統計 [https://bookdown.org/sbtseiji/lswjamoviJ/]
+- jamovi で学ぶ心理統計 [https://bookdown.org/sbtseiji/lswjamoviJ/](https://bookdown.org/sbtseiji/lswjamoviJ/){target="_blank"}
