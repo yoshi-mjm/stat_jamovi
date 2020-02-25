@@ -1,5 +1,6 @@
 bookdown::gitbook: 
   fig_caption: yes
+  keep_md: yes
   css: style_customized.css
   self_contained: false
   number_sections: true
@@ -9,6 +10,7 @@ bookdown::gitbook:
         ]
 bookdown::html_document2:
   fig_caption: yes
+  keep_md: yes
   css: style_customized.css
   self_contained: false
   toc: true
