@@ -13,4 +13,8 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
+<<<<<<< HEAD
 WebsitePath: ~/OneDrive/Documents/Research/Projects/Statistics/course/stat_jamovi
+=======
+WebsitePath: ~/Documents/GitHub/stat_jamovi
+>>>>>>> 433b52458cbaf17c8a6e5ee5d0245c9bb03cc9a7
