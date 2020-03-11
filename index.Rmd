@@ -3,8 +3,6 @@ title: "jamovi ガイドブック（北星学園大学版）"
 author: "Hokusei Gakuen Statistics Education Renovation Team"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-documentclass: ltjsarticle
-
 ---
 
 ```{r setup, echo=FALSE}
