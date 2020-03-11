@@ -17,7 +17,3 @@ bookdown::html_document2:
   toc_float: true
   number_sections: true
   theme: readable
-pdf_document:
-    latex_engine: lualatex
-    number_sections: yes
-  

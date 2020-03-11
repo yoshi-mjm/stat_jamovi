@@ -1,10 +1,8 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
 author: "Hokusei Gakuen Statistics Education Renovation Team"
-date: "2020-02-25"
+date: "2020-03-11"
 site: bookdown::bookdown_site
-documentclass: ltjsarticle
-
 ---
 
 

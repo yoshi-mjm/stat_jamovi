@@ -13,4 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: ~/Dropbox/research/ResearchProjects/Statistics/course/stat_jamovi
+WebsitePath: ~/Documents/GitHub/stat_jamovi
