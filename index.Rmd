@@ -11,7 +11,7 @@ library(bookdown)
 
 # jamovi Manual
 
-jamovi (https://www.jamovi.org/) の利用マニュアルというか，教材のベータ版です。
+jamovi (https://www.jamovi.org/) の北星学園大学版利用マニュアルです。
 まだまだ，修正中。
 
 ## データについて

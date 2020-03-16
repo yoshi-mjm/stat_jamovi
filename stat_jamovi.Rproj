@@ -1,8 +1,8 @@
 Version: 1.0
 
-RestoreWorkspace: Default
-SaveWorkspace: Default
-AlwaysSaveHistory: Default
+RestoreWorkspace: Yes
+SaveWorkspace: Ask
+AlwaysSaveHistory: Yes
 
 EnableCodeIndexing: Yes
 UseSpacesForTab: Yes
@@ -13,8 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-<<<<<<< HEAD
 WebsitePath: ~/OneDrive/Documents/Research/Projects/Statistics/course/stat_jamovi
-=======
-WebsitePath: ~/Documents/GitHub/stat_jamovi
->>>>>>> 433b52458cbaf17c8a6e5ee5d0245c9bb03cc9a7
