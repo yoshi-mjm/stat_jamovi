@@ -142,7 +142,7 @@
 <p>ここでは，分散分析の方法について学びます。データは，永井 (2018) のものを用います。</p>
 <div id="要因完全無作為計画の分散分析" class="section level2">
 <h2><span class="header-section-number">7.1</span> １要因完全無作為計画の分散分析</h2>
-<p>1要因完全無作為計画の分散分析では，対応のない1つの質的な独立変数（要因）の水準によって，従属変数の平均に差があるかどうかを検定します。。ここでは，永井 (2018) の中から，友人との付き合い方 (5水準) という要因によって，傷つけられやすさ回避 ，距離確保，礼儀，傷つけ回避に差があるかどうかを検定してみましょう。</p>
+<p>1要因完全無作為計画の分散分析では，対応のない1つの質的な独立変数（要因）の水準によって，従属変数の平均に差があるかどうかを検定します。。ここでは，永井 (2018) の中から，友人との付き合い方 (5水準, style_friendship) という要因によって，傷つけられやすさ回避 (avo_hurt)，距離確保 (distance)，礼儀 (courtesy)，傷つけ回避 (avo_blacken) に差があるかどうかを検定してみましょう。</p>
 <p>データファイルを読み込み，変数の諸設定を行います。ここで扱う分散分析は，いずれも Analysis タブの ANOVA の中にあります。ANOVA のメニューの中には，1要因の分散分析 (One-Way ANOVA)，分散分析 (ANOVA)，反復測定デザインの分散分析 (Repeated Measures ANOVA)，共分散分析 (ANCOVA)，多変量共分散分析 (MANCOVA) や，ノンパラメトリック検定として，対応のない1要因のクラスカル・ウォリスの検定 (Kruskal-Wallis)，対応のある要因のフリードマン検定 (Friedman) が用意されています。</p>
 <p>1要因の分散分析 (One-Way ANOVA) は，独立変数・要因は1つのみ，従属変数は複数指定可能ですが，分散分析は (ANOVA) では独立変数・要因は複数指定可能であるものの，従属変数は1つしか指定できません。しかしながら，使い方や出力の仕方は多少異なっていますが，One-Way ANOVA で行った分析を ANOVA を使って行っても，当然ですが検定結果は変わりません。つまり，ここで行う1要因完全無作為計画の分散分析については，One-way ANOVA または，ANOVA のいずれを選択しても問題ありません。ここでは，One-way ANOVA で分散分析を行ってみましょう。</p>
 <p><img src="img/06anova/Anova02_oneway_menu.png" title="Menu - Oneway ANOVA" alt="“Menu - Oneway ANOVA”" /></p>
@@ -158,12 +158,12 @@
 </div>
 <div id="分散の等質性の検定" class="section level3">
 <h3><span class="header-section-number">7.1.3</span> 分散の等質性の検定</h3>
-<p>分散の等質性の前提が満たされているかどうかは，Assumption Checks の中の Equality of variances にチェックを付けると分かります。このオプションにチェックを付けると，分散の等質性に関するルビーンの検定 (Levene’s test) が行われます。今回のデータでは，等質性が保たれているのは距離確保のみで，それ以外の従属変数では等質性の仮定が満たされていないことがわかります。しかし，上の主効果の検定で示されたように，分散の等質性を仮定した場合でも，仮定しない場合でも検定結果は変わらないので，結論としては全ての従属変数について，付き合い方の主効果は有意であると言えます。</p>
+<p>分散の等質性の前提が満たされているかどうかは，Assumption Checks の中の Equality of variances にチェックを付けると分かります。このオプションにチェックを付けると，分散の等質性に関するルビーンの検定 (Levene’s test) が行われます。今回のデータでは，等質性が保たれているのは距離確保 (distance) のみで，それ以外の従属変数では等質性の仮定が満たされていないことがわかります。しかし，上の主効果の検定で示されたように，分散の等質性を仮定した場合でも，仮定しない場合でも検定結果は変わらないので，結論としては全ての従属変数について，付き合い方 (style_friendship) の主効果は有意であると言えます。</p>
 <p><img src="img/06anova/Anova06_assumption_equalvar.png" title="Assumption - equal var" alt="“Assumption - equal var”" /></p>
 </div>
 <div id="正規性の検定" class="section level3">
 <h3><span class="header-section-number">7.1.4</span> 正規性の検定</h3>
-<p>従属変数が正規分布に従っているかどうかは，シャピロ−ウィルクの正規性の検定で確認します。正規性の検定は，Assumption Checks オプションにある Normality (Shapiro-Wilk) にチェックを付けてください。今回のデータでは，礼儀と傷つけ回避で正規性の仮定が満たされないことがわかります。分散分析は従属変数が正規分布に従うことを前提とするパラメトリック検定なので，正規性が満たされない場合は，ノンパラメトリック検定であるクラスカル・ウォリスの検定を行わなければなりません。クラスカル・ウォリスの検定については，後に説明します。</p>
+<p>従属変数が正規分布に従っているかどうかは，シャピロ−ウィルクの正規性の検定で確認します。正規性の検定は，Assumption Checks オプションにある Normality (Shapiro-Wilk) にチェックを付けてください。今回のデータでは，礼儀 (courtesy) と傷つけ回避 (avoid_blacken) で正規性の仮定が満たされないことがわかります。分散分析は従属変数が正規分布に従うことを前提とするパラメトリック検定なので，正規性が満たされない場合は，ノンパラメトリック検定であるクラスカル・ウォリスの検定を行わなければなりません。クラスカル・ウォリスの検定については，後に説明します。</p>
 <p><img src="img/06anova/Anova07_assumption_normality.png" title="Assumption - normality" alt="“Assumption - normality”" /></p>
 </div>
 <div id="多重比較" class="section level3">
@@ -174,37 +174,37 @@
 </div>
 <div id="要因完全無作為計画の分散分析-1" class="section level2">
 <h2><span class="header-section-number">7.2</span> ２要因完全無作為計画の分散分析</h2>
-<p>では，次に，2要因以上の分散分析の方法について見ていきましょう。ここでは，先ほどと同じ永井 (2018) のデータを用いて，友人との付き合い方と性別を独立変数に，社会的居場所を従属変数とする分散分析を行ってみましょう。2要因以上の分散分析の場合は，ANOVA メニューの 2つ目にある ANOVA を選んで行います。</p>
+<p>では，次に，2要因以上の分散分析の方法について見ていきましょう。ここでは，先ほどと同じ永井 (2018) のデータを用いて，友人との付き合い方 (style_friendship) と性別 (gender) を独立変数に，社会的居場所 (s.ibasho) を従属変数とする分散分析を行ってみましょう。2要因以上の分散分析の場合は，ANOVA メニューの 2つ目にある ANOVA を選んで行います。</p>
 <p><img src="img/06anova/Anova09_anova_menu.PNG" title="Menu - Anova" alt="“Menu - ANOVA”" /></p>
-<p>すでに，述べたように，この ANOVA では，One-way ANOVA とは異なり従属変数は1つしか指定できません。それでは，従属変数である社会的居場所を Dependent Variable のボックスに，独立変数である付き合い方，性別を Fixed factors のボックスに入れてみましょう。</p>
+<p>すでに，述べたように，この ANOVA では，One-way ANOVA とは異なり従属変数は1つしか指定できません。それでは，従属変数である社会的居場所(s.ibasho) を Dependent Variable のボックスに，独立変数である付き合い方 (style_friendship)，性別 (gender) を Fixed factors のボックスに入れてみましょう。</p>
 <p><img src="img/06anova/Anova11_anova_ini.png" title="Anova" alt="“ANOVA”" /></p>
 <p>分散分析の結果は，即時に表示されます。結果を見て分かるとおり，友人との付き合い方の主効果は有意 [<span class="math inline">\(F(4, 347) = 11.2, p &lt; .001\)</span>] ですが，性別の主効果，付き合い方×性別の交互作用は有意ではありません [<span class="math inline">\(F(1, 347) = 1.74, p = .19; F(4, 345) &lt; 1\)</span>]。</p>
 <p>ただし，このままの分散分析表では，効果量が算出されていません。必要に応じて，イータ2乗 (<span class="math inline">\(\eta^2\)</span>)，偏イータ2乗 (partial <span class="math inline">\(\eta^2\)</span>)，またはオメガ2乗 (<span class="math inline">\(\omega^2\)</span>) にチェックを付けてください。表の右側に，選択した効果量が出力されます。</p>
 <p><img src="img/06anova/Anova12_anova_effsize.png" title="Anova Effect Size" alt="“ANOVA Effect Size”" /></p>
 <div id="事後検定" class="section level3">
 <h3><span class="header-section-number">7.2.1</span> 事後検定</h3>
-<p>1要因の時と同じように，友人との付き合い方の主効果が有意でしたので，多重比較を行いましょう。多重比較は，Post Hoc Tests オプションで選択します。事後検定を行いたい変数を左の変数一覧から右のボックスに入れ，多重比較の際の有意水準の調整方法を選択してください（下図では Holm の方法を用いています）。また，対比較の効果量 (Cohen’s d) を出力することもできます。</p>
+<p>1要因の時と同じように，友人との付き合い方 (style_friendship) の主効果が有意でしたので，多重比較を行いましょう。多重比較は，Post Hoc Tests オプションで選択します。事後検定を行いたい変数を左の変数一覧から右のボックスに入れ，多重比較の際の有意水準の調整方法を選択してください（下図では Holm の方法を用いています）。また，対比較の効果量 (Cohen’s d) を出力することもできます。</p>
 <p><img src="img/06anova/Anova13_anova_posthoc.PNG" title="Anova Post-Hoc Tests" alt="“ANOVA Post-Hoc”" /></p>
 </div>
 <div id="推定周辺平均" class="section level3">
 <h3><span class="header-section-number">7.2.2</span> 推定周辺平均</h3>
-<p>水準ごとの推定周辺平均 (Estimated Marginal Means) を求めたいときは，Estimated Marginal Means オプションを開き，推定周辺平均を求めたい変数を Marginal Means のボックスに入れます。まずは，水準間の差が見られた友人との付き合い方について推定周辺平均を求めてみましょう (下図)。</p>
+<p>水準ごとの推定周辺平均 (Estimated Marginal Means) を求めたいときは，Estimated Marginal Means オプションを開き，推定周辺平均を求めたい変数を Marginal Means のボックスに入れます。まずは，水準間の差が見られた友人との付き合い方 (style_friendship) について推定周辺平均を求めてみましょう (下図)。</p>
 <p>初期状態では，推定周辺平均のプロット (Marginal means plots; エラーバーは信頼区間) が表示されています。表が必要な場合は，Marginal means tables にチェックを付けてください。また，プロットのエラーバーは，無し (None)，信頼区間 (Confidence interval)，標準誤差 (Standard error) の中から選ぶことができます。</p>
 <p><img src="img/06anova/Anova16_emmeans.PNG" title="Anova Estimated Marginal Means" alt="“ANOVA EM-Means”" /></p>
-<p>交互作用について，水準の組み合わせごとの推定周辺平均を算出したい場合は，2つの変数を同時に同じ Term の中に入れることで可能です。まずは，下図のように新しい Term を作成し (Add New Term)，付き合い方と性別を同時に，その Term の中に入れてみましょう。オプションの指定は上と同じです。</p>
+<p>交互作用について，水準の組み合わせごとの推定周辺平均を算出したい場合は，2つの変数を同時に同じ Term の中に入れることで可能です。まずは，下図のように新しい Term を作成し (Add New Term)，付き合い方 (style_friendship) と性別 (gender) を同時に，その Term の中に入れてみましょう。オプションの指定は上と同じです。</p>
 <p><img src="img/06anova/Anova17_emmeans2.PNG" title="Anova Estimated Marginal Means 2" alt="“ANOVA EM-Means2”" /></p>
 </div>
 </div>
 <div id="クラスカルウォリスの検定" class="section level2">
 <h2><span class="header-section-number">7.3</span> クラスカル・ウォリスの検定</h2>
-<p>分散分析は，従属変数が正規分布に従うことを前提としたパラメトリック検定です。そのため，正規分布しない従属変数に対して分散分析を行うのは，厳密に言えば問題があります。例えば先ほどの1要因完全無作為計画の分散分析では，礼儀と傷つけ回避では正規性の仮定が満たされていませんでした。このような場合に行われるノンパラメトリック検定として，jamovi にはクラスカル・ウォリス (Kruskal-Wallis) の検定が用意されています。それでは，友人との付き合い方 (friendship) を独立変数，従属変数を礼儀，傷つけ回避とするクラスカル・ウォリスの検定を行ってみましょう。</p>
+<p>分散分析は，従属変数が正規分布に従うことを前提としたパラメトリック検定です。そのため，正規分布しない従属変数に対して分散分析を行うのは，厳密に言えば問題があります。例えば先ほどの1要因完全無作為計画の分散分析では，礼儀 (courtesy) と傷つけ回避 (avoid_blacken) では正規性の仮定が満たされていませんでした。このような場合に行われるノンパラメトリック検定として，jamovi にはクラスカル・ウォリス (Kruskal-Wallis) の検定が用意されています。それでは，友人との付き合い方 (style_friendship) を独立変数，従属変数を礼儀，傷つけ回避とするクラスカル・ウォリスの検定を行ってみましょう。</p>
 <p>クラスカル・ウォリスの検定は，ANOVA メニューにある Non parametric / One-Way ANOVA – Kruskal-Wallis を選択します。</p>
 <p><img src="img/06anova/Anova18_nonpara_menu.PNG" title="Menu - Non-Parametric (Kruskal-Wallis)" alt="“Menu - Non-para”" /></p>
-<p>インターフェースは，1要因の分散分析 (One-Way ANOVA) と良く似ているので，同じように従属変数を Dependent Variables へ，独立変数を Grouping Variable へと入れます (下図)。礼儀と傷つけ回避の双方ともに，友人との付き合い方による差があることが見て取れる。</p>
+<p>インターフェースは，1要因の分散分析 (One-Way ANOVA) と良く似ているので，同じように従属変数を Dependent Variables へ，独立変数を Grouping Variable へと入れます (下図)。礼儀 (courtesy) と傷つけ回避 (avoid_blacken) の双方ともに，友人との付き合い方 (style_friendship) による差があることがわかります。</p>
 <p><img src="img/06anova/Anova19_nonpara_ini.PNG" title="Non-Parametric (Kruskal-Wallis) tests" alt="“Kruskal-Wallis”" /></p>
 <p>クラスカル・ウォリスの検定にはオプションとして，効果量 (<span class="math inline">\(\epsilon^2\)</span>) を出力するかどうか，有意であった場合に水準間の対比較を行うかどうかの設定があります (下図)。効果量は，クラスカル・ウォリスの検定結果表の末尾に，対比較はその下に出力されるようになっています (Dwass-Steel-Critchlow-Fligner pairwise comparison)。</p>
 <p><img src="img/06anova/Anova20_nonpara_additional.PNG" title="Non-Parametric (Kruskal-Wallis) tests options" alt="“Kruskal-Wallis options”" /></p>
-<p>結果から，礼儀については 1-2, 4-5 の間に差は無く，それ以外の組み合わせの間には差があることが見て取れます。また，傷つけ回避については，1-5 の間に差が無く，それ以外の組み合わせの間には差があることがわかります。</p>
+<p>結果から，礼儀 (courtesy) については 1-2, 4-5 の間に差は無く，それ以外の組み合わせの間には差があることが見て取れます。また，傷つけ回避 (avoid_blacken) については，1-5 の間に差が無く，それ以外の組み合わせの間には差があることがわかります。</p>
 
 </div>
 </div>
