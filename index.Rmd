@@ -1,6 +1,6 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
-author: "Hokusei Gakuen Statistics Education Renovation Team"
+author: "眞嶋良全・松浦年男・藤木晶子・永井暁行"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
@@ -9,16 +9,24 @@ site: bookdown::bookdown_site
 library(bookdown)
 ```
 
-# jamovi Manual
+# このマニュアルについて
 
-jamovi (https://www.jamovi.org/) の北星学園大学版利用マニュアルです。
+オープンソースの統計ソフトウェア jamovi (https://www.jamovi.org/) の北星学園大学版利用マニュアルです。
+このマニュアルは，2019年度北星学園大学・特定研究費（共同研究費，課題名：学部・学科の垣根を越えた共通統計教育教材の開発，研究代表者：眞嶋良全）の費用援助を受けて作成されています。
 まだまだ，修正中。
+
+## 執筆者について
+
+このマニュアルは，「学部・学科の垣根を越えた共通統計教育教材の開発」プロジェクトの成果として作成されています。
+このプロジェクトは，北星学園大学・社会福祉学部の眞嶋良全を代表とし，同大文学部の石川悟，松浦年男，永井暁行，同大短期大学部の藤木晶子が参加して行われました。
+プロジェクトメンバーの全員がこのマニュアルの執筆に参加しています。
+なお，冒頭の著者名の表記は，執筆を担当した章の出現順序に沿っており，貢献度の多寡を示すものではありません。
 
 ## データについて
 
 この教材で使用するデータは，[https://github.com/yoshi-mjm/stat_jamovi](https://github.com/yoshi-mjm/stat_jamovi){target="_blank"} の [data](https://github.com/yoshi-mjm/stat_jamovi/tree/master/data){target="_blank"} というフォルダの中にあります。また，これらのデータは，それぞれ，
 
-- Majima, Y. & Nakamura, H. (2020). Development of the Japanese Version of the Generic Conspiracist Beliefs Scale (GCBS‐J). Japanese Psychological Research. (Advance Online Publication)  [https://doi.org/10.1111/jpr.12267](https://doi.org/10.1111/jpr.12267){target="_blank"}
+- Majima, Y. & Nakamura, H. (2020). Development of the Japanese Version of the Generic Conspiracist Beliefs Scale (GCBS‐J). Japanese Psychological Research. [Advance Online Publication]. [https://doi.org/10.1111/jpr.12267](https://doi.org/10.1111/jpr.12267){target="_blank"}
 - 永井暁行 (2018). ソーシャルスキルと態度による大学生の友人との付き合い方の分類―友人関係による居場所感の違い―. 教育心理学研究, 66, 54-66. [https://doi.org/10.5926/jjep.66.54](https://doi.org/10.5926/jjep.66.54){target="_blank"}
 
 を使用しています。
