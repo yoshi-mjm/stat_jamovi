@@ -1,6 +1,6 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
-author: "眞嶋良全・石川悟・松浦年男・藤木晶子・永井暁行"
+author: "眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行"
 date: "2020-03-23"
 site: bookdown::bookdown_site
 ---
