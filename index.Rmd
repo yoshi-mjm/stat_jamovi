@@ -1,13 +1,10 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
-author: "眞嶋良全・松浦年男・藤木晶子・永井暁行"
+author: "眞嶋良全・石川悟・松浦年男・藤木晶子・永井暁行"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-```{r setup, echo=FALSE}
-library(bookdown)
-```
 
 # このマニュアルについて
 
