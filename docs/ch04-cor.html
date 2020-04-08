@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-03-23" />
+<meta name="date" content="2020-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,6 +120,7 @@
 <li class="chapter" data-level="7.2.2" data-path="ch06-anova.html"><a href="ch06-anova.html#推定周辺平均"><i class="fa fa-check"></i><b>7.2.2</b> 推定周辺平均</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="ch06-anova.html"><a href="ch06-anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>7.3</b> クラスカル・ウォリスの検定</a></li>
+<li class="chapter" data-level="7.4" data-path="ch06-anova.html"><a href="ch06-anova.html#要因反復測定計画の分散分析"><i class="fa fa-check"></i><b>7.4</b> 1要因反復測定計画の分散分析</a></li>
 </ul></li>
 </ul>
 
@@ -146,15 +147,22 @@
 <div id="相関係数を求める相関分析をおこなう" class="section level2">
 <h2><span class="header-section-number">5.1</span> 相関係数を求める／相関分析をおこなう</h2>
 <p>　まず，「傷つけ合い回避」尺度の下位尺度である「傷つけられ回避(avo_hurt)」，「距離確保(distance)」，「礼儀(courtesy)」，「傷つけ回避(avo_blacken)」のそれぞれの尺度得点間の関連性を確かめてみましょう。まず，AnalysesタブのRegressionを選択します。プルダウンメニューから「Correlation Matrix」を選択してください (Figure 4-1)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここでは「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」のそれぞれの尺度得点間の関連性を確かめるため，「傷つけられ回避」，「距離確保」，「礼儀」，「傷つけ回避」の４つを選びます。すると右側の出力結果部分に，それぞれの尺度得点間のピアソンの積率相関係数 (Pearson’s r) を示した相関行列が示されます。</p>
-<p><img src="img/04correl/Figure1.png" alt="Figure 4-1" />
-Figure 4-1 相関行列の表示</p>
+<div class="figure"><span id="fig:unnamed-chunk-37"></span>
+<img src="img/04correl/Figure1.png" alt="相関行列の表示" width="1182" />
+<p class="caption">
+Figure 5.1: 相関行列の表示
+</p>
+</div>
 <p>　ピアソンの積率相関係数 (Pearson’s r) の下の行に示されている数値は，その相関係数が生じ得る確率 (p-value)です。「その相関係数が生じ得る確率 (p-value)」とは，関連性を確認した２つの変数から得られた相関係数について，仮説検定（無相関検定）を行った結果を示しています。無相関検定の帰無仮説は「相関がない／相関係数≒０」となります。相関係数は自由度がn-2のt分布に従うことが知られているので， <span class="math display">\[ t = r\sqrt{n-2}/\sqrt{1-r^2} \]</span> の式に，相関係数 (<em>r</em>) およびデータ数 (<em>n</em>) を代入してt値を求めると，そのt値が取る累積確率（外側）を用いて仮説検定を行えます。</p>
 <div id="信頼区間を表示する" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> 信頼区間を表示する</h3>
-<p>　左側のボックスの下部には「Correlation Coefficients」，「Additional Options」，「Hypothesis」，「Plot」の４つのメニューがあります。このうち「Additional Options」の「Confidence intervals」を選択すると，得られたピアソンの積率相関係数 (Pearson’s r) が取り得る信頼区間が示されます(Figure 4-2)。このとき，信頼区間の水準を指定することができます（初期値の信頼区間の水準は95%）。示された数値は，母集団の相関係数が95％の確率で含まれる相関係数の範囲 (95% CI Lower ~ 95% CI Upper) を示しています。
-　
-<img src="img/04correl/Figure2.png" alt="Figure 4-2" />
-Figure 4-2 相関行列の表示（信頼区間を示したもの）</p>
+<p>　左側のボックスの下部には「Correlation Coefficients」，「Additional Options」，「Hypothesis」，「Plot」の４つのメニューがあります。このうち「Additional Options」の「Confidence intervals」を選択すると，得られたピアソンの積率相関係数 (Pearson’s r) が取り得る信頼区間が示されます(Figure 4-2)。このとき，信頼区間の水準を指定することができます（初期値の信頼区間の水準は95%）。示された数値は，母集団の相関係数が95％の確率で含まれる相関係数の範囲 (95% CI Lower ~ 95% CI Upper) を示しています。</p>
+<div class="figure"><span id="fig:unnamed-chunk-38"></span>
+<img src="img/04correl/Figure2.png" alt="相関行列の表示（信頼区間を示したもの）" width="475" />
+<p class="caption">
+Figure 5.2: 相関行列の表示（信頼区間を示したもの）
+</p>
+</div>
 </div>
 <div id="相関係数の結果を確かめる" class="section level3">
 <h3><span class="header-section-number">5.1.2</span> 相関係数の結果を確かめる</h3>
@@ -164,26 +172,37 @@ Figure 4-2 相関行列の表示（信頼区間を示したもの）</p>
 </div>
 <div id="クロス集計カイ二乗検定をおこなう" class="section level2">
 <h2><span class="header-section-number">5.2</span> クロス集計／カイ二乗検定をおこなう</h2>
-<p>　永井(2018)では，調査に協力した357名の学生の「友人との付き合い方」を，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度への回答結果に基づいて５つのグループ（クラスタ）に分け，調査協力者の性別との関わりについて検討しています（Table 2）。この分析をどのようにおこなうのか，jamoviを操作して実際に確かめてみましょう。まず，AnalysesタブのFrequenciesを選択します。プルダウンメニューから「Contingency Tables」の下にある「Independent Samples <em>χ</em><sup>2</sup> test of association」を選択してください (Figure 4-3)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここではRows（行）に「性別(gender)」，Columns（列）に「友人との付き合い方(style_friendship)」を選択します。すると右側の出力結果部分に，連関表（クロス集計表）が示されます。同時にカイ二乗検定をおこなった結果も示されています。
-　
-<img src="img/04correl/Figure3.png" alt="Figure 4-3" />
-Figure 4-3 性別と友人との付き合い方とのクロス集計表</p>
-<p>　それぞれのグループでの男女比を示したい場合には，左側のボックスの下部の「Cells」をクリックして開き，「Percentages」で Row と Column を選択すると，各性別での各グループの構成比および各グループでの男女比がクロス集計表に追加されて示されます (Figure 4-4)。これらの情報を見ると，男性でも女性でも各グループの構成比は変わらないこと，そしてどのグループでも男女比が３:７～４：６の間に収まっていることが分かります。
-　
-<img src="img/04correl/Figure4.png" alt="Figure 4-4" />
-Figure 4-4 性別と友人との付き合い方とのクロス集計表（男女比を示したもの）</p>
+<p>　永井(2018)では，調査に協力した357名の学生の「友人との付き合い方」を，「傷つけ合い回避」尺度と「ソーシャルスキル」尺度への回答結果に基づいて５つのグループ（クラスタ）に分け，調査協力者の性別との関わりについて検討しています（Table 2）。この分析をどのようにおこなうのか，jamoviを操作して実際に確かめてみましょう。まず，AnalysesタブのFrequenciesを選択します。プルダウンメニューから「Contingency Tables」の下にある「Independent Samples <em>χ</em><sup>2</sup> test of association」を選択してください (Figure 4-3)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び右側のボックスに移します。ここではRows（行）に「性別(gender)」，Columns（列）に「友人との付き合い方(style_friendship)」を選択します。すると右側の出力結果部分に，連関表（クロス集計表）が示されます。同時にカイ二乗検定をおこなった結果も示されています。</p>
+<div class="figure"><span id="fig:unnamed-chunk-39"></span>
+<img src="img/04correl/Figure3.png" alt="性別と友人との付き合い方とのクロス集計表" width="1160" />
+<p class="caption">
+Figure 5.3: 性別と友人との付き合い方とのクロス集計表
+</p>
+</div>
+<p>　それぞれのグループでの男女比を示したい場合には，左側のボックスの下部の「Cells」をクリックして開き，「Percentages」で Row と Column を選択すると，各性別での各グループの構成比および各グループでの男女比がクロス集計表に追加されて示されます (Figure 4-4)。これらの情報を見ると，男性でも女性でも各グループの構成比は変わらないこと，そしてどのグループでも男女比が３:７～４：６の間に収まっていることが分かります。</p>
+<div class="figure"><span id="fig:unnamed-chunk-40"></span>
+<img src="img/04correl/Figure4.png" alt="性別と友人との付き合い方とのクロス集計表（男女比を示したもの）" width="1270" />
+<p class="caption">
+Figure 5.4: 性別と友人との付き合い方とのクロス集計表（男女比を示したもの）
+</p>
+</div>
 <div id="カイ二乗検定の結果を確かめる" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> カイ二乗検定の結果を確かめる</h3>
-<p>　Figure 4-４ で見たように，どちらの性別でも「友人との付き合い方」で分けた５つのグループの構成比に違いはありませんでした。またどのグループでも男女比は３:７～４：６の間に収まりました。このことは，５つの「友人との付き合い方」と調査協力者の性別との間に関わりはなく，「友人との付き合い方」は性別によって決まるものではない，と考えられます。この傾向はカイ二乗検定の結果 (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71) からも確かめられます。この結果に加えて，このカイ二乗値にどれだけ効果が認められるか確かめておきましょう。左側のボックスの下部の「Statistics」をクリックして開き，「Nominal」欄の 「Phi and Cramer’s V」 を選択すると効果量が求められます (Figure 4-5)。今回の分析で用いた２行×５列のような多くのカテゴリーから構成される情報を分析する場合は，Cramer’s V を用います。それぞれの２つずつのカテゴリーから構成される２行×２列のクロス集計の場合には，Phi-coefficient (<em>φ</em>) を用います。それぞれの降下量の目安は，小：.10，中：.30，大：.50です。今回の場合 <em>V</em> = .08ですので，「友人との付き合い方」と調査協力者の性別との間に連関がないこと（独立であること）が確かめられます。
-　
-<img src="img/04correl/Figure5.png" alt="Figure 4-5" />
-Figure 4-5 性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）
-　
-　カイ二乗検定に用いられるカイ二乗値には，複数の求め方があります。一般的な求め方の他に尤度比と呼ばれるものを用いてカイ二乗値を求めたい場合には，左側のボックスの下部の「Tests」欄のLikelihood ratioを選択すると尤度比検定を行った結果が示されます (Figure 4-6)。また，今回の分析で用いた２行×５列のような，多くのカテゴリーからなる情報を分析する場合には問題になりませんが，それぞれが２つずつのカテゴリーからなる２行×２列である情報をクロス集計する場合には注意が必要です。２行×２列のクロス集計の場合は，「Statistics」をクリックして開き，「Tests」欄の<em>χ</em><sup>2</sup> continuity correction（連続修正／イエーツの修正），そしてFisher’s exact test（フィッシャーの正確確率検定）を選択します。もし１つのセルの期待度数が５未満となる場合にはFisher’s exact test の結果を用います。そうでない場合は，<em>χ</em><sup>2</sup> continuity correction の結果を用います (Figure 4-6)。</p>
-<p><img src="img/04correl/Figure6.png" alt="Figure 4-6" />
-Figure 4-6 性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）
-　　
-　以上の結果をまとめると，「友人との付き合い方」によって分けた５つのグループと調査協力者の性別との間には関わり（連関）はなく独立の関係であること (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71, <em>V</em> = .08) が確かめられた，ということになります。</p>
+<p>　Figure 4-４ で見たように，どちらの性別でも「友人との付き合い方」で分けた５つのグループの構成比に違いはありませんでした。またどのグループでも男女比は３:７～４：６の間に収まりました。このことは，５つの「友人との付き合い方」と調査協力者の性別との間に関わりはなく，「友人との付き合い方」は性別によって決まるものではない，と考えられます。この傾向はカイ二乗検定の結果 (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71) からも確かめられます。この結果に加えて，このカイ二乗値にどれだけ効果が認められるか確かめておきましょう。左側のボックスの下部の「Statistics」をクリックして開き，「Nominal」欄の 「Phi and Cramer’s V」 を選択すると効果量が求められます (Figure 4-5)。今回の分析で用いた２行×５列のような多くのカテゴリーから構成される情報を分析する場合は，Cramer’s V を用います。それぞれの２つずつのカテゴリーから構成される２行×２列のクロス集計の場合には，Phi-coefficient (<em>φ</em>) を用います。それぞれの降下量の目安は，小：.10，中：.30，大：.50です。今回の場合 <em>V</em> = .08ですので，「友人との付き合い方」と調査協力者の性別との間に連関がないこと（独立であること）が確かめられます。</p>
+<div class="figure"><span id="fig:unnamed-chunk-41"></span>
+<img src="img/04correl/Figure5.png" alt="性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）" width="1265" />
+<p class="caption">
+Figure 5.5: 性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）
+</p>
+</div>
+<p>　カイ二乗検定に用いられるカイ二乗値には，複数の求め方があります。一般的な求め方の他に尤度比と呼ばれるものを用いてカイ二乗値を求めたい場合には，左側のボックスの下部の「Tests」欄のLikelihood ratioを選択すると尤度比検定を行った結果が示されます (Figure 4-6)。また，今回の分析で用いた２行×５列のような，多くのカテゴリーからなる情報を分析する場合には問題になりませんが，それぞれが２つずつのカテゴリーからなる２行×２列である情報をクロス集計する場合には注意が必要です。２行×２列のクロス集計の場合は，「Statistics」をクリックして開き，「Tests」欄の<em>χ</em><sup>2</sup> continuity correction（連続修正／イエーツの修正），そしてFisher’s exact test（フィッシャーの正確確率検定）を選択します。もし１つのセルの期待度数が５未満となる場合にはFisher’s exact test の結果を用います。そうでない場合は，<em>χ</em><sup>2</sup> continuity correction の結果を用います (Figure 4-6)。</p>
+<div class="figure"><span id="fig:unnamed-chunk-42"></span>
+<img src="img/04correl/Figure6.png" alt="性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）" width="1262" />
+<p class="caption">
+Figure 5.6: 性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）
+</p>
+</div>
+<p>　以上の結果をまとめると，「友人との付き合い方」によって分けた５つのグループと調査協力者の性別との間には関わり（連関）はなく独立の関係であること (<em>χ</em><sup>2</sup>(4) = 2.16, <em>p</em> = .71, <em>V</em> = .08) が確かめられた，ということになります。</p>
 
 </div>
 </div>

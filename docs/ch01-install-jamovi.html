@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-03-23" />
+<meta name="date" content="2020-04-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,6 +120,7 @@
 <li class="chapter" data-level="7.2.2" data-path="ch06-anova.html"><a href="ch06-anova.html#推定周辺平均"><i class="fa fa-check"></i><b>7.2.2</b> 推定周辺平均</a></li>
 </ul></li>
 <li class="chapter" data-level="7.3" data-path="ch06-anova.html"><a href="ch06-anova.html#クラスカルウォリスの検定"><i class="fa fa-check"></i><b>7.3</b> クラスカル・ウォリスの検定</a></li>
+<li class="chapter" data-level="7.4" data-path="ch06-anova.html"><a href="ch06-anova.html#要因反復測定計画の分散分析"><i class="fa fa-check"></i><b>7.4</b> 1要因反復測定計画の分散分析</a></li>
 </ul></li>
 </ul>
 
@@ -143,21 +144,36 @@
 <div id="jamovi-のインストール" class="section level2">
 <h2><span class="header-section-number">2.1</span> jamovi のインストール</h2>
 <p>jamovi は，プロジェクトの Web サイト (<a href="https://www.jamovi.org/" class="uri">https://www.jamovi.org/</a>) からダウンロードできます。Web サイトのダウンロードをクリックすると，OS に応じた選択肢がトップに表示されるので，安定版 (solid) をダウンロードしましょう。図の場合は，Windows 用の 1.1.9 solid が最新の安定版となっています。</p>
-<p><img src="img/01install/Install02.PNG" title="Downloading jamovi" alt="“Jamovi”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="img/01install/Install02.PNG" alt="Web site of jamovi" width="2448" />
+<p class="caption">
+Figure 2.1: Web site of jamovi
+</p>
+</div>
 <p>ダウンロードが完了したら，ファイルのアイコン (下図は Windows の安定版 1.1.9 の場合) をダブルクリックしてインストールを開始しましょう。</p>
-<p><img src="img/01install/Install03_icon.png" title="jamovi icon" alt="“jamovi icon”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="img/01install/Install03_icon.png" alt="jamovi installer" width="421" />
+<p class="caption">
+Figure 2.2: jamovi installer
+</p>
+</div>
 <p>インストールは，その他のアプリと同じようにウィザードによって進行し，特に難しいことはありません。</p>
 <p>インストールが完了したら，ソフトウェアを起動してください。</p>
 </div>
 <div id="jamovi-の基本操作" class="section level2">
 <h2><span class="header-section-number">2.2</span> jamovi の基本操作</h2>
 <p>jamovi は Excel や SPSS と良く似たスプレッドシート形式の外観をもっています。また，トップレベルのメニューは，データの各種操作を行う Data と，分析を行う Analysis の2つであり，とてもシンプルです。ファイルの操作は，Data の左にある Ξ のような形をしたメニューをクリックして行います。また，設定は，画面右上にある三つの点が縦に並んだボタンをクリックして行います。</p>
-<p><img src="img/01install/Install04.PNG" title="Interface of jamovi" alt="“Interface of jamovi”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="img/01install/Install04.PNG" alt="Interface of jamovi" width="2560" />
+<p class="caption">
+Figure 2.3: Interface of jamovi
+</p>
+</div>
 <div id="データの入力" class="section level3">
 <h3><span class="header-section-number">2.2.1</span> データの入力</h3>
 <p>では，まずデータを入力してみましょう（表1）。使い方は，Excel や SPSS とよく似ていて，特に難しいことはありません。なお，A 列は被験者番号 (PID; S1-S6)，B 列は年齢 (Age)，C 列は性別（Gender; 1=男性, 2=女性），D 列は外向性の測定項目1 (Ex1)， E 列は外向性の測定項目2 (Ex2R, 逆転)となっています。</p>
-<p>表1. 年齢と性別のデータ</p>
 <table>
+<caption>年齢と性別のデータ</caption>
 <thead>
 <tr class="header">
 <th>A</th>
@@ -213,13 +229,33 @@
 </tbody>
 </table>
 <p>データを入力し終えると 下図のようになっているはずです。</p>
-<p><img src="img/01install/Install05.PNG" title="Data Entry" alt="“Data Entry”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-4"></span>
+<img src="img/01install/Install05.PNG" alt="Data entry" width="2622" />
+<p class="caption">
+Figure 2.4: Data entry
+</p>
+</div>
 <p>次に，列（変数）の設定を行います。Data タブをクリックし，1列目 (A) のいずこかのセルが選択されている状態で Setup ボタンをクリックしましょう。すると，下図のような設定画面となるので，変数名 (Data variable) に PID を入力します。変数（データ）の種類としては，連続量 (Continuous)，順序尺度 (Ordinal)，名義尺度 (Nominal) の他に，jamovi に特有の変数種類として ID の4種類があります。なお，ID はデータの型としては名義尺度なのですが，変数の値をメモリ上に貯蔵しないので，メモリの消費を抑えることができます。</p>
-<p><img src="img/01install/Install08_var_setup.png" title="Setting - ID" alt="“Setting - ID”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-5"></span>
+<img src="img/01install/Install08_var_setup.png" alt="Variable setup (ID)" width="2622" />
+<p class="caption">
+Figure 2.5: Variable setup (ID)
+</p>
+</div>
 <p>それでは，A 列は変数名を PID (変数種別は ID)，B 列は変数名を Age (種別 Continuous)，C 列は変数名を Gender (種別 Nominal) としてみましょう。D，E 列はそれぞれ変数名を Ex1, Ex2R (種別 Continuious) とします。列間の移動は，設定画面左右にある &lt;，&gt; をクリックするとできます。なお，C 列の性別については，1 = Men, 2 = Women とするようにラベルを付けます。値ラベルは，Levels ボックスに入力してください。</p>
-<p><img src="img/01install/Install11_var_gender.PNG" title="Setting - Gender" alt="“Setting - gender”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-6"></span>
+<img src="img/01install/Install11_var_gender.PNG" alt="Variable setup (gender)" width="1070" />
+<p class="caption">
+Figure 2.6: Variable setup (gender)
+</p>
+</div>
 <p>変数の設定が終わると，下図のようになるはずです。</p>
-<p><img src="img/01install/Install14.PNG" title="Finish Data entry" alt="“Finish Data entry”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-7"></span>
+<img src="img/01install/Install14.PNG" alt="Finish data entry" width="2622" />
+<p class="caption">
+Figure 2.7: Finish data entry
+</p>
+</div>
 </div>
 <div id="変数の計算" class="section level3">
 <h3><span class="header-section-number">2.2.2</span> 変数の計算</h3>
@@ -228,15 +264,30 @@
 <p>で行われます。jamovi では，変数の値を使った計算は，Data タブにある Compute をクリックして行います。自動的に F 列が選択され，変数名や計算式を入力する画面となりますので，変数名 (Computed Variable) を Ex2，計算式として，</p>
 <pre><code>8-Ex2R</code></pre>
 <p>と入力しましょう。</p>
-<p><img src="img/01install/Install15_compute_rev.png" title="Compute reverse score" alt="“Compute reverse score”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-8"></span>
+<img src="img/01install/Install15_compute_rev.png" alt="Calculate reverse score" width="2622" />
+<p class="caption">
+Figure 2.8: Calculate reverse score
+</p>
+</div>
 <p>さらに，2つの外向性項目の合計点を，G 列に，Extraversion という変数名で作成します。</p>
-<p><img src="img/01install/Install16_compute_sum.png" title="Compute sum" alt="“Compute sum”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-9"></span>
+<img src="img/01install/Install16_compute_sum.png" alt="Calculate sum" width="1070" />
+<p class="caption">
+Figure 2.9: Calculate sum
+</p>
+</div>
 </div>
 <div id="ファイルの保存" class="section level3">
 <h3><span class="header-section-number">2.2.3</span> ファイルの保存</h3>
 <p>ファイルの各種操作は，Data タブの左側にある Ξ のような形をしたボタンをクリックして行います。選ぶことができるのは，新規作成 (New)，データを開く (Open)，外部ファイルからのインポート (Import)，上書き保存 (Save)，名前を付けて保存 (Save as)，外部ファイルへのエクスポート (Export) の 6 通りです（メニューの下に，最近使用したファイルのリストが表示されます）。</p>
 <p>それでは，ここまで作成したファイルを保存しよう。Save または Save as をクリックするとファイル名やフォルダを指定するダイアログが表示されますので，フォルダとファイル名に注意して保存しよう。ただし，Save は，初回のファイル名が設定されていない場合のみ，ダイアログが表示され，一度保存した状態で Save をクリックした場合は，そのファイルへの上書き保存となりますので注意してください。フォルダをデフォルトから変える場合は，Browse ボタンをクリックすると保存用のダイアログが表示されるので，目的のフォルダを選択し，ファイル名を入力してください。</p>
-<p><img src="img/01install/Install17.PNG" title="Save file" alt="“Save file”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-10"></span>
+<img src="img/01install/Install17.PNG" alt="Save file" width="2622" />
+<p class="caption">
+Figure 2.10: Save file
+</p>
+</div>
 </div>
 <div id="ファイルを開く" class="section level3">
 <h3><span class="header-section-number">2.2.4</span> ファイルを開く</h3>
@@ -252,14 +303,29 @@
 <div id="値の割り当て" class="section level4">
 <h4><span class="header-section-number">2.2.6.1</span> 値の割り当て</h4>
 <p>ある変数の値を元に，別の変数に値を割り当てたい場合は，Data タブにある Transform を使います。例えば，年齢 (Age) を25歳以上 / 未満に分けたい場合は，Age のどこかが選択されている状態で Transform をクリックします。すると下図のように，Age(2) という名前で新たな変数が作成されるので，変数名と値の割り当て規則を設定します。</p>
-<p><img src="img/01install/Install18_transform.PNG" title="Transform" alt="“Transform”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-11"></span>
+<img src="img/01install/Install18_transform.PNG" alt="Recode variable" width="1098" />
+<p class="caption">
+Figure 2.11: Recode variable
+</p>
+</div>
 <p>ここでは，変数名を Age_grp とします。割り当て規則は，using transform のドロップダウンボックスをクリックし，新規作成 (Create New Transform) を選択して設定します。</p>
-<p><img src="img/01install/Install19_transform_age.PNG" title="Transform age" alt="“Transform Age”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-12"></span>
+<img src="img/01install/Install19_transform_age.PNG" alt="Recode setup" width="1027" />
+<p class="caption">
+Figure 2.12: Recode setup
+</p>
+</div>
 <p>新規作成を選ぶと，割り当て規則の編集画面となるので，規則の名前と条件を入力しましょう。ここでは，条件規則について，25歳未満を1, それ以上は2とするようにコーディングしたいと思います。規則を編集する場合，Add recode condition をクリックします。デフォルトでは下図のように元の変数をそのまま使用するようになっているので，Add recode condition をクリックし，</p>
 <pre><code>if $source &lt; 25 use 1
 else use 2</code></pre>
 <p>となるように入力します。</p>
-<p><img src="img/01install/Install20_transform_rule.PNG" title="Transform rule" alt="“Transform rule”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-13"></span>
+<img src="img/01install/Install20_transform_rule.PNG" alt="Recode rule" width="1036" />
+<p class="caption">
+Figure 2.13: Recode rule
+</p>
+</div>
 <p>上で説明した，変数の値を使った計算や，値の再割り当ては，任意の位置の列に挿入したり，データの末尾に挿入することもできます。その場合は，Variables グループの中にある Add をクリックし，Insert（挿入）または Append (末尾に追加) を，それぞれの操作ごとに行います。データ (行) を途中で挿入する場合は，Rows グループの中の Add をクリックし Insert を，行を末尾に追加したい場合は Add → Append を選択することで可能です。</p>
 </div>
 <div id="フィルターデータの選択" class="section level4">
@@ -267,9 +333,19 @@ else use 2</code></pre>
 <p>データの中から一部のみを選択したい場合は，Rows グループにある Filters を使います。試しに，男性のみを選択してみましょう。まず，Filters をクリックし，選択の条件に，</p>
 <pre><code>Gender == &quot;Men&quot;</code></pre>
 <p>と入力します。ここで，= が一つだけだと，代入を意味するため条件式としては正しくなく，== と2つ重ねることによって，Gender の値が Men と一致する場合，という意味になりますので注意してください。なお，条件式の下にある description フィールドは，フィルタにつける補足説明なので，あってもなくても動作自体に影響はありません。</p>
-<p><img src="img/01install/Install21_filter_active.PNG" title="Filter - active" alt="“Filter”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-14"></span>
+<img src="img/01install/Install21_filter_active.PNG" alt="Apply filter" width="2622" />
+<p class="caption">
+Figure 2.14: Apply filter
+</p>
+</div>
 <p>適用したフィルタを解除する場合は，フィルタ変数そのものを削除するか，フィルタ変数の設定 (setup) で，inactive にしてください。</p>
-<p><img src="img/01install/Install22_filter_inactive.PNG" title="Filter - inactive" alt="“Filter inactive”" /></p>
+<div class="figure"><span id="fig:unnamed-chunk-15"></span>
+<img src="img/01install/Install22_filter_inactive.PNG" alt="(De)activate filter" width="1031" />
+<p class="caption">
+Figure 2.15: (De)activate filter
+</p>
+</div>
 
 </div>
 </div>

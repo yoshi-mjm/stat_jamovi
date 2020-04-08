@@ -16,21 +16,31 @@
 
 Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。
 
-![exploration_01](./img/03mean/exploration_01.png)
+```{r fig.cap="記述統計量の計算"}
+knitr::include_graphics("./img/03mean/exploration_01.png")
+```
 
 次に［Statistics］より，オプション設定を１つ行います。Dispersion（ばらつき）カテゴリーにあるStd. deviation（標準偏差）にチェックを追加します。
 
-![exploration_02](./img/03mean/exploration_02.png)
+```{r fig.cap="統計量の選択メニュー"}
+knitr::include_graphics("./img/03mean/exploration_02.png")
+```
 
 次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の計算方法を決める際に必要となります。等分散性の検定でさらに判断していきましょう。また，平均やばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも見ていきましょう。
 
-![exploration_03](./img/03mean/exploration_03.png)
+```{r fig.cap="記述統計量の計算結果"}
+knitr::include_graphics("./img/03mean/exploration_03.png")
+```
 
 Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（ヒストグラム）カテゴリーにあるHistogram（ヒストグラム）と（密度曲線）にチェックするだけで作図が行われます。
 
-![exploration_04](./img/03mean/exploration_04.png)
+```{r fig.cap="作図メニュー"}
+knitr::include_graphics("./img/03mean/exploration_04.png")
+```
 
-![exploration_05](./img/03mean/exploration_05.png)
+```{r fig.cap="ヒストグラムと密度曲線"}
+knitr::include_graphics("./img/03mean/exploration_05.png")
+```
 
 　凸凹しているのがヒストグラム，曲線がヒストグラムをカーネル平滑化した密度曲線になります。Jamoviでは，ヒストグラムに密度曲線を重ねて作図することができます。その他に，Box Plot（ボックスプロット）では，データの中央値・四分位範囲・範囲をシンプルな形で視覚化する箱ひげ図が，Q-Q（Q-Qプロット）では，標本が正規性の仮定を満たしているかどうかを視覚的に確認することができます。
 
@@ -52,11 +62,15 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 10人の身長の平均と日本人の平均身長のように，１組のデータとある固定値を比較したいときに用います。Jamoviでは，スチューデントの対応ありｔ検定，ウィルコクソンの符号順位検定の２つを行うことができます。
 
-![t-test_a_01](./img/03mean/t-test_00.png)
+```{r fig.cap="独立な2群の t 検定メニュー"}
+knitr::include_graphics("./img/03mean/t-test_00.png")
+```
 
 ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。
 
-![t-test_a_01](./img/03mean/t-test_01.png)
+```{r fig.cap="変数の選択"}
+knitr::include_graphics("./img/03mean/t-test_01.png")
+```
 
 次に，以下の分析方法を確認もしくは追加していきます。
 
@@ -101,7 +115,9 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 ここでは，Equality of variances（分散の等質性）にチェックを入れます。はじめに述べたように，Jamoviで独立標本のｔ検定を行う場合，ここで等分散性の検定を行うことができます。そのため，t検定と等分散性の検定結果は同時に出力されます。この等分散性の検定結果によって，等分散性が仮定されない場合にはスチューデントのt検定からウェルチのt検定に変更する必要があります。
 
-![t-test_02](./img/03mean/t-test_02.png)
+```{r fig.cap="分散の等質性の検定の実行"}
+knitr::include_graphics("./img/03mean/t-test_02.png")
+```
 
 ### 結果の見方
 
@@ -109,7 +125,9 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 結果は，t検定の結果ではなく，検定の前提条件となるAssumptionsにあるTest of Equality of Variances(Levene's)の結果から見ていきます。
 
-![t-test_03](./img/03mean/t-test_03.png)
+```{r fig.cap="等質性の検定の結果"}
+knitr::include_graphics("./img/03mean/t-test_03.png")
+```
 
 等分散性の検定の場合，p < 0.05 であった場合は『分散に差がある』，p ≧ 0.05 であった場合は『分散に差がない』となります。今回のp値は0.182なので『分散に差がない』つまり等分散性を仮定したスチューデントのt検定が適切な検定となります。今回はこのスチューデントのt検定を選択していたので，そのままt検定の結果を見ていきます。『分散に差がある』場合には，TestsカテゴリーにあるWelch's（ウェルチのt検定）にチェックを入れます。
 
@@ -117,7 +135,9 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 では，スチューデントのt検定の結果を見てみましょう。
 
-![t-test_04](./img/03mean/t-test_04.png)
+```{r fig.cap="t 検定の結果"}
+knitr::include_graphics("./img/03mean/t-test_04.png")
+```
 
 ｔ値は2.24，ｐ値は0.026と有意な差が見られています。したがって，男性と女性は「社会的居場所」において異なる（t(355)=2.24, p < .05)ことが分かりました。
 
@@ -125,8 +145,12 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 分析は先ほどとすべて同じですが，次の１カ所のみ変更します。Hypothesis（仮説）をGroup 1 < Group 2に変更します。
 
-![t-test_05](./img/03mean/t-test_05.png)
+```{r fig.cap="片側検定への変更"}
+knitr::include_graphics("./img/03mean/t-test_05.png")
+```
 
-![t-test_06](./img/03mean/t-test_06.png)
+```{r fig.cap="片側検定の実施"}
+knitr::include_graphics("./img/03mean/t-test_06.png")
+```
 
 両側検定と同じく有意になりました。この場合，変更されたのはp値の0.013のみで，t値，自由度はそのままの値です。分布の両側を棄却域にするよりも，片側を棄却域にする方が若干検出力が高くなります。この結果からは，女性の方が男性よりも「社会的居場所」得点が有意に高い（t(355)=2.24, p < .05)ことを示すことができます。このように両側と片側検定は仮説に応じて使い分けていきます。
