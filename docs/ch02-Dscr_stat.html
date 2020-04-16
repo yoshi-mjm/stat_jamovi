@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-04-08" />
+<meta name="date" content="2020-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,11 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このマニュアルについて</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#執筆者について"><i class="fa fa-check"></i><b>1.1</b> 執筆者について</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#データについて"><i class="fa fa-check"></i><b>1.2</b> データについて</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.3</b> その他の参考文献</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#データのダウンロードについての補足"><i class="fa fa-check"></i><b>1.3</b> データのダウンロードについての補足</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#リポジトリを一括ダウンロードする"><i class="fa fa-check"></i><b>1.3.1</b> リポジトリを一括ダウンロードする</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#github-を使う"><i class="fa fa-check"></i><b>1.3.2</b> Git(Hub) を使う</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.4</b> その他の参考文献</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a><ul>
 <li class="chapter" data-level="2.1" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
@@ -146,7 +150,7 @@
 <h2><span class="header-section-number">3.1</span> 平均化する</h2>
 <p>ここではMajima &amp; Nakamura (2019)のStudy 1のデータを使います。Majima &amp; Nakamura (2019)ではGCBS(一般陰謀論者信念尺度, Generic Conspiracist Beliefs Scale)，BCTI(陰謀理論目録の信念, Belief in Conspiracy Theories Inventory)，OICM(【日本語】,One-Item Conspiracy Measure)の記述統計量を出していますが，ここではGCBSのうち，EFA (exploratory factor analysis) subsampleのみ扱います。GCB-Jは一般陰謀論者信念尺度と呼ばれ，GCは一般陰謀者信念とETC(地球外陰謀論者信念)という2つの下位尺度からなります。この2つの下位尺度の記述統計量を出すためにはそれぞれの尺度の平均値を出す必要があります。</p>
 <p>CSVファイル(Survey1_EFA.csv)を読み込みます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-16"></span>
+<div class="figure"><span id="fig:unnamed-chunk-19"></span>
 <img src="img/02desc/dscr01.png" alt="データ読み込み" width="2558" />
 <p class="caption">
 Figure 3.1: データ読み込み
@@ -164,28 +168,28 @@ Figure 3.1: データ読み込み
 </ul></li>
 </ul>
 <p>それぞれの下位尺度の記述統計量を出すにあたり，このデータをそれぞれ平均化する必要があります。平均化は次の手順で行います。まずDataタブを選択します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-17"></span>
+<div class="figure"><span id="fig:unnamed-chunk-20"></span>
 <img src="img/02desc/dscr02.png" alt="Data タブ" width="2560" />
 <p class="caption">
 Figure 3.2: Data タブ
 </p>
 </div>
 <p>この状態で[Compute]を押します。この状態で新しい変数が追加されていますので，COMPUTED VARIABLE（おそらく「B」と書かれている）に新たな変数の名前を付けます（ここではGCにします）。</p>
-<div class="figure"><span id="fig:unnamed-chunk-18"></span>
+<div class="figure"><span id="fig:unnamed-chunk-21"></span>
 <img src="img/02desc/dscr03.png" alt="Compute で平均を出す" width="2560" />
 <p class="caption">
 Figure 3.3: Compute で平均を出す
 </p>
 </div>
 <p>そして，2行下の=の後ろに計算式を入れます。ここでは必要な変数を全て足し，項目数の12で割ります。そうすると平均した結果が出てきます（1行目の2.583など）。</p>
-<div class="figure"><span id="fig:unnamed-chunk-19"></span>
+<div class="figure"><span id="fig:unnamed-chunk-22"></span>
 <img src="img/02desc/dscr04.png" alt="平均を計算" width="2558" />
 <p class="caption">
 Figure 3.4: 平均を計算
 </p>
 </div>
 <p>ETCについても出す必要があるので，再び[Compute]を押して，変数の名前(ETC)を入れ3つの変数を足し，3で割ります。</p>
-<div class="figure"><span id="fig:unnamed-chunk-20"></span>
+<div class="figure"><span id="fig:unnamed-chunk-23"></span>
 <img src="img/02desc/dscr05.png" alt="Descriptives を選択" width="2548" />
 <p class="caption">
 Figure 3.5: Descriptives を選択
@@ -195,28 +199,28 @@ Figure 3.5: Descriptives を選択
 <div id="記述統計量の計算" class="section level2">
 <h2><span class="header-section-number">3.2</span> 記述統計量の計算</h2>
 <p>記述統計量を出すためにAnalysisタブを押し，[Exploration]から[Descriptives]を選択します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-21"></span>
+<div class="figure"><span id="fig:unnamed-chunk-24"></span>
 <img src="img/02desc/dscr06.png" alt="変数を選択" width="2548" />
 <p class="caption">
 Figure 3.6: 変数を選択
 </p>
 </div>
 <p>そうすると記述統計量のための画面になります。</p>
-<div class="figure"><span id="fig:unnamed-chunk-22"></span>
+<div class="figure"><span id="fig:unnamed-chunk-25"></span>
 <img src="img/02desc/dscr07.png" alt="デフォルトの結果" width="2554" />
 <p class="caption">
 Figure 3.7: デフォルトの結果
 </p>
 </div>
 <p>ここでここで先ほど計算したGCとETCを選択し「→」を押すと，右の画面にデフォルトの記述統計量が出てきます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-23"></span>
+<div class="figure"><span id="fig:unnamed-chunk-26"></span>
 <img src="img/02desc/dscr10.png" alt="記述統計量" width="2556" />
 <p class="caption">
 Figure 3.8: 記述統計量
 </p>
 </div>
 <p>Statisticsを押すと様々な項目があるので，必要な記述統計量の項目を選びます。ここではMajima &amp; Nakamura (2019)に従い「平均 (Mean)」と「標準偏差 (Std. deviation)」を選択してみましょう。</p>
-<div class="figure"><span id="fig:unnamed-chunk-24"></span>
+<div class="figure"><span id="fig:unnamed-chunk-27"></span>
 <img src="img/02desc/dscr09.png" alt="Statistics の画面" width="2558" />
 <p class="caption">
 Figure 3.9: Statistics の画面

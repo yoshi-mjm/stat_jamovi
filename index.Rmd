@@ -33,6 +33,40 @@ knitr::opts_chunk$set(echo = FALSE)
 を使用しています。
 なお，Majima & Nakamura (2020) については，全てのデータが [https://osf.io/24w8u/](https://osf.io/24w8u/){target="_blank"}  からダウンロードすることが可能です。
 
+## データのダウンロードについての補足
+
+### リポジトリを一括ダウンロードする
+
+上の [data](https://github.com/yoshi-mjm/stat_jamovi/tree/master/data){target="_blank"} というフォルダをクリックして表示されるファイルは，直接1つ1つのファイルをダウンロードできませんので注意してください。
+このサイトは Git(Hub) を使ってバージョン管理をしているためです。
+データをダウンロードする一番簡単な方法は，データも含めてサイトの全てを一括ダウンロードする方法です。
+一括ダウンロードをするためには，上のリンクをクリックして data フォルダに移動し
+
+```{r fig.cap="GitHub リポジトリ"}
+knitr::include_graphics('./img/00general/fig1_github.png')
+```
+
+図に示されるように <> Code と書かれているタブか，リポジトリの名前である stat_jamovi をクリックします。
+リポジトリのトップに移動したら，
+
+```{r fig.cap="Zip 形式でのダウンロード"}
+knitr::include_graphics('./img/00general/fig2_download.png')
+```
+
+右側にある緑色の Clone of download と書かれたボタンをクリックし，Download ZIP を選んでください。
+リポジトリのファイルが一括で zip ファイルでダウンロードされます。
+zip ファイルを展開した先に出来る data フォルダにデータが入っています。
+
+```{r fig.cap="展開した先の data フォルダ"}
+knitr::include_graphics('./img/00general/fig3_unzipped.png')
+```
+
+このガイドブックを授業で使用する場合は，授業担当者から別途指示があるかもしれませんので，その場合はその指示に従ってください。
+
+### Git(Hub) を使う
+
+Git というのは，プログラムのソースコードなどをバージョン管理するツールであり，[GitHub](https://github.com/){target="_blank"} は，Git を使った開発者を支援する Web サイトです。Git および GitHub の詳細はここでは省略しますが，[GitHub Desktop](https://help.github.com/ja/desktop){target="_blank"}というアプリケーションを使うと，リポジトリのコピー（クローン）なども簡単にできて便利です。
+
 ## その他の参考文献
 
 jamovi の使い方については，下のサイトも参考になります。あわせてご覧ください。

@@ -1,7 +1,7 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
 author: "眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行"
-date: "2020-04-08"
+date: "2020-04-16"
 site: bookdown::bookdown_site
 ---
 
@@ -31,6 +31,43 @@ site: bookdown::bookdown_site
 を使用しています。
 なお，Majima & Nakamura (2020) については，全てのデータが [https://osf.io/24w8u/](https://osf.io/24w8u/){target="_blank"}  からダウンロードすることが可能です。
 
+## データのダウンロードについての補足
+
+### リポジトリを一括ダウンロードする
+
+上の [data](https://github.com/yoshi-mjm/stat_jamovi/tree/master/data){target="_blank"} というフォルダをクリックして表示されるファイルは，直接1つ1つのファイルをダウンロードできませんので注意してください。
+このサイトは Git(Hub) を使ってバージョン管理をしているためです。
+データをダウンロードする一番簡単な方法は，データも含めてサイトの全てを一括ダウンロードする方法です。
+一括ダウンロードをするためには，上のリンクをクリックして data フォルダに移動し
+
+<div class="figure">
+<img src="./img/00general/fig1_github.png" alt="GitHub リポジトリ" width="2246" />
+<p class="caption">(\#fig:unnamed-chunk-1)GitHub リポジトリ</p>
+</div>
+
+図に示されるように <> Code と書かれているタブか，リポジトリの名前である stat_jamovi をクリックします。
+リポジトリのトップに移動したら，
+
+<div class="figure">
+<img src="./img/00general/fig2_download.png" alt="Zip 形式でのダウンロード" width="2246" />
+<p class="caption">(\#fig:unnamed-chunk-2)Zip 形式でのダウンロード</p>
+</div>
+
+右側にある緑色の Clone of download と書かれたボタンをクリックし，Download ZIP を選んでください。
+リポジトリのファイルが一括で zip ファイルでダウンロードされます。
+zip ファイルを展開した先に出来る data フォルダにデータが入っています。
+
+<div class="figure">
+<img src="./img/00general/fig3_unzipped.png" alt="展開した先の data フォルダ" width="1540" />
+<p class="caption">(\#fig:unnamed-chunk-3)展開した先の data フォルダ</p>
+</div>
+
+このガイドブックを授業で使用する場合は，授業担当者から別途指示があるかもしれませんので，その場合はその指示に従ってください。
+
+### Git(Hub) を使う
+
+Git というのは，プログラムのソースコードなどをバージョン管理するツールであり，[GitHub](https://github.com/){target="_blank"} は，Git を使った開発者を支援する Web サイトです。Git および GitHub の詳細はここでは省略しますが，[GitHub Desktop](https://help.github.com/ja/desktop){target="_blank"}というアプリケーションを使うと，リポジトリのコピー（クローン）なども簡単にできて便利です。
+
 ## その他の参考文献
 
 jamovi の使い方については，下のサイトも参考になります。あわせてご覧ください。
@@ -47,14 +84,14 @@ jamovi は，プロジェクトの Web サイト (https://www.jamovi.org/) か�
 
 <div class="figure">
 <img src="./img/01install/Install02.PNG" alt="Web site of jamovi" width="2448" />
-<p class="caption">(\#fig:unnamed-chunk-1)Web site of jamovi</p>
+<p class="caption">(\#fig:unnamed-chunk-4)Web site of jamovi</p>
 </div>
 
 ダウンロードが完了したら，ファイルのアイコン (下図は Windows の安定版 1.1.9 の場合) をダブルクリックしてインストールを開始しましょう。
 
 <div class="figure">
 <img src="./img/01install/Install03_icon.png" alt="jamovi installer" width="421" />
-<p class="caption">(\#fig:unnamed-chunk-2)jamovi installer</p>
+<p class="caption">(\#fig:unnamed-chunk-5)jamovi installer</p>
 </div>
 
 インストールは，その他のアプリと同じようにウィザードによって進行し，特に難しいことはありません。
@@ -69,7 +106,7 @@ jamovi は Excel や SPSS と良く似たスプレッドシート形式の外観
 
 <div class="figure">
 <img src="./img/01install/Install04.PNG" alt="Interface of jamovi" width="2560" />
-<p class="caption">(\#fig:unnamed-chunk-3)Interface of jamovi</p>
+<p class="caption">(\#fig:unnamed-chunk-6)Interface of jamovi</p>
 </div>
 
 ### データの入力
@@ -91,28 +128,28 @@ Table: 年齢と性別のデータ
 
 <div class="figure">
 <img src="./img/01install/Install05.PNG" alt="Data entry" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-4)Data entry</p>
+<p class="caption">(\#fig:unnamed-chunk-7)Data entry</p>
 </div>
 
 次に，列（変数）の設定を行います。Data タブをクリックし，1列目 (A) のいずこかのセルが選択されている状態で Setup ボタンをクリックしましょう。すると，下図のような設定画面となるので，変数名 (Data variable) に PID を入力します。変数（データ）の種類としては，連続量 (Continuous)，順序尺度 (Ordinal)，名義尺度 (Nominal) の他に，jamovi に特有の変数種類として ID の4種類があります。なお，ID はデータの型としては名義尺度なのですが，変数の値をメモリ上に貯蔵しないので，メモリの消費を抑えることができます。
 
 <div class="figure">
 <img src="./img/01install/Install08_var_setup.PNG" alt="Variable setup (ID)" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-5)Variable setup (ID)</p>
+<p class="caption">(\#fig:unnamed-chunk-8)Variable setup (ID)</p>
 </div>
 
 それでは，A 列は変数名を PID (変数種別は ID)，B 列は変数名を Age (種別 Continuous)，C 列は変数名を Gender (種別 Nominal) としてみましょう。D，E 列はそれぞれ変数名を Ex1, Ex2R (種別 Continuious) とします。列間の移動は，設定画面左右にある <，> をクリックするとできます。なお，C 列の性別については，1 = Men, 2 = Women とするようにラベルを付けます。値ラベルは，Levels ボックスに入力してください。
 
 <div class="figure">
 <img src="./img/01install/Install11_var_gender.PNG" alt="Variable setup (gender)" width="1070" />
-<p class="caption">(\#fig:unnamed-chunk-6)Variable setup (gender)</p>
+<p class="caption">(\#fig:unnamed-chunk-9)Variable setup (gender)</p>
 </div>
 
 変数の設定が終わると，下図のようになるはずです。
 
 <div class="figure">
 <img src="./img/01install/Install14.PNG" alt="Finish data entry" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-7)Finish data entry</p>
+<p class="caption">(\#fig:unnamed-chunk-10)Finish data entry</p>
 </div>
 
 ### 変数の計算
@@ -133,14 +170,14 @@ Table: 年齢と性別のデータ
 
 <div class="figure">
 <img src="./img/01install/Install15_compute_rev.PNG" alt="Calculate reverse score" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-8)Calculate reverse score</p>
+<p class="caption">(\#fig:unnamed-chunk-11)Calculate reverse score</p>
 </div>
 
 さらに，2つの外向性項目の合計点を，G 列に，Extraversion という変数名で作成します。
 
 <div class="figure">
 <img src="./img/01install/Install16_compute_sum.PNG" alt="Calculate sum" width="1070" />
-<p class="caption">(\#fig:unnamed-chunk-9)Calculate sum</p>
+<p class="caption">(\#fig:unnamed-chunk-12)Calculate sum</p>
 </div>
 
 ### ファイルの保存
@@ -151,7 +188,7 @@ Table: 年齢と性別のデータ
 
 <div class="figure">
 <img src="./img/01install/Install17.PNG" alt="Save file" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-10)Save file</p>
+<p class="caption">(\#fig:unnamed-chunk-13)Save file</p>
 </div>
 
 ### ファイルを開く
@@ -172,14 +209,14 @@ Table: 年齢と性別のデータ
 
 <div class="figure">
 <img src="./img/01install/Install18_transform.png" alt="Recode variable" width="1098" />
-<p class="caption">(\#fig:unnamed-chunk-11)Recode variable</p>
+<p class="caption">(\#fig:unnamed-chunk-14)Recode variable</p>
 </div>
 
 ここでは，変数名を Age_grp とします。割り当て規則は，using transform のドロップダウンボックスをクリックし，新規作成 (Create New Transform) を選択して設定します。
 
 <div class="figure">
 <img src="./img/01install/Install19_transform_age.png" alt="Recode setup" width="1027" />
-<p class="caption">(\#fig:unnamed-chunk-12)Recode setup</p>
+<p class="caption">(\#fig:unnamed-chunk-15)Recode setup</p>
 </div>
 
 新規作成を選ぶと，割り当て規則の編集画面となるので，規則の名前と条件を入力しましょう。ここでは，条件規則について，25歳未満を1, それ以上は2とするようにコーディングしたいと思います。規則を編集する場合，Add recode condition をクリックします。デフォルトでは下図のように元の変数をそのまま使用するようになっているので，Add recode condition をクリックし，
@@ -193,7 +230,7 @@ else use 2
 
 <div class="figure">
 <img src="./img/01install/Install20_transform_rule.png" alt="Recode rule" width="1036" />
-<p class="caption">(\#fig:unnamed-chunk-13)Recode rule</p>
+<p class="caption">(\#fig:unnamed-chunk-16)Recode rule</p>
 </div>
 
 上で説明した，変数の値を使った計算や，値の再割り当ては，任意の位置の列に挿入したり，データの末尾に挿入することもできます。その場合は，Variables グループの中にある Add をクリックし，Insert（挿入）または Append (末尾に追加) を，それぞれの操作ごとに行います。データ (行) を途中で挿入する場合は，Rows グループの中の Add をクリックし Insert を，行を末尾に追加したい場合は Add → Append を選択することで可能です。
@@ -210,14 +247,14 @@ Gender == "Men"
 
 <div class="figure">
 <img src="./img/01install/Install21_filter_active.png" alt="Apply filter" width="2622" />
-<p class="caption">(\#fig:unnamed-chunk-14)Apply filter</p>
+<p class="caption">(\#fig:unnamed-chunk-17)Apply filter</p>
 </div>
 
 適用したフィルタを解除する場合は，フィルタ変数そのものを削除するか，フィルタ変数の設定 (setup) で，inactive にしてください。
 
 <div class="figure">
 <img src="./img/01install/Install22_filter_inactive.png" alt="(De)activate filter" width="1031" />
-<p class="caption">(\#fig:unnamed-chunk-15)(De)activate filter</p>
+<p class="caption">(\#fig:unnamed-chunk-18)(De)activate filter</p>
 </div>
 
 <!--chapter:end:ch01-install-jamovi.Rmd-->
@@ -233,7 +270,7 @@ CSVファイル(Survey1_EFA.csv)を読み込みます。
 
 <div class="figure">
 <img src="./img/02desc/dscr01.png" alt="データ読み込み" width="2558" />
-<p class="caption">(\#fig:unnamed-chunk-16)データ読み込み</p>
+<p class="caption">(\#fig:unnamed-chunk-19)データ読み込み</p>
 </div>
 
 列を見るとGCB_1からGCB_15まであることが分かります。GCとETCを出すのに必要な変数は次のように分かれています。
@@ -247,28 +284,28 @@ CSVファイル(Survey1_EFA.csv)を読み込みます。
 
 <div class="figure">
 <img src="./img/02desc/dscr02.png" alt="Data タブ" width="2560" />
-<p class="caption">(\#fig:unnamed-chunk-17)Data タブ</p>
+<p class="caption">(\#fig:unnamed-chunk-20)Data タブ</p>
 </div>
 
 この状態で[Compute]を押します。この状態で新しい変数が追加されていますので，COMPUTED VARIABLE（おそらく「B」と書かれている）に新たな変数の名前を付けます（ここではGCにします）。
 
 <div class="figure">
 <img src="./img/02desc/dscr03.png" alt="Compute で平均を出す" width="2560" />
-<p class="caption">(\#fig:unnamed-chunk-18)Compute で平均を出す</p>
+<p class="caption">(\#fig:unnamed-chunk-21)Compute で平均を出す</p>
 </div>
 
 そして，2行下の=の後ろに計算式を入れます。ここでは必要な変数を全て足し，項目数の12で割ります。そうすると平均した結果が出てきます（1行目の2.583など）。
 
 <div class="figure">
 <img src="./img/02desc/dscr04.png" alt="平均を計算" width="2558" />
-<p class="caption">(\#fig:unnamed-chunk-19)平均を計算</p>
+<p class="caption">(\#fig:unnamed-chunk-22)平均を計算</p>
 </div>
 
 ETCについても出す必要があるので，再び[Compute]を押して，変数の名前(ETC)を入れ3つの変数を足し，3で割ります。
 
 <div class="figure">
 <img src="./img/02desc/dscr05.png" alt="Descriptives を選択" width="2548" />
-<p class="caption">(\#fig:unnamed-chunk-20)Descriptives を選択</p>
+<p class="caption">(\#fig:unnamed-chunk-23)Descriptives を選択</p>
 </div>
 
 ## 記述統計量の計算
@@ -277,28 +314,28 @@ ETCについても出す必要があるので，再び[Compute]を押して，�
 
 <div class="figure">
 <img src="./img/02desc/dscr06.png" alt="変数を選択" width="2548" />
-<p class="caption">(\#fig:unnamed-chunk-21)変数を選択</p>
+<p class="caption">(\#fig:unnamed-chunk-24)変数を選択</p>
 </div>
 
 そうすると記述統計量のための画面になります。
 
 <div class="figure">
 <img src="./img/02desc/dscr07.png" alt="デフォルトの結果" width="2554" />
-<p class="caption">(\#fig:unnamed-chunk-22)デフォルトの結果</p>
+<p class="caption">(\#fig:unnamed-chunk-25)デフォルトの結果</p>
 </div>
 
 ここでここで先ほど計算したGCとETCを選択し「→」を押すと，右の画面にデフォルトの記述統計量が出てきます。
 
 <div class="figure">
 <img src="./img/02desc/dscr10.png" alt="記述統計量" width="2556" />
-<p class="caption">(\#fig:unnamed-chunk-23)記述統計量</p>
+<p class="caption">(\#fig:unnamed-chunk-26)記述統計量</p>
 </div>
 
 Statisticsを押すと様々な項目があるので，必要な記述統計量の項目を選びます。ここではMajima & Nakamura (2019)に従い「平均 (Mean)」と「標準偏差 (Std. deviation)」を選択してみましょう。
 
 <div class="figure">
 <img src="./img/02desc/dscr09.png" alt="Statistics の画面" width="2558" />
-<p class="caption">(\#fig:unnamed-chunk-24)Statistics の画面</p>
+<p class="caption">(\#fig:unnamed-chunk-27)Statistics の画面</p>
 </div>
 
 このようにして記述統計量として平均と標準偏差を出すことができました。
@@ -325,33 +362,33 @@ Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブ
 
 <div class="figure">
 <img src="./img/03mean/exploration_01.png" alt="記述統計量の計算" width="1366" />
-<p class="caption">(\#fig:unnamed-chunk-25)記述統計量の計算</p>
+<p class="caption">(\#fig:unnamed-chunk-28)記述統計量の計算</p>
 </div>
 
 次に［Statistics］より，オプション設定を１つ行います。Dispersion（ばらつき）カテゴリーにあるStd. deviation（標準偏差）にチェックを追加します。
 
 <div class="figure">
 <img src="./img/03mean/exploration_02.png" alt="統計量の選択メニュー" width="566" />
-<p class="caption">(\#fig:unnamed-chunk-26)統計量の選択メニュー</p>
+<p class="caption">(\#fig:unnamed-chunk-29)統計量の選択メニュー</p>
 </div>
 
 次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の計算方法を決める際に必要となります。等分散性の検定でさらに判断していきましょう。また，平均やばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも見ていきましょう。
 
 <div class="figure">
 <img src="./img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="358" />
-<p class="caption">(\#fig:unnamed-chunk-27)記述統計量の計算結果</p>
+<p class="caption">(\#fig:unnamed-chunk-30)記述統計量の計算結果</p>
 </div>
 
 Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（ヒストグラム）カテゴリーにあるHistogram（ヒストグラム）と（密度曲線）にチェックするだけで作図が行われます。
 
 <div class="figure">
 <img src="./img/03mean/exploration_04.png" alt="作図メニュー" width="567" />
-<p class="caption">(\#fig:unnamed-chunk-28)作図メニュー</p>
+<p class="caption">(\#fig:unnamed-chunk-31)作図メニュー</p>
 </div>
 
 <div class="figure">
 <img src="./img/03mean/exploration_05.png" alt="ヒストグラムと密度曲線" width="430" />
-<p class="caption">(\#fig:unnamed-chunk-29)ヒストグラムと密度曲線</p>
+<p class="caption">(\#fig:unnamed-chunk-32)ヒストグラムと密度曲線</p>
 </div>
 
 　凸凹しているのがヒストグラム，曲線がヒストグラムをカーネル平滑化した密度曲線になります。Jamoviでは，ヒストグラムに密度曲線を重ねて作図することができます。その他に，Box Plot（ボックスプロット）では，データの中央値・四分位範囲・範囲をシンプルな形で視覚化する箱ひげ図が，Q-Q（Q-Qプロット）では，標本が正規性の仮定を満たしているかどうかを視覚的に確認することができます。
@@ -376,14 +413,14 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/03mean/t-test_00.png" alt="独立な2群の t 検定メニュー" width="443" />
-<p class="caption">(\#fig:unnamed-chunk-30)独立な2群の t 検定メニュー</p>
+<p class="caption">(\#fig:unnamed-chunk-33)独立な2群の t 検定メニュー</p>
 </div>
 
 ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。
 
 <div class="figure">
 <img src="./img/03mean/t-test_01.png" alt="変数の選択" width="570" />
-<p class="caption">(\#fig:unnamed-chunk-31)変数の選択</p>
+<p class="caption">(\#fig:unnamed-chunk-34)変数の選択</p>
 </div>
 
 次に，以下の分析方法を確認もしくは追加していきます。
@@ -431,7 +468,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1366" />
-<p class="caption">(\#fig:unnamed-chunk-32)分散の等質性の検定の実行</p>
+<p class="caption">(\#fig:unnamed-chunk-35)分散の等質性の検定の実行</p>
 </div>
 
 ### 結果の見方
@@ -442,7 +479,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/03mean/t-test_03.png" alt="等質性の検定の結果" width="442" />
-<p class="caption">(\#fig:unnamed-chunk-33)等質性の検定の結果</p>
+<p class="caption">(\#fig:unnamed-chunk-36)等質性の検定の結果</p>
 </div>
 
 等分散性の検定の場合，p < 0.05 であった場合は『分散に差がある』，p ≧ 0.05 であった場合は『分散に差がない』となります。今回のp値は0.182なので『分散に差がない』つまり等分散性を仮定したスチューデントのt検定が適切な検定となります。今回はこのスチューデントのt検定を選択していたので，そのままt検定の結果を見ていきます。『分散に差がある』場合には，TestsカテゴリーにあるWelch's（ウェルチのt検定）にチェックを入れます。
@@ -453,7 +490,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/03mean/t-test_04.png" alt="t 検定の結果" width="420" />
-<p class="caption">(\#fig:unnamed-chunk-34)t 検定の結果</p>
+<p class="caption">(\#fig:unnamed-chunk-37)t 検定の結果</p>
 </div>
 
 ｔ値は2.24，ｐ値は0.026と有意な差が見られています。したがって，男性と女性は「社会的居場所」において異なる（t(355)=2.24, p < .05)ことが分かりました。
@@ -464,12 +501,12 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/03mean/t-test_05.png" alt="片側検定への変更" width="206" />
-<p class="caption">(\#fig:unnamed-chunk-35)片側検定への変更</p>
+<p class="caption">(\#fig:unnamed-chunk-38)片側検定への変更</p>
 </div>
 
 <div class="figure">
 <img src="./img/03mean/t-test_06.png" alt="片側検定の実施" width="478" />
-<p class="caption">(\#fig:unnamed-chunk-36)片側検定の実施</p>
+<p class="caption">(\#fig:unnamed-chunk-39)片側検定の実施</p>
 </div>
 
 両側検定と同じく有意になりました。この場合，変更されたのはp値の0.013のみで，t値，自由度はそのままの値です。分布の両側を棄却域にするよりも，片側を棄却域にする方が若干検出力が高くなります。この結果からは，女性の方が男性よりも「社会的居場所」得点が有意に高い（t(355)=2.24, p < .05)ことを示すことができます。このように両側と片側検定は仮説に応じて使い分けていきます。
@@ -486,7 +523,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/04correl/Figure1.png" alt="相関行列の表示" width="1182" />
-<p class="caption">(\#fig:unnamed-chunk-37)相関行列の表示</p>
+<p class="caption">(\#fig:unnamed-chunk-40)相関行列の表示</p>
 </div>
 
 　ピアソンの積率相関係数 (Pearson's r) の下の行に示されている数値は，その相関係数が生じ得る確率 (p-value)です。「その相関係数が生じ得る確率 (p-value)」とは，関連性を確認した２つの変数から得られた相関係数について，仮説検定（無相関検定）を行った結果を示しています。無相関検定の帰無仮説は「相関がない／相関係数≒０」となります。相関係数は自由度がn-2のt分布に従うことが知られているので， $$ t = r\sqrt{n-2}/\sqrt{1-r^2} $$ の式に，相関係数 (*r*) およびデータ数 (*n*) を代入してt値を求めると，そのt値が取る累積確率（外側）を用いて仮説検定を行えます。
@@ -497,7 +534,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/04correl/Figure2.png" alt="相関行列の表示（信頼区間を示したもの）" width="475" />
-<p class="caption">(\#fig:unnamed-chunk-38)相関行列の表示（信頼区間を示したもの）</p>
+<p class="caption">(\#fig:unnamed-chunk-41)相関行列の表示（信頼区間を示したもの）</p>
 </div>
 
 ### 相関係数の結果を確かめる 
@@ -511,14 +548,14 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/04correl/Figure3.png" alt="性別と友人との付き合い方とのクロス集計表" width="1160" />
-<p class="caption">(\#fig:unnamed-chunk-39)性別と友人との付き合い方とのクロス集計表</p>
+<p class="caption">(\#fig:unnamed-chunk-42)性別と友人との付き合い方とのクロス集計表</p>
 </div>
 
 　それぞれのグループでの男女比を示したい場合には，左側のボックスの下部の「Cells」をクリックして開き，「Percentages」で Row と Column を選択すると，各性別での各グループの構成比および各グループでの男女比がクロス集計表に追加されて示されます (Figure 4-4)。これらの情報を見ると，男性でも女性でも各グループの構成比は変わらないこと，そしてどのグループでも男女比が３:７～４：６の間に収まっていることが分かります。
 
 <div class="figure">
 <img src="./img/04correl/Figure4.png" alt="性別と友人との付き合い方とのクロス集計表（男女比を示したもの）" width="1270" />
-<p class="caption">(\#fig:unnamed-chunk-40)性別と友人との付き合い方とのクロス集計表（男女比を示したもの）</p>
+<p class="caption">(\#fig:unnamed-chunk-43)性別と友人との付き合い方とのクロス集計表（男女比を示したもの）</p>
 </div>
 
 ### カイ二乗検定の結果を確かめる
@@ -526,14 +563,14 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/04correl/Figure5.png" alt="性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）" width="1265" />
-<p class="caption">(\#fig:unnamed-chunk-41)性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）</p>
+<p class="caption">(\#fig:unnamed-chunk-44)性別と友人との付き合い方とのクロス集計表（男女比・効果量を示したもの）</p>
 </div>
 
 　カイ二乗検定に用いられるカイ二乗値には，複数の求め方があります。一般的な求め方の他に尤度比と呼ばれるものを用いてカイ二乗値を求めたい場合には，左側のボックスの下部の「Tests」欄のLikelihood ratioを選択すると尤度比検定を行った結果が示されます (Figure 4-6)。また，今回の分析で用いた２行×５列のような，多くのカテゴリーからなる情報を分析する場合には問題になりませんが，それぞれが２つずつのカテゴリーからなる２行×２列である情報をクロス集計する場合には注意が必要です。２行×２列のクロス集計の場合は，「Statistics」をクリックして開き，「Tests」欄の*χ*<sup>2</sup> continuity correction（連続修正／イエーツの修正），そしてFisher's exact test（フィッシャーの正確確率検定）を選択します。もし１つのセルの期待度数が５未満となる場合にはFisher's exact test の結果を用います。そうでない場合は，*χ*<sup>2</sup> continuity correction の結果を用います (Figure 4-6)。
 
 <div class="figure">
 <img src="./img/04correl/Figure6.png" alt="性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）" width="1262" />
-<p class="caption">(\#fig:unnamed-chunk-42)性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）</p>
+<p class="caption">(\#fig:unnamed-chunk-45)性別と友人との付き合い方とのクロス集計表（全ての情報を示したもの）</p>
 </div>
 
 　以上の結果をまとめると，「友人との付き合い方」によって分けた５つのグループと調査協力者の性別との間には関わり（連関）はなく独立の関係であること (*χ*<sup>2</sup>(4) = 2.16, *p* = .71, *V* = .08) が確かめられた，ということになります。
@@ -549,12 +586,12 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-1_select_regression_analysis.png" alt="回帰分析の選択" width="992" />
-<p class="caption">(\#fig:unnamed-chunk-43)回帰分析の選択</p>
+<p class="caption">(\#fig:unnamed-chunk-46)回帰分析の選択</p>
 </div>
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-2_sra_for_GCBS-J-GC_and_edu_lv.png" alt="GCBS-J-GCとedu_lvの単回帰分析" width="1197" />
-<p class="caption">(\#fig:unnamed-chunk-44)GCBS-J-GCとedu_lvの単回帰分析</p>
+<p class="caption">(\#fig:unnamed-chunk-47)GCBS-J-GCとedu_lvの単回帰分析</p>
 </div>
 
 ## 分析結果の表示を選ぶ
@@ -563,7 +600,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
  
 <div class="figure">
 <img src="./img/05reg/Figure_x-3_select_the_type_of_value_to_display.png" alt="様々な指標の表示" width="1203" />
-<p class="caption">(\#fig:unnamed-chunk-45)様々な指標の表示</p>
+<p class="caption">(\#fig:unnamed-chunk-48)様々な指標の表示</p>
 </div>
 
 ## 重回帰分析を行う 
@@ -573,27 +610,27 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-4_prepare_dummy.png" alt="ダミー変数の作成" width="967" />
-<p class="caption">(\#fig:unnamed-chunk-46)ダミー変数の作成</p>
+<p class="caption">(\#fig:unnamed-chunk-49)ダミー変数の作成</p>
 </div>
 
 　次に，「Source variable」欄に元になる変数を指定します。gender dummyの作成にあたっては，gender変数の値(1=男性，2=女性)を用いますので，genderを指定します。次に「using transform」欄に変数を変換する条件を指定します。初期値はNoneになっていますので，プルダウンメニューを開き「Create New Transform…」を選択してください(Figure 6-5)。なお，一度変数の変換をすれば，変換の条件がJamoviに記憶され，次回からは「using transform」欄に任意の変換条件を指定することで簡便に変数の変換を行えます。  
  
 <div class="figure">
 <img src="./img/05reg/Figure_x-5_select_using_trasform.png" alt="変換条件の指定" width="828" />
-<p class="caption">(\#fig:unnamed-chunk-47)変換条件の指定</p>
+<p class="caption">(\#fig:unnamed-chunk-50)変換条件の指定</p>
 </div>
 
 　「Create New Transform…」を選択すると，TRANSFORMと表示される画面が重なります。上部の空欄には新しく作る変換条件の名前をつけることができます。ここではcreate gender dummyとしました。f<sub>x</sub>=$sourceと書いてある欄の右辺($sourceと記入されている部分)を編集します。用いることのできる関数の一覧はfxをクリックすることで開くことができます。今回はIF関数を使います。性別(gender)の値が1(男性)であれば，性別ダミー(gender dummy)の値は0となり，性別の値が1(男性)でなければ性別ダミーの値を1となるように指定します。以上からIF(gender==1,0,1)という条件を記入します(Figure 6-6)。条件の記入が終わったら，「↓」をクリックします。条件に従い新たな変数である性別ダミー(gender dummy)が作られました(Figure 6-7)。今回は等価である演算子「==」を用いましたが，その他にも様々な演算子があります。演算子の一例をTable 6-1に示します。  
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-6_feed_condition_transform.png" alt="変換条件の入力" width="792" />
-<p class="caption">(\#fig:unnamed-chunk-48)変換条件の入力</p>
+<p class="caption">(\#fig:unnamed-chunk-51)変換条件の入力</p>
 </div>
 
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-7_complete_dummy.png" alt="ダミー変数の完成" width="713" />
-<p class="caption">(\#fig:unnamed-chunk-49)ダミー変数の完成</p>
+<p class="caption">(\#fig:unnamed-chunk-52)ダミー変数の完成</p>
 </div>
 
 Table 6-1 演算子の一例
@@ -611,19 +648,19 @@ Table 6-1 演算子の一例
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-8_select_using_variable.png" alt="分析する変数の投入" width="1185" />
-<p class="caption">(\#fig:unnamed-chunk-50)分析する変数の投入</p>
+<p class="caption">(\#fig:unnamed-chunk-53)分析する変数の投入</p>
 </div>
 
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-9_mra_for_GCBS-J-GC.png" alt="重回帰分析結果の表示(GCBS-J-GC)  " width="1201" />
-<p class="caption">(\#fig:unnamed-chunk-51)重回帰分析結果の表示(GCBS-J-GC)  </p>
+<p class="caption">(\#fig:unnamed-chunk-54)重回帰分析結果の表示(GCBS-J-GC)  </p>
 </div>
 
 
 <div class="figure">
 <img src="./img/05reg/Figure_x-10_mra_for_GCBS-J-ETC.png" alt="重回帰分析結果の表示(GCBS-J-ETC)" width="1199" />
-<p class="caption">(\#fig:unnamed-chunk-52)重回帰分析結果の表示(GCBS-J-ETC)</p>
+<p class="caption">(\#fig:unnamed-chunk-55)重回帰分析結果の表示(GCBS-J-ETC)</p>
 </div>
 
 
@@ -646,7 +683,7 @@ Table 6-1 演算子の一例
 
 <div class="figure">
 <img src="./img/06anova/Anova02_oneway_menu.png" alt="Select One-Way ANOVA" width="566" />
-<p class="caption">(\#fig:unnamed-chunk-53)Select One-Way ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-56)Select One-Way ANOVA</p>
 </div>
 
 
@@ -656,7 +693,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova04_oneway_ini.png" alt="Options for One-way ANOVA" width="1023" />
-<p class="caption">(\#fig:unnamed-chunk-54)Options for One-way ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-57)Options for One-way ANOVA</p>
 </div>
 
 ### 主効果の検定
@@ -665,7 +702,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova05_oneway_fisher.png" alt="Results of One-way ANOVA (equal variance)" width="1053" />
-<p class="caption">(\#fig:unnamed-chunk-55)Results of One-way ANOVA (equal variance)</p>
+<p class="caption">(\#fig:unnamed-chunk-58)Results of One-way ANOVA (equal variance)</p>
 </div>
 
 ### 分散の等質性の検定
@@ -674,7 +711,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova06_assumption_equalvar.png" alt="Tests of equality of variance" width="777" />
-<p class="caption">(\#fig:unnamed-chunk-56)Tests of equality of variance</p>
+<p class="caption">(\#fig:unnamed-chunk-59)Tests of equality of variance</p>
 </div>
 
 ### 正規性の検定
@@ -683,7 +720,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova07_assumption_normality.png" alt="Tests of normality" width="779" />
-<p class="caption">(\#fig:unnamed-chunk-57)Tests of normality</p>
+<p class="caption">(\#fig:unnamed-chunk-60)Tests of normality</p>
 </div>
 
 ### 多重比較
@@ -692,7 +729,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova08_oneway_posthoc.png" alt="Post-Hoc tests for One-way ANOVA" width="1160" />
-<p class="caption">(\#fig:unnamed-chunk-58)Post-Hoc tests for One-way ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-61)Post-Hoc tests for One-way ANOVA</p>
 </div>
 
 
@@ -703,14 +740,14 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova09_anova_menu.png" alt="Select ANOVA" width="566" />
-<p class="caption">(\#fig:unnamed-chunk-59)Select ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-62)Select ANOVA</p>
 </div>
 
 すでに，述べたように，この ANOVA では，One-way ANOVA とは異なり従属変数は1つしか指定できません。それでは，従属変数である社会的居場所(s.ibasho) を Dependent Variable のボックスに，独立変数である付き合い方 (style_friendship)，性別 (gender) を Fixed factors のボックスに入れてみましょう。
 
 <div class="figure">
 <img src="./img/06anova/Anova11_anova_ini.png" alt="Options for ANOVA" width="1225" />
-<p class="caption">(\#fig:unnamed-chunk-60)Options for ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-63)Options for ANOVA</p>
 </div>
 
 分散分析の結果は，即時に表示されます。結果を見て分かるとおり，友人との付き合い方の主効果は有意 [$F(4, 347) = 11.2, p < .001$] ですが，性別の主効果，付き合い方×性別の交互作用は有意ではありません [$F(1, 347) = 1.74, p = .19; F(4, 345) < 1$]。
@@ -719,7 +756,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova12_anova_effsize.png" alt="Effect size for ANOVA" width="1320" />
-<p class="caption">(\#fig:unnamed-chunk-61)Effect size for ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-64)Effect size for ANOVA</p>
 </div>
 
 
@@ -729,7 +766,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova13_anova_posthoc.png" alt="Post-hoc tests for ANOVA" width="1336" />
-<p class="caption">(\#fig:unnamed-chunk-62)Post-hoc tests for ANOVA</p>
+<p class="caption">(\#fig:unnamed-chunk-65)Post-hoc tests for ANOVA</p>
 </div>
 
 
@@ -741,7 +778,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova16_emmeans.png" alt="Estimated marginal means" width="1142" />
-<p class="caption">(\#fig:unnamed-chunk-63)Estimated marginal means</p>
+<p class="caption">(\#fig:unnamed-chunk-66)Estimated marginal means</p>
 </div>
 
 
@@ -749,7 +786,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova17_emmeans2.png" alt="Estimated marginal means (2 variables)" width="1200" />
-<p class="caption">(\#fig:unnamed-chunk-64)Estimated marginal means (2 variables)</p>
+<p class="caption">(\#fig:unnamed-chunk-67)Estimated marginal means (2 variables)</p>
 </div>
 
 
@@ -761,7 +798,7 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova18_nonpara_menu.png" alt="Select Kruskal-Wallis test (non-partmetric one-way ANOVA)" width="566" />
-<p class="caption">(\#fig:unnamed-chunk-65)Select Kruskal-Wallis test (non-partmetric one-way ANOVA)</p>
+<p class="caption">(\#fig:unnamed-chunk-68)Select Kruskal-Wallis test (non-partmetric one-way ANOVA)</p>
 </div>
 
 
@@ -769,14 +806,14 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 
 <div class="figure">
 <img src="./img/06anova/Anova19_nonpara_ini.png" alt="Options for Kruska-Wallis test" width="981" />
-<p class="caption">(\#fig:unnamed-chunk-66)Options for Kruska-Wallis test</p>
+<p class="caption">(\#fig:unnamed-chunk-69)Options for Kruska-Wallis test</p>
 </div>
 
 クラスカル・ウォリスの検定にはオプションとして，効果量 ($\epsilon^2$) を出力するかどうか，有意であった場合に水準間の対比較を行うかどうかの設定があります (下図)。効果量は，クラスカル・ウォリスの検定結果表の末尾に，対比較はその下に出力されるようになっています (Dwass-Steel-Critchlow-Fligner pairwise comparison)。
 
 <div class="figure">
 <img src="./img/06anova/Anova20_nonpara_additional.png" alt="Effect size and pairwise comparison for Kruskal-Wallis test" width="1009" />
-<p class="caption">(\#fig:unnamed-chunk-67)Effect size and pairwise comparison for Kruskal-Wallis test</p>
+<p class="caption">(\#fig:unnamed-chunk-70)Effect size and pairwise comparison for Kruskal-Wallis test</p>
 </div>
 
 

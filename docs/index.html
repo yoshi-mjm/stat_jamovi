@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-04-08" />
+<meta name="date" content="2020-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,11 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このマニュアルについて</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#執筆者について"><i class="fa fa-check"></i><b>1.1</b> 執筆者について</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#データについて"><i class="fa fa-check"></i><b>1.2</b> データについて</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.3</b> その他の参考文献</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#データのダウンロードについての補足"><i class="fa fa-check"></i><b>1.3</b> データのダウンロードについての補足</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#リポジトリを一括ダウンロードする"><i class="fa fa-check"></i><b>1.3.1</b> リポジトリを一括ダウンロードする</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#github-を使う"><i class="fa fa-check"></i><b>1.3.2</b> Git(Hub) を使う</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.4</b> その他の参考文献</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a><ul>
 <li class="chapter" data-level="2.1" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
@@ -142,7 +146,7 @@
 <div id="header">
 <h1 class="title">jamovi ガイドブック（北星学園大学版）</h1>
 <p class="author"><em>眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行</em></p>
-<p class="date"><em>2020-04-08</em></p>
+<p class="date"><em>2020-04-16</em></p>
 </div>
 <div id="このマニュアルについて" class="section level1">
 <h1><span class="header-section-number">1</span> このマニュアルについて</h1>
@@ -167,8 +171,46 @@
 <p>を使用しています。
 なお，Majima &amp; Nakamura (2020) については，全てのデータが <a href="https://osf.io/24w8u/" target="_blank">https://osf.io/24w8u/</a> からダウンロードすることが可能です。</p>
 </div>
+<div id="データのダウンロードについての補足" class="section level2">
+<h2><span class="header-section-number">1.3</span> データのダウンロードについての補足</h2>
+<div id="リポジトリを一括ダウンロードする" class="section level3">
+<h3><span class="header-section-number">1.3.1</span> リポジトリを一括ダウンロードする</h3>
+<p>上の <a href="https://github.com/yoshi-mjm/stat_jamovi/tree/master/data" target="_blank">data</a> というフォルダをクリックして表示されるファイルは，直接1つ1つのファイルをダウンロードできませんので注意してください。
+このサイトは Git(Hub) を使ってバージョン管理をしているためです。
+データをダウンロードする一番簡単な方法は，データも含めてサイトの全てを一括ダウンロードする方法です。
+一括ダウンロードをするためには，上のリンクをクリックして data フォルダに移動し</p>
+<div class="figure"><span id="fig:unnamed-chunk-1"></span>
+<img src="img/00general/fig1_github.png" alt="GitHub リポジトリ" width="2246" />
+<p class="caption">
+Figure 1.1: GitHub リポジトリ
+</p>
+</div>
+<p>図に示されるように &lt;&gt; Code と書かれているタブか，リポジトリの名前である stat_jamovi をクリックします。
+リポジトリのトップに移動したら，</p>
+<div class="figure"><span id="fig:unnamed-chunk-2"></span>
+<img src="img/00general/fig2_download.png" alt="Zip 形式でのダウンロード" width="2246" />
+<p class="caption">
+Figure 1.2: Zip 形式でのダウンロード
+</p>
+</div>
+<p>右側にある緑色の Clone of download と書かれたボタンをクリックし，Download ZIP を選んでください。
+リポジトリのファイルが一括で zip ファイルでダウンロードされます。
+zip ファイルを展開した先に出来る data フォルダにデータが入っています。</p>
+<div class="figure"><span id="fig:unnamed-chunk-3"></span>
+<img src="img/00general/fig3_unzipped.png" alt="展開した先の data フォルダ" width="1540" />
+<p class="caption">
+Figure 1.3: 展開した先の data フォルダ
+</p>
+</div>
+<p>このガイドブックを授業で使用する場合は，授業担当者から別途指示があるかもしれませんので，その場合はその指示に従ってください。</p>
+</div>
+<div id="github-を使う" class="section level3">
+<h3><span class="header-section-number">1.3.2</span> Git(Hub) を使う</h3>
+<p>Git というのは，プログラムのソースコードなどをバージョン管理するツールであり，<a href="https://github.com/" target="_blank">GitHub</a> は，Git を使った開発者を支援する Web サイトです。Git および GitHub の詳細はここでは省略しますが，<a href="https://help.github.com/ja/desktop" target="_blank">GitHub Desktop</a>というアプリケーションを使うと，リポジトリのコピー（クローン）なども簡単にできて便利です。</p>
+</div>
+</div>
 <div id="その他の参考文献" class="section level2">
-<h2><span class="header-section-number">1.3</span> その他の参考文献</h2>
+<h2><span class="header-section-number">1.4</span> その他の参考文献</h2>
 <p>jamovi の使い方については，下のサイトも参考になります。あわせてご覧ください。</p>
 <ul>
 <li>jamovi で学ぶ心理統計 <a href="https://bookdown.org/sbtseiji/lswjamoviJ/" target="_blank">https://bookdown.org/sbtseiji/lswjamoviJ/</a></li>

@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-04-08" />
+<meta name="date" content="2020-04-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -69,7 +69,11 @@
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> このマニュアルについて</a><ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#執筆者について"><i class="fa fa-check"></i><b>1.1</b> 執筆者について</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#データについて"><i class="fa fa-check"></i><b>1.2</b> データについて</a></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.3</b> その他の参考文献</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#データのダウンロードについての補足"><i class="fa fa-check"></i><b>1.3</b> データのダウンロードについての補足</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#リポジトリを一括ダウンロードする"><i class="fa fa-check"></i><b>1.3.1</b> リポジトリを一括ダウンロードする</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#github-を使う"><i class="fa fa-check"></i><b>1.3.2</b> Git(Hub) を使う</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#その他の参考文献"><i class="fa fa-check"></i><b>1.4</b> その他の参考文献</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html"><i class="fa fa-check"></i><b>2</b> jamovi のインストールと操作の基礎</a><ul>
 <li class="chapter" data-level="2.1" data-path="ch01-install-jamovi.html"><a href="ch01-install-jamovi.html#jamovi-のインストール"><i class="fa fa-check"></i><b>2.1</b> jamovi のインストール</a></li>
@@ -151,34 +155,34 @@
 <h3><span class="header-section-number">4.1.1</span> 基本統計量の算出</h3>
 <p>まず，適切な分析方法を選ぶための準備として，男女のサンプル数，平均値，標準偏差，ヒストグラム，密度曲線を見ていきます。t検定の理解を深めるために必要な手順ですが，手早く分析したい場合にはこの基本統計量の算出は飛ばすこともできます。その場合には，後述するt検定の分析の際にAdditional Statisticsカテゴリー内にあるDescriptivesを追加します。</p>
 <p>Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-25"></span>
+<div class="figure"><span id="fig:unnamed-chunk-28"></span>
 <img src="img/03mean/exploration_01.png" alt="記述統計量の計算" width="1366" />
 <p class="caption">
 Figure 4.1: 記述統計量の計算
 </p>
 </div>
 <p>次に［Statistics］より，オプション設定を１つ行います。Dispersion（ばらつき）カテゴリーにあるStd. deviation（標準偏差）にチェックを追加します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-26"></span>
+<div class="figure"><span id="fig:unnamed-chunk-29"></span>
 <img src="img/03mean/exploration_02.png" alt="統計量の選択メニュー" width="566" />
 <p class="caption">
 Figure 4.2: 統計量の選択メニュー
 </p>
 </div>
 <p>次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の計算方法を決める際に必要となります。等分散性の検定でさらに判断していきましょう。また，平均やばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも見ていきましょう。</p>
-<div class="figure"><span id="fig:unnamed-chunk-27"></span>
+<div class="figure"><span id="fig:unnamed-chunk-30"></span>
 <img src="img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="358" />
 <p class="caption">
 Figure 4.3: 記述統計量の計算結果
 </p>
 </div>
 <p>Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（ヒストグラム）カテゴリーにあるHistogram（ヒストグラム）と（密度曲線）にチェックするだけで作図が行われます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-28"></span>
+<div class="figure"><span id="fig:unnamed-chunk-31"></span>
 <img src="img/03mean/exploration_04.png" alt="作図メニュー" width="567" />
 <p class="caption">
 Figure 4.4: 作図メニュー
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-29"></span>
+<div class="figure"><span id="fig:unnamed-chunk-32"></span>
 <img src="img/03mean/exploration_05.png" alt="ヒストグラムと密度曲線" width="430" />
 <p class="caption">
 Figure 4.5: ヒストグラムと密度曲線
@@ -197,14 +201,14 @@ Figure 4.5: ヒストグラムと密度曲線
 <p>同じ人で走る前のデータと後のデータように，対応のある２つの標本の平均値の差を求めたいときに用います。Jamoviでは，スチューデントの対応ありｔ検定，ウィルコクソンの符号順位検定の２つを行うことができます。</p>
 <p><strong>One Sample T-Test（１標本のｔ検定）</strong></p>
 <p>10人の身長の平均と日本人の平均身長のように，１組のデータとある固定値を比較したいときに用います。Jamoviでは，スチューデントの対応ありｔ検定，ウィルコクソンの符号順位検定の２つを行うことができます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-30"></span>
+<div class="figure"><span id="fig:unnamed-chunk-33"></span>
 <img src="img/03mean/t-test_00.png" alt="独立な2群の t 検定メニュー" width="443" />
 <p class="caption">
 Figure 4.6: 独立な2群の t 検定メニュー
 </p>
 </div>
 <p>ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-31"></span>
+<div class="figure"><span id="fig:unnamed-chunk-34"></span>
 <img src="img/03mean/t-test_01.png" alt="変数の選択" width="570" />
 <p class="caption">
 Figure 4.7: 変数の選択
@@ -247,7 +251,7 @@ Figure 4.7: 変数の選択
 <strong>Normality (Q-Q plot)</strong>：データが正規分布しているかどうかを視覚的に確かめるためのＱ‐Ｑプロットを作図します。
 <strong>Equality of variances（分散の等質性）</strong>：分散が等質であるかどうかを調べるために，Levene（ルビーン）の等分散性検定を実施します。今回紹介している独立標本のｔ検定にのみ必須の前提条件となります。対応のある標本のｔ検定および１標本のｔ検定に，このオプションはありません。</p>
 <p>ここでは，Equality of variances（分散の等質性）にチェックを入れます。はじめに述べたように，Jamoviで独立標本のｔ検定を行う場合，ここで等分散性の検定を行うことができます。そのため，t検定と等分散性の検定結果は同時に出力されます。この等分散性の検定結果によって，等分散性が仮定されない場合にはスチューデントのt検定からウェルチのt検定に変更する必要があります。</p>
-<div class="figure"><span id="fig:unnamed-chunk-32"></span>
+<div class="figure"><span id="fig:unnamed-chunk-35"></span>
 <img src="img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1366" />
 <p class="caption">
 Figure 4.8: 分散の等質性の検定の実行
@@ -260,7 +264,7 @@ Figure 4.8: 分散の等質性の検定の実行
 <div id="等分散性の検定結果" class="section level4">
 <h4><span class="header-section-number">4.1.3.1</span> 等分散性の検定結果</h4>
 <p>結果は，t検定の結果ではなく，検定の前提条件となるAssumptionsにあるTest of Equality of Variances(Levene’s)の結果から見ていきます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-33"></span>
+<div class="figure"><span id="fig:unnamed-chunk-36"></span>
 <img src="img/03mean/t-test_03.png" alt="等質性の検定の結果" width="442" />
 <p class="caption">
 Figure 4.9: 等質性の検定の結果
@@ -271,7 +275,7 @@ Figure 4.9: 等質性の検定の結果
 <div id="t検定の結果" class="section level4">
 <h4><span class="header-section-number">4.1.3.2</span> t検定の結果</h4>
 <p>では，スチューデントのt検定の結果を見てみましょう。</p>
-<div class="figure"><span id="fig:unnamed-chunk-34"></span>
+<div class="figure"><span id="fig:unnamed-chunk-37"></span>
 <img src="img/03mean/t-test_04.png" alt="t 検定の結果" width="420" />
 <p class="caption">
 Figure 4.10: t 検定の結果
@@ -280,13 +284,13 @@ Figure 4.10: t 検定の結果
 <p>ｔ値は2.24，ｐ値は0.026と有意な差が見られています。したがって，男性と女性は「社会的居場所」において異なる（t(355)=2.24, p &lt; .05)ことが分かりました。</p>
 <p>では，さいごにもう一つt検定を行ってみましょう。基本統計量のところで確認したように「社会的居場所」の平均値は，女性の方が男性よりもが高い結果が得られていました。もし理論的に女性の方が「社会的居場所」得点が高くなる可能性を説明できるのであれば，統計的にも女性の方が得点が高いことを示した方が説得力が高まります。そこで，ここでは理論的根拠を説明できることを仮に想定した場合，女性の方が「社会的居場所」得点が高くなるのかどうかを調べる片側t検定の結果がどうなるのか試してみます。</p>
 <p>分析は先ほどとすべて同じですが，次の１カ所のみ変更します。Hypothesis（仮説）をGroup 1 &lt; Group 2に変更します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-35"></span>
+<div class="figure"><span id="fig:unnamed-chunk-38"></span>
 <img src="img/03mean/t-test_05.png" alt="片側検定への変更" width="206" />
 <p class="caption">
 Figure 4.11: 片側検定への変更
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-36"></span>
+<div class="figure"><span id="fig:unnamed-chunk-39"></span>
 <img src="img/03mean/t-test_06.png" alt="片側検定の実施" width="478" />
 <p class="caption">
 Figure 4.12: 片側検定の実施
