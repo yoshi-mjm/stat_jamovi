@@ -26,6 +26,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 この教材で使用するデータは，[https://github.com/yoshi-mjm/stat_jamovi](https://github.com/yoshi-mjm/stat_jamovi){target="_blank"} の [data](https://github.com/yoshi-mjm/stat_jamovi/tree/master/data){target="_blank"} というフォルダの中にあります。また，これらのデータは，それぞれ，
 
+- Majima, Y. (2017). The Feasibility of a Japanese Crowdsourcing Service for Experimental Research in Psychology. Sage Open, 27, 1. [https://doi.org/10.1177/2158244017698731](https://doi.org/10.1177/2158244017698731){target="_blank"}
 - Majima, Y. & Nakamura, H. (2020). Development of the Japanese Version of the Generic Conspiracist Beliefs Scale (GCBS‐J). Japanese Psychological Research. [Advance Online Publication]. [https://doi.org/10.1111/jpr.12267](https://doi.org/10.1111/jpr.12267){target="_blank"}
 - 永井暁行 (2018). ソーシャルスキルと態度による大学生の友人との付き合い方の分類―友人関係による居場所感の違い―. 教育心理学研究, 66, 54-66. [https://doi.org/10.5926/jjep.66.54](https://doi.org/10.5926/jjep.66.54){target="_blank"}
 - 中村紘子・眞嶋良全(2019). 日本人クラウドワーカーによるオンライン実験と大学生による実験室実験における認知課題成績の比較. 基礎心理学研究, 38, 33-47. [https://doi.org/10.14947/psychono.38.10](https://doi.org/10.14947/psychono.38.10){target="_blank"}

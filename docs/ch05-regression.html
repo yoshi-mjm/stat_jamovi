@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-04-16" />
+<meta name="date" content="2020-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -96,6 +96,10 @@
 <li class="chapter" data-level="4.1.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
 <li class="chapter" data-level="4.1.3" data-path="ch03-ttest.html"><a href="ch03-ttest.html#結果の見方"><i class="fa fa-check"></i><b>4.1.3</b> 結果の見方</a></li>
 </ul></li>
+<li class="chapter" data-level="4.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#対応のある-t-検定"><i class="fa fa-check"></i><b>4.2</b> 対応のある t 検定</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="ch03-ttest.html"><a href="ch03-ttest.html#基本統計量の算出-1"><i class="fa fa-check"></i><b>4.2.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.2.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#対応のある-t-検定の実施"><i class="fa fa-check"></i><b>4.2.2</b> 対応のある t 検定の実施</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="ch04-cor.html"><a href="ch04-cor.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a><ul>
 <li class="chapter" data-level="5.1" data-path="ch04-cor.html"><a href="ch04-cor.html#相関係数を求める相関分析をおこなう"><i class="fa fa-check"></i><b>5.1</b> 相関係数を求める／相関分析をおこなう</a><ul>
@@ -149,13 +153,13 @@
 <div id="回帰分析を行う" class="section level2">
 <h2><span class="header-section-number">6.1</span> 回帰分析を行う</h2>
 <p>　まず，AnalysesタブのRegressionを選択します。プルダウンメニューから「Liner Regression」を選択してください(Figure 6-1)。ここまでの分析と同様に，左側のボックスには変数の一覧が表示されています。この変数の一覧から使用する変数を選び，右側のボックスに移します。Dependent Variableに分析の従属変数(目的変数)を指定します。Covariatesに独立変数(説明変数)を指定します。たとえば，第2節で記述統計量を算出したMajima &amp; Nakamura(2019)の，GCBS-J-GCをDependent Variableに，edu_lvをCovariatesに指定することで単回帰分析ができます(Figure 6-2)。重回帰分析を行う場合にはCovariatesに複数の独立変数を指定してください。</p>
-<div class="figure"><span id="fig:unnamed-chunk-46"></span>
+<div class="figure"><span id="fig:unnamed-chunk-54"></span>
 <img src="img/05reg/Figure_x-1_select_regression_analysis.png" alt="回帰分析の選択" width="992" />
 <p class="caption">
 Figure 6.1: 回帰分析の選択
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-47"></span>
+<div class="figure"><span id="fig:unnamed-chunk-55"></span>
 <img src="img/05reg/Figure_x-2_sra_for_GCBS-J-GC_and_edu_lv.png" alt="GCBS-J-GCとedu_lvの単回帰分析" width="1197" />
 <p class="caption">
 Figure 6.2: GCBS-J-GCとedu_lvの単回帰分析
@@ -166,7 +170,7 @@ Figure 6.2: GCBS-J-GCとedu_lvの単回帰分析
 <h2><span class="header-section-number">6.2</span> 分析結果の表示を選ぶ</h2>
 <p>　回帰分析のオプションメニューの内，「Model Fit」を開くと，結果に表示する適合度指標を選ぶことができます。初期値ではFit Measures内のRとR2が選択されています。調整済み決定係数を表示する際にはAdjust R2を選択します。その他，赤池情報量基準 (AIC)，ベイズ情報量規準 (BIC)，RMSEA (Root Mean Square Error of Approximation)を選択できます。また，Overall Model Test内のF Testを選択することで，回帰モデルの F 検定の結果を示すことができます。以上のように，主に分析モデル全体の評価に関する指標は「Model Fit」から指定できます。<br />
 　次に，表示する係数を指定します。オプションメニューの「Model Coefficients」を開いてください。初期値は非標準化係数の点推定値のみが表示されています。標準化係数 (Standardized Estimate) を表示するためには，Standardized Estimate内のStandardized estimateを選択してください。また，各推定値の95%信頼区間を表示するためには，Confidence Intervalを選択し，信頼区間の数値を指定してください(初期値は95%信頼区間)。信頼区間は非標準化推定値(Estimate)と標準化推定値(Standardized Estimate)のそれぞれに対して指定できます。例として，Figure 6-1で表示した回帰分析に，調整済み決定係数，F 検定の結果，標準化係数，非標準化係数の95%信頼区間を加えて表示してみました(Figure 6-3)。Figure 6-2からFigure 6-3にかけて表示されている結果が増えています。</p>
-<div class="figure"><span id="fig:unnamed-chunk-48"></span>
+<div class="figure"><span id="fig:unnamed-chunk-56"></span>
 <img src="img/05reg/Figure_x-3_select_the_type_of_value_to_display.png" alt="様々な指標の表示" width="1203" />
 <p class="caption">
 Figure 6.3: 様々な指標の表示
@@ -178,27 +182,27 @@ Figure 6.3: 様々な指標の表示
 <p>　最後に，改めてMajima &amp; Nakamura(2019)のデータを使って分析していきます。ここでは，Majima &amp; Nakamura(2019)によって邦訳された日本語版一般陰謀論者信念尺度の一般陰謀者信念(GCBS-J-GC)，地球外陰謀論者信念(GCBS-J-ETC)の各下位尺度を性別(gender)，年齢(age)，教育水準(edu_lv)によって予測することを試みます。この分析はMajima &amp; Nakamura(2019) には記載されていませんが，この論文のstudy 2で用いられたデータを使っています。関心のある方はMajima &amp; Nakamura(2019) を読んでみてください。<br />
 　今回の目的変数となる日本語版一般陰謀論者信念尺度の一般陰謀者信念(GCBS-J-GC)，地球外陰謀論者信念(GCBS-J-ETC)の各下位尺度は第3章第1節(3.1.平均化する)にて変数の作成を行いました。本項ではこの変数を用いることにします。説明変数の性別(gender)は男性が1，女性が2の数値を割り当てられている名義尺度です。回帰分析における説明変数は間隔尺度以上の尺度水準であることが求められますので，このままでは分析に用いることができません。そこで，性別(gender)を0，1のダミー変数に変換します。ダミー変数は0から1までの間隔尺度として見なされます。ここでは男性を0，女性を1としたgender dummyを作ります。<br />
 　ダミー変数の作り方を以下に示します。この方法では，元となる変数を指定し，その変数の値によって新たな変数の値を指定します。まずDataタブのTransformを選択します。すると，画面上部にTRANSFORMED VARIABLEと表示されます。上部の空欄に新しく作成する変数名を入力します。今回はgender dummyとします(Figure 6-4)。</p>
-<div class="figure"><span id="fig:unnamed-chunk-49"></span>
+<div class="figure"><span id="fig:unnamed-chunk-57"></span>
 <img src="img/05reg/Figure_x-4_prepare_dummy.png" alt="ダミー変数の作成" width="967" />
 <p class="caption">
 Figure 6.4: ダミー変数の作成
 </p>
 </div>
 <p>　次に，「Source variable」欄に元になる変数を指定します。gender dummyの作成にあたっては，gender変数の値(1=男性，2=女性)を用いますので，genderを指定します。次に「using transform」欄に変数を変換する条件を指定します。初期値はNoneになっていますので，プルダウンメニューを開き「Create New Transform…」を選択してください(Figure 6-5)。なお，一度変数の変換をすれば，変換の条件がJamoviに記憶され，次回からは「using transform」欄に任意の変換条件を指定することで簡便に変数の変換を行えます。</p>
-<div class="figure"><span id="fig:unnamed-chunk-50"></span>
+<div class="figure"><span id="fig:unnamed-chunk-58"></span>
 <img src="img/05reg/Figure_x-5_select_using_trasform.png" alt="変換条件の指定" width="828" />
 <p class="caption">
 Figure 6.5: 変換条件の指定
 </p>
 </div>
 <p>　「Create New Transform…」を選択すると，TRANSFORMと表示される画面が重なります。上部の空欄には新しく作る変換条件の名前をつけることができます。ここではcreate gender dummyとしました。f<sub>x</sub>=<span class="math inline">\(sourceと書いてある欄の右辺(\)</span>sourceと記入されている部分)を編集します。用いることのできる関数の一覧はfxをクリックすることで開くことができます。今回はIF関数を使います。性別(gender)の値が1(男性)であれば，性別ダミー(gender dummy)の値は0となり，性別の値が1(男性)でなければ性別ダミーの値を1となるように指定します。以上からIF(gender==1,0,1)という条件を記入します(Figure 6-6)。条件の記入が終わったら，「↓」をクリックします。条件に従い新たな変数である性別ダミー(gender dummy)が作られました(Figure 6-7)。今回は等価である演算子「==」を用いましたが，その他にも様々な演算子があります。演算子の一例をTable 6-1に示します。</p>
-<div class="figure"><span id="fig:unnamed-chunk-51"></span>
+<div class="figure"><span id="fig:unnamed-chunk-59"></span>
 <img src="img/05reg/Figure_x-6_feed_condition_transform.png" alt="変換条件の入力" width="792" />
 <p class="caption">
 Figure 6.6: 変換条件の入力
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-52"></span>
+<div class="figure"><span id="fig:unnamed-chunk-60"></span>
 <img src="img/05reg/Figure_x-7_complete_dummy.png" alt="ダミー変数の完成" width="713" />
 <p class="caption">
 Figure 6.7: ダミー変数の完成
@@ -254,19 +258,19 @@ Figure 6.7: ダミー変数の完成
 </tbody>
 </table>
 <p>　目的変数となる一般陰謀者信念(GCBS-J-GC)と地球外陰謀論者信念(GCBS-J-ETC)，説明変数となる性別(gender dummy)，年齢(age)，教育水準(edu_lv)が用意できましたので，重回帰分析を試みます。もう一度Analysesタブを開き，Regressionを選択します。プルダウンメニューから「Liner Regression」を選択します。まずDependent VariableにGCBS-J-GCを指定します。次にCovariatesにgender dummy，age，edu_lvの3変数を指定します(Figure 6-8)。前述の例と同様に重相関係数，決定係数，調整済み決定係数，F 検定の結果，標準化係数，非標準化係数の95%信頼区間を表示しました(Figure 6-9)。次にGCBS-J-ETCをDependent Variableに指定して同様の分析を行います(Figure 6-10)。</p>
-<div class="figure"><span id="fig:unnamed-chunk-53"></span>
+<div class="figure"><span id="fig:unnamed-chunk-61"></span>
 <img src="img/05reg/Figure_x-8_select_using_variable.png" alt="分析する変数の投入" width="1185" />
 <p class="caption">
 Figure 6.8: 分析する変数の投入
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-54"></span>
+<div class="figure"><span id="fig:unnamed-chunk-62"></span>
 <img src="img/05reg/Figure_x-9_mra_for_GCBS-J-GC.png" alt="重回帰分析結果の表示(GCBS-J-GC)  " width="1201" />
 <p class="caption">
 Figure 6.9: 重回帰分析結果の表示(GCBS-J-GC)
 </p>
 </div>
-<div class="figure"><span id="fig:unnamed-chunk-55"></span>
+<div class="figure"><span id="fig:unnamed-chunk-63"></span>
 <img src="img/05reg/Figure_x-10_mra_for_GCBS-J-ETC.png" alt="重回帰分析結果の表示(GCBS-J-ETC)" width="1199" />
 <p class="caption">
 Figure 6.10: 重回帰分析結果の表示(GCBS-J-ETC)

@@ -24,7 +24,7 @@
 <meta name="author" content="眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行" />
 
 
-<meta name="date" content="2020-04-16" />
+<meta name="date" content="2020-05-05" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -95,6 +95,10 @@
 <li class="chapter" data-level="4.1.1" data-path="ch03-ttest.html"><a href="ch03-ttest.html#基本統計量の算出"><i class="fa fa-check"></i><b>4.1.1</b> 基本統計量の算出</a></li>
 <li class="chapter" data-level="4.1.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#t検定の実施"><i class="fa fa-check"></i><b>4.1.2</b> t検定の実施</a></li>
 <li class="chapter" data-level="4.1.3" data-path="ch03-ttest.html"><a href="ch03-ttest.html#結果の見方"><i class="fa fa-check"></i><b>4.1.3</b> 結果の見方</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#対応のある-t-検定"><i class="fa fa-check"></i><b>4.2</b> 対応のある t 検定</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="ch03-ttest.html"><a href="ch03-ttest.html#基本統計量の算出-1"><i class="fa fa-check"></i><b>4.2.1</b> 基本統計量の算出</a></li>
+<li class="chapter" data-level="4.2.2" data-path="ch03-ttest.html"><a href="ch03-ttest.html#対応のある-t-検定の実施"><i class="fa fa-check"></i><b>4.2.2</b> 対応のある t 検定の実施</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="ch04-cor.html"><a href="ch04-cor.html"><i class="fa fa-check"></i><b>5</b> 相関と連関</a><ul>
@@ -297,8 +301,87 @@ Figure 4.12: 片側検定の実施
 </p>
 </div>
 <p>両側検定と同じく有意になりました。この場合，変更されたのはp値の0.013のみで，t値，自由度はそのままの値です。分布の両側を棄却域にするよりも，片側を棄却域にする方が若干検出力が高くなります。この結果からは，女性の方が男性よりも「社会的居場所」得点が有意に高い（t(355)=2.24, p &lt; .05)ことを示すことができます。このように両側と片側検定は仮説に応じて使い分けていきます。</p>
-
 </div>
+</div>
+</div>
+<div id="対応のある-t-検定" class="section level2">
+<h2><span class="header-section-number">4.2</span> 対応のある t 検定</h2>
+<p>次に，同一の標本から複数回測定値を得た場合に行われる対応のある2群の t 検定について説明します。ここでは，Majima (2017) のデータを使い，フランカー課題において，中央のターゲット刺激と周辺刺激が一致している場合 (con) と，一致しない場合 (incon) とで，反応時間が異なるかどうかを分析していきます。
+なお，Majima (2017) では，試行の種類（一致・不一致）と，参加者の種別（学生・クラウドワーカー）を組み合わせた分析をしていますが，ここでは試行の種類のみに注目した比較を行うことにします。
+まずは，対応のない場合と同じように，基本統計量の算出から行っていきましょう。</p>
+<div id="基本統計量の算出-1" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> 基本統計量の算出</h3>
+<p>算出の手順は，対応のない場合と全く一緒なのですが，Majima (2017) では，全体の正答率が 0.8 以下である参加者を分析の対象外としています。
+ここでも，その手続きに従ってデータのフィルタリングを行います。
+フィルタリングの詳細は，第2章の 2.2 <a href="https://yoshi-mjm.github.io/stat_jamovi/ch01-install-jamovi.html#jamovi-%E3%81%AE%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C">jamovi の基本操作</a> を見てください。</p>
+<p>このデータで，全体の正答率は，mean.correct.total という変数にありますので，この変数の値が 0.8 より大きいものを選びます。</p>
+<div class="figure"><span id="fig:unnamed-chunk-40"></span>
+<img src="img/03mean/pairwise-filter.png" alt="参加者の選択" width="1853" />
+<p class="caption">
+Figure 4.13: 参加者の選択
+</p>
+</div>
+<p>では，つづいて記述統計量を計算します。
+今回対象となる変数は，一致試行の反応時間 (mean.RT.NoOutlier.con) および，不一致試行の反応時間 (mean.RT.NoOutlier.incon) の2つです。なお，この変数では，早すぎる反応と遅すぎる反応 (平均+3SD 以上) を除外することで，反応時間の分布の歪みに対処しています。つまり，外れ値 (Outlier) を除いているわけです（詳細は元論文を見て下さい）。</p>
+<div class="figure"><span id="fig:unnamed-chunk-41"></span>
+<img src="img/03mean/pairwise-descriptive_01.png" alt="変数の選択" width="2419" />
+<p class="caption">
+Figure 4.14: 変数の選択
+</p>
+</div>
+<p>また，対応のない t 検定の時に，データの可視化の方法としてヒストグラムを使いましたが，ここではもう一つの方法を使って見ましょう。それが，箱ひげ図 (Box plot) とバイオリン図 (Violin plot) です。
+箱ひげ図は，中央値を中心に，四分位点や外れ値の存在を可視化してくれる図です。しかし，これだけでは分布の形状が今ひとつよくわからないため，近年では，箱ひげ図に加えて，カーネル密度推定をプロットしたバイオリン図が使われるようになってきています。</p>
+<p>箱ひげ図，バイオリン図は，ヒストグラムと同様に， 作図 (Plots) メニューの中にあります。作図したい図にチェックを付けてください。また，バイオリン図の下にある Data というチェックは，この図に実際のデータを合わせてプロットするオプションです。ただ，同じ値が重複していると点が同じポイントに来てしまうので，少しずらして表示する (jitter) ことにします。</p>
+<div class="figure"><span id="fig:unnamed-chunk-42"></span>
+<img src="img/03mean/pairwise-descriptive_02.png" alt="箱ひげ図とバイオリン図のオプション" width="1262" />
+<p class="caption">
+Figure 4.15: 箱ひげ図とバイオリン図のオプション
+</p>
+</div>
+<p>今回のデータについて，箱ひげ + バイオリン図にデータを重ねると，以下のようなグラフになります。</p>
+<div class="figure"><span id="fig:unnamed-chunk-43"></span>
+<img src="img/03mean/pairwise-descriptive_03.png" alt="箱ひげ図とバイオリン図" width="887" />
+<p class="caption">
+Figure 4.16: 箱ひげ図とバイオリン図
+</p>
+</div>
+<p>中心は 500 ms 付近にありますが，最大が 1200ms 以上となるなど，正方向にやや歪んだ分布であることがわかります（これは，反応時間の特徴的な分布です）。</p>
+</div>
+<div id="対応のある-t-検定の実施" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> 対応のある t 検定の実施</h3>
+<p>では，続けて対応のある t 検定を行います。
+上の 4.1.2 にあるように，jamovi の t 検定には 3 種類のものがありますが，ここでは対応のある標本の t 検定 (Paired Samples T-Test) を選びます。</p>
+<div class="figure"><span id="fig:unnamed-chunk-44"></span>
+<img src="img/03mean/pairwise-t-test_00.png" alt="対応のある t 検定" width="662" />
+<p class="caption">
+Figure 4.17: 対応のある t 検定
+</p>
+</div>
+<p>対応のない t 検定と違い，対応のある t 検定は，原則として 1 人につき，2つの測定値が対になって存在します。そのため，対応のある t 検定では，そのペアを指定する必要があります。
+対になった変数は，Paired Variables のボックスに2つ並べて入れてやります（変数を2つ選択して，矢印ボタンをクリックすれば良いです）。</p>
+<div class="figure"><span id="fig:unnamed-chunk-45"></span>
+<img src="img/03mean/pairwise-t-test_01.png" alt="変数の選択" width="1288" />
+<p class="caption">
+Figure 4.18: 変数の選択
+</p>
+</div>
+<p>そして必要な統計量を選択します。例では，Student.の t，平均の差，効果量 (Cohen’s d)，各変数の記述統計量が選択されています。</p>
+<div class="figure"><span id="fig:unnamed-chunk-46"></span>
+<img src="img/03mean/pairwise-t-test_02.png" alt="出力する統計量のの選択" width="1317" />
+<p class="caption">
+Figure 4.19: 出力する統計量のの選択
+</p>
+</div>
+<p>この検定を行うと，結果は，以下のようになります。</p>
+<div class="figure"><span id="fig:unnamed-chunk-47"></span>
+<img src="img/03mean/pairwise-t-test_03.png" alt="対応のある t 検定の結果" width="1860" />
+<p class="caption">
+Figure 4.20: 対応のある t 検定の結果
+</p>
+</div>
+<p>結果から，<span class="math inline">\(t(198) = 11.7, p &lt; .001, Cohen&#39;s \; d = 0.83\)</span>，つまり一致試行と不一致試行で反応時間に有意な差が見られることがわかります。なお，ここで <span class="math inline">\(t &lt; 0, d &lt; 0\)</span> となっているのは，ペアにした2つ目の変数，すなわち不一致試行の方が，1つ目の変数である一致試行よりも反応時間が長いためです (618 ms. vs. 577ms)。
+しかし，両側検定で検定の対象となっている帰無仮説は，両群の平均値は等しい，というものですので，t の値は正負どちらでも良いということになります。</p>
+
 </div>
 </div>
 </div>
