@@ -359,10 +359,10 @@ Statisticsを押すと様々な項目があるので，必要な記述統計量�
 
 まず，適切な分析方法を選ぶための準備として，男女のサンプル数，平均値，標準偏差，ヒストグラム，密度曲線を見ていきます。t検定の理解を深めるために必要な手順ですが，手早く分析したい場合にはこの基本統計量の算出は飛ばすこともできます。その場合には，後述するt検定の分析の際にAdditional Statisticsカテゴリー内にあるDescriptivesを追加します。
 
-Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。
+Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所 (s.ibasho) 」を，［Split by（グループ変数）］に「性別 (gender)」を指定します。
 
 <div class="figure">
-<img src="./img/03mean/exploration_01.png" alt="記述統計量の計算" width="1366" />
+<img src="./img/03mean/exploration_01.png" alt="記述統計量の計算" width="1063" />
 <p class="caption">(\#fig:unnamed-chunk-28)記述統計量の計算</p>
 </div>
 
@@ -376,7 +376,7 @@ Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブ
 次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の計算方法を決める際に必要となります。等分散性の検定でさらに判断していきましょう。また，平均やばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも見ていきましょう。
 
 <div class="figure">
-<img src="./img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="358" />
+<img src="./img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="308" />
 <p class="caption">(\#fig:unnamed-chunk-30)記述統計量の計算結果</p>
 </div>
 
@@ -417,10 +417,10 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 <p class="caption">(\#fig:unnamed-chunk-33)独立な2群の t 検定メニュー</p>
 </div>
 
-ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。
+ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所 (s.ibasho)」を，Grouping Variable（グループ変数）に「性別 (gender)」のグループ変数を指定します。
 
 <div class="figure">
-<img src="./img/03mean/t-test_01.png" alt="変数の選択" width="570" />
+<img src="./img/03mean/t-test_01.png" alt="変数の選択" width="579" />
 <p class="caption">(\#fig:unnamed-chunk-34)変数の選択</p>
 </div>
 
@@ -468,7 +468,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 ここでは，Equality of variances（分散の等質性）にチェックを入れます。はじめに述べたように，Jamoviで独立標本のｔ検定を行う場合，ここで等分散性の検定を行うことができます。そのため，t検定と等分散性の検定結果は同時に出力されます。この等分散性の検定結果によって，等分散性が仮定されない場合にはスチューデントのt検定からウェルチのt検定に変更する必要があります。
 
 <div class="figure">
-<img src="./img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1366" />
+<img src="./img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1210" />
 <p class="caption">(\#fig:unnamed-chunk-35)分散の等質性の検定の実行</p>
 </div>
 
@@ -479,7 +479,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 結果は，t検定の結果ではなく，検定の前提条件となるAssumptionsにあるTest of Equality of Variances(Levene's)の結果から見ていきます。
 
 <div class="figure">
-<img src="./img/03mean/t-test_03.png" alt="等質性の検定の結果" width="442" />
+<img src="./img/03mean/t-test_03.png" alt="等質性の検定の結果" width="404" />
 <p class="caption">(\#fig:unnamed-chunk-36)等質性の検定の結果</p>
 </div>
 
@@ -490,7 +490,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 では，スチューデントのt検定の結果を見てみましょう。
 
 <div class="figure">
-<img src="./img/03mean/t-test_04.png" alt="t 検定の結果" width="420" />
+<img src="./img/03mean/t-test_04.png" alt="t 検定の結果" width="367" />
 <p class="caption">(\#fig:unnamed-chunk-37)t 検定の結果</p>
 </div>
 
@@ -506,7 +506,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 </div>
 
 <div class="figure">
-<img src="./img/03mean/t-test_06.png" alt="片側検定の実施" width="478" />
+<img src="./img/03mean/t-test_06.png" alt="片側検定の実施" width="376" />
 <p class="caption">(\#fig:unnamed-chunk-39)片側検定の実施</p>
 </div>
 

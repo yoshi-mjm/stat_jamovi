@@ -14,7 +14,7 @@
 
 まず，適切な分析方法を選ぶための準備として，男女のサンプル数，平均値，標準偏差，ヒストグラム，密度曲線を見ていきます。t検定の理解を深めるために必要な手順ですが，手早く分析したい場合にはこの基本統計量の算出は飛ばすこともできます。その場合には，後述するt検定の分析の際にAdditional Statisticsカテゴリー内にあるDescriptivesを追加します。
 
-Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。
+Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所 (s.ibasho) 」を，［Split by（グループ変数）］に「性別 (gender)」を指定します。
 
 ```{r fig.cap="記述統計量の計算"}
 knitr::include_graphics("./img/03mean/exploration_01.png")
@@ -66,7 +66,7 @@ knitr::include_graphics("./img/03mean/exploration_05.png")
 knitr::include_graphics("./img/03mean/t-test_00.png")
 ```
 
-ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。
+ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所 (s.ibasho)」を，Grouping Variable（グループ変数）に「性別 (gender)」のグループ変数を指定します。
 
 ```{r fig.cap="変数の選択"}
 knitr::include_graphics("./img/03mean/t-test_01.png")
