@@ -145,3 +145,85 @@ knitr::include_graphics("./img/06anova/Anova20_nonpara_additional.png")
 ただし，jamovi では，反復測定計画であれ，混合計画であれ，分析メニューとしては，
 反復測定デザインの分散分析 (Repeated Measures ANOVA) を使います。
 
+それでは分析を始めましょう。まずは，データファイルを読み込んでください。今回使う変数は，反転像の反応時間を格納した，RT_Mirror_0, RT_Mirror_60, RT_Mirror_120, RT_Mirror_180, RT_Mirror_240, RT_Mirror_300 の6変数です（Mirror の後の数字は回転角度）。
+
+反復測定デザインの分散分析は，Analyses タブの ANOVA メニューにある Repeated Measures ANOVA です。なお，Repeated Measures は，反復測定デザインだけではなく，被験者間要因と被験者内要因が混在した混合デザインでも同じメニューを使います。
+
+```{r fig.cap="Select repeated measures ANOVA"}
+knitr::include_graphics("./img/06anova/Anova21_repeated_menu.png")
+```
+
+被験者内要因を含む分散分析では，変数の指定の仕方が完全無作為デザインとは大きく異なっています。
+参加者間要因の変数の場合，要因の水準を表す変数と従属変数が別々になっていましたが，被験者内要因の変数の場合は，一つの変数が一つの水準を表しており，従属変数にあたる変数が複数あります（加えて，水準を表す変数がありません）。
+そこで，参加者内要因については，要因の名前や，水準数，さらには水準の名前（ラベル）を分析者の側で指定する必要があります。
+それが，Repeated Measure Factors のボックスです。
+
+```{r fig.cap="Repeated Measure Factor"}
+knitr::include_graphics("./img/06anova/Anova22_repeated_Factor1.png")
+```
+
+Repeated Measure Factors のボックスにある，RM Factor 1 というのが1つめの参加者内要因になります。その下に Level とあるのが，その要因の水準を表しており，初期状態では Level 2，すなわち2水準までが用意されています。
+また，それぞれの水準に対してデータ中のどの変数を割り付けるかは，下の Repeated Measure Cells のボックスで指定します（薄く書かれているように，それぞれのボックスに変数をドラッグアンドドロップします）。
+
+それでは，今回のデータの場合は，要因が回転角(Angle)，水準数は6，使う変数は RT_Mirror_0, RT_Mirror_60, RT_Mirror_120, RT_Mirror_180, RT_Mirror_240, RT_Mirror_300 の6個ですので，以下の図のように指定します。
+
+```{r fig.cap="Assign Repeated Measure Factor"}
+knitr::include_graphics("./img/06anova/Anova23_repeated_Factor2.png")
+```
+
+図では隠れていて見えませんが，0, 60, 120, 180, 240, 300 の6つの水準があり，それぞれ対応する変数が割り付けられています。
+
+### 球面性の仮定の検定
+
+参加者内要因を含む分析では，水準間の分散が等しいかどうかを，球面性の検定によって検定します。
+このとき，球面性の仮定が満たされない場合は，自由度の調整が必要となります。
+jamovi では，SPSS と同様にモークリーの球面性の検定を行い，自由度の調整方法についても，SPSS と同様，Greenhouse-Geisser, Huynh-Feldt のイプシロンを用いた方法が使われます。
+
+球面性の検定は，Assumption Checks にある Sphericity tests，この検定が有意な場合に行う自由度の調整は，Sphericity correction の箇所のチェックボックスにチェックを付ければ実行されます。
+
+```{r fig.cap="Sphericity Test"}
+knitr::include_graphics("./img/06anova/Anova24_repeated_Sphericity.png")
+```
+
+### 反復測定デザインの分散分析結果
+
+さて，次に結果をみてみましょう。
+
+```{r fig.cap="Resulsts - Repeated Measures ANOVA"}
+knitr::include_graphics("./img/06anova/Anova25_repeated_result.png")
+```
+
+まず，Assumptions の所にある，球面性の検定の結果を見ます。
+すると，モークリーの W の値が 0.004, p < .001 であり，球面性の仮定が満たされていない（水準間で分散が異なる）ことがわかります。
+ここが有意でない場合は，自由度の調整は必要ありませんが，今回のデータは分散が異なるため，自由度の調整が必要です。
+ここでは，Greenhouse-Geisser のイプシロンを使った補正を行っており，結果は，Repeated Measures ANOVA の Within Subjects Effects の表に出力されています。
+この結果からは，$F(1.4, 144.3) = 22.3, p < .001$，すなわち回転角によって反応時間が異なることがわかります。
+
+### 多重比較
+
+回転角の主効果が有意であることがわかりましたので，次に，多重比較を行いましょう。
+多重比較は，Post Hoc Tests のオプションで指定します。
+被験者内要因の場合は，Tukey 法ではなく，Bonferroni，またはその改良版である Holm の方法を使うことが推奨されています。
+
+```{r fig.cap="Post Hoc Test"}
+knitr::include_graphics("./img/06anova/Anova26_repeated_posthoc_menu.png")
+```
+
+多重比較を行うためには，多重比較をしたい要因を右側のボックスに移動し，有意確率の調整方法を選択します。
+
+```{r fig.cap="Resulsts - Post Hoc Test"}
+knitr::include_graphics("./img/06anova/Anova27_repeated_posthoc.png")
+```
+
+結果から，回転していない0°条件は，60°および300°（=反時計回りに60°）との間に差はありませんが，回転角度が120°を越えると反応時間が長くなることがわかります。
+また，上下が逆になっている回転角180°は，その他全ての条件と有意に反応時間が異なり，180°は最も時間がかかっていることもわかります。
+
+### 推定周辺平均
+
+水準毎の推定周辺平均を求めたい場合は，完全無作為デザインの場合と同様に，Estimated Marginal Means のオプションを開き，推定周辺平均を求めたい要因を右側のボックスに入れます。
+その他のオプションは，完全無作為デザインの場合と同様です。
+
+```{r fig.cap="Estimated Margial Means (repeated measures ANOVA)"}
+knitr::include_graphics("./img/06anova/Anova28_repeated_emmeans.png")
+```
+

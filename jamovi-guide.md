@@ -1,7 +1,7 @@
 ---
 title: "jamovi ガイドブック（北星学園大学版）"
 author: "眞嶋良全・松浦年男・藤木晶子・石川悟・永井暁行"
-date: "2020-05-05"
+date: "2020-07-07"
 site: bookdown::bookdown_site
 ---
 
@@ -359,10 +359,10 @@ Statisticsを押すと様々な項目があるので，必要な記述統計量�
 
 まず，適切な分析方法を選ぶための準備として，男女のサンプル数，平均値，標準偏差，ヒストグラム，密度曲線を見ていきます。t検定の理解を深めるために必要な手順ですが，手早く分析したい場合にはこの基本統計量の算出は飛ばすこともできます。その場合には，後述するt検定の分析の際にAdditional Statisticsカテゴリー内にあるDescriptivesを追加します。
 
-Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所」を，［Split by（グループ変数）］に「性別」を指定します。
+Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブより「Exploration（記述統計）」を選択し，さらに「Descriptives（基本統計量）」を選択します。変数リストより→のボタンを押して，［Variables（変数）］に「社会的居場所 (s.ibasho) 」を，［Split by（グループ変数）］に「性別 (gender)」を指定します。
 
 <div class="figure">
-<img src="./img/03mean/exploration_01.png" alt="記述統計量の計算" width="1366" />
+<img src="./img/03mean/exploration_01.png" alt="記述統計量の計算" width="1063" />
 <p class="caption">(\#fig:unnamed-chunk-28)記述統計量の計算</p>
 </div>
 
@@ -376,7 +376,7 @@ Jamoviで基本統計量を算出する場合，「Analyses（分析）」タブ
 次に，算出結果を見ていきます。性別の符号は，１＝男性，２＝女性になります。サンプル数をみると，男性が122名，女性235名であることが分かります。「社会的居場所」得点の平均値は，男性が2.98，女性が3.13と女性の方が0.15高いことが分かります。なおこの２つの平均値に有意な差があるのかどうかは，t検定の結果を見て判断しましょう。また，分布のばらつきを調べる標準偏差は，男性が0.642，女性が0.559と男性の方が0.08数値が大きくなっています。このばらつきが同じかどうかについてはt検定の計算方法を決める際に必要となります。等分散性の検定でさらに判断していきましょう。また，平均やばらつきなどの分布の特徴は，数値だけでなく，全体を視覚的に捉えることも大切です。以下のPlotsにある作図オプションも見ていきましょう。
 
 <div class="figure">
-<img src="./img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="358" />
+<img src="./img/03mean/exploration_03.png" alt="記述統計量の計算結果" width="308" />
 <p class="caption">(\#fig:unnamed-chunk-30)記述統計量の計算結果</p>
 </div>
 
@@ -417,10 +417,10 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 <p class="caption">(\#fig:unnamed-chunk-33)独立な2群の t 検定メニュー</p>
 </div>
 
-ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所」を，Grouping Variable（グループ変数）に「性別」のグループ変数を指定します。
+ここでは，男性と女性という異なるサンプルデータを分析するため，Independent Samples T-Test（独立標本t検定）を選択します。続いて，選択した画面の変数リストより→のボタンを押して，Dependent Variables（従属変数）に「社会的居場所 (s.ibasho)」を，Grouping Variable（グループ変数）に「性別 (gender)」のグループ変数を指定します。
 
 <div class="figure">
-<img src="./img/03mean/t-test_01.png" alt="変数の選択" width="570" />
+<img src="./img/03mean/t-test_01.png" alt="変数の選択" width="579" />
 <p class="caption">(\#fig:unnamed-chunk-34)変数の選択</p>
 </div>
 
@@ -468,7 +468,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 ここでは，Equality of variances（分散の等質性）にチェックを入れます。はじめに述べたように，Jamoviで独立標本のｔ検定を行う場合，ここで等分散性の検定を行うことができます。そのため，t検定と等分散性の検定結果は同時に出力されます。この等分散性の検定結果によって，等分散性が仮定されない場合にはスチューデントのt検定からウェルチのt検定に変更する必要があります。
 
 <div class="figure">
-<img src="./img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1366" />
+<img src="./img/03mean/t-test_02.png" alt="分散の等質性の検定の実行" width="1210" />
 <p class="caption">(\#fig:unnamed-chunk-35)分散の等質性の検定の実行</p>
 </div>
 
@@ -479,7 +479,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 結果は，t検定の結果ではなく，検定の前提条件となるAssumptionsにあるTest of Equality of Variances(Levene's)の結果から見ていきます。
 
 <div class="figure">
-<img src="./img/03mean/t-test_03.png" alt="等質性の検定の結果" width="442" />
+<img src="./img/03mean/t-test_03.png" alt="等質性の検定の結果" width="404" />
 <p class="caption">(\#fig:unnamed-chunk-36)等質性の検定の結果</p>
 </div>
 
@@ -490,7 +490,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 では，スチューデントのt検定の結果を見てみましょう。
 
 <div class="figure">
-<img src="./img/03mean/t-test_04.png" alt="t 検定の結果" width="420" />
+<img src="./img/03mean/t-test_04.png" alt="t 検定の結果" width="367" />
 <p class="caption">(\#fig:unnamed-chunk-37)t 検定の結果</p>
 </div>
 
@@ -506,7 +506,7 @@ Jamoviによる作図は非常に簡便です。［Plots］よりHistograms（�
 </div>
 
 <div class="figure">
-<img src="./img/03mean/t-test_06.png" alt="片側検定の実施" width="478" />
+<img src="./img/03mean/t-test_06.png" alt="片側検定の実施" width="376" />
 <p class="caption">(\#fig:unnamed-chunk-39)片側検定の実施</p>
 </div>
 
@@ -913,6 +913,96 @@ One-way ANOVA を選ぶと下図のような画面になります。ここで，
 被験者内要因をデザインに含む分散分析には，反復測定計画と混合計画がありますが，今回は被験者内要因が1つですので，1要因反復測定計画の分散分析となります。
 ただし，jamovi では，反復測定計画であれ，混合計画であれ，分析メニューとしては，
 反復測定デザインの分散分析 (Repeated Measures ANOVA) を使います。
+
+それでは分析を始めましょう。まずは，データファイルを読み込んでください。今回使う変数は，反転像の反応時間を格納した，RT_Mirror_0, RT_Mirror_60, RT_Mirror_120, RT_Mirror_180, RT_Mirror_240, RT_Mirror_300 の6変数です（Mirror の後の数字は回転角度）。
+
+反復測定デザインの分散分析は，Analyses タブの ANOVA メニューにある Repeated Measures ANOVA です。なお，Repeated Measures は，反復測定デザインだけではなく，被験者間要因と被験者内要因が混在した混合デザインでも同じメニューを使います。
+
+<div class="figure">
+<img src="./img/06anova/Anova21_repeated_menu.png" alt="Select repeated measures ANOVA" width="1162" />
+<p class="caption">(\#fig:unnamed-chunk-79)Select repeated measures ANOVA</p>
+</div>
+
+被験者内要因を含む分散分析では，変数の指定の仕方が完全無作為デザインとは大きく異なっています。
+参加者間要因の変数の場合，要因の水準を表す変数と従属変数が別々になっていましたが，被験者内要因の変数の場合は，一つの変数が一つの水準を表しており，従属変数にあたる変数が複数あります（加えて，水準を表す変数がありません）。
+そこで，参加者内要因については，要因の名前や，水準数，さらには水準の名前（ラベル）を分析者の側で指定する必要があります。
+それが，Repeated Measure Factors のボックスです。
+
+<div class="figure">
+<img src="./img/06anova/Anova22_repeated_Factor1.png" alt="Repeated Measure Factor" width="1300" />
+<p class="caption">(\#fig:unnamed-chunk-80)Repeated Measure Factor</p>
+</div>
+
+Repeated Measure Factors のボックスにある，RM Factor 1 というのが1つめの参加者内要因になります。その下に Level とあるのが，その要因の水準を表しており，初期状態では Level 2，すなわち2水準までが用意されています。
+また，それぞれの水準に対してデータ中のどの変数を割り付けるかは，下の Repeated Measure Cells のボックスで指定します（薄く書かれているように，それぞれのボックスに変数をドラッグアンドドロップします）。
+
+それでは，今回のデータの場合は，要因が回転角(Angle)，水準数は6，使う変数は RT_Mirror_0, RT_Mirror_60, RT_Mirror_120, RT_Mirror_180, RT_Mirror_240, RT_Mirror_300 の6個ですので，以下の図のように指定します。
+
+<div class="figure">
+<img src="./img/06anova/Anova23_repeated_Factor2.png" alt="Assign Repeated Measure Factor" width="1298" />
+<p class="caption">(\#fig:unnamed-chunk-81)Assign Repeated Measure Factor</p>
+</div>
+
+図では隠れていて見えませんが，0, 60, 120, 180, 240, 300 の6つの水準があり，それぞれ対応する変数が割り付けられています。
+
+### 球面性の仮定の検定
+
+参加者内要因を含む分析では，水準間の分散が等しいかどうかを，球面性の検定によって検定します。
+このとき，球面性の仮定が満たされない場合は，自由度の調整が必要となります。
+jamovi では，SPSS と同様にモークリーの球面性の検定を行い，自由度の調整方法についても，SPSS と同様，Greenhouse-Geisser, Huynh-Feldt のイプシロンを用いた方法が使われます。
+
+球面性の検定は，Assumption Checks にある Sphericity tests，この検定が有意な場合に行う自由度の調整は，Sphericity correction の箇所のチェックボックスにチェックを付ければ実行されます。
+
+<div class="figure">
+<img src="./img/06anova/Anova24_repeated_Sphericity.png" alt="Sphericity Test" width="900" />
+<p class="caption">(\#fig:unnamed-chunk-82)Sphericity Test</p>
+</div>
+
+### 反復測定デザインの分散分析結果
+
+さて，次に結果をみてみましょう。
+
+<div class="figure">
+<img src="./img/06anova/Anova25_repeated_result.png" alt="Resulsts - Repeated Measures ANOVA" width="1620" />
+<p class="caption">(\#fig:unnamed-chunk-83)Resulsts - Repeated Measures ANOVA</p>
+</div>
+
+まず，Assumptions の所にある，球面性の検定の結果を見ます。
+すると，モークリーの W の値が 0.004, p < .001 であり，球面性の仮定が満たされていない（水準間で分散が異なる）ことがわかります。
+ここが有意でない場合は，自由度の調整は必要ありませんが，今回のデータは分散が異なるため，自由度の調整が必要です。
+ここでは，Greenhouse-Geisser のイプシロンを使った補正を行っており，結果は，Repeated Measures ANOVA の Within Subjects Effects の表に出力されています。
+この結果からは，$F(1.4, 144.3) = 22.3, p < .001$，すなわち回転角によって反応時間が異なることがわかります。
+
+### 多重比較
+
+回転角の主効果が有意であることがわかりましたので，次に，多重比較を行いましょう。
+多重比較は，Post Hoc Tests のオプションで指定します。
+被験者内要因の場合は，Tukey 法ではなく，Bonferroni，またはその改良版である Holm の方法を使うことが推奨されています。
+
+<div class="figure">
+<img src="./img/06anova/Anova26_repeated_posthoc_menu.png" alt="Post Hoc Test" width="1276" />
+<p class="caption">(\#fig:unnamed-chunk-84)Post Hoc Test</p>
+</div>
+
+多重比較を行うためには，多重比較をしたい要因を右側のボックスに移動し，有意確率の調整方法を選択します。
+
+<div class="figure">
+<img src="./img/06anova/Anova27_repeated_posthoc.png" alt="Resulsts - Post Hoc Test" width="1370" />
+<p class="caption">(\#fig:unnamed-chunk-85)Resulsts - Post Hoc Test</p>
+</div>
+
+結果から，回転していない0°条件は，60°および300°（=反時計回りに60°）との間に差はありませんが，回転角度が120°を越えると反応時間が長くなることがわかります。
+また，上下が逆になっている回転角180°は，その他全ての条件と有意に反応時間が異なり，180°は最も時間がかかっていることもわかります。
+
+### 推定周辺平均
+
+水準毎の推定周辺平均を求めたい場合は，完全無作為デザインの場合と同様に，Estimated Marginal Means のオプションを開き，推定周辺平均を求めたい要因を右側のボックスに入れます。
+その他のオプションは，完全無作為デザインの場合と同様です。
+
+<div class="figure">
+<img src="./img/06anova/Anova28_repeated_emmeans.png" alt="Estimated Margial Means (repeated measures ANOVA)" width="2344" />
+<p class="caption">(\#fig:unnamed-chunk-86)Estimated Margial Means (repeated measures ANOVA)</p>
+</div>
 
 
 <!--chapter:end:ch06-anova.Rmd-->
